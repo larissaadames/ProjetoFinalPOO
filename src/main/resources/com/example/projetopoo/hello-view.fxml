@@ -1,16 +1,72 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
-<?import javafx.scene.control.Label?>
-<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.shape.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
 
-<?import javafx.scene.control.Button?>
-<VBox alignment="CENTER" spacing="20.0" xmlns:fx="http://javafx.com/fxml"
-      fx:controller="com.example.projetopoo.HelloController">
-    <padding>
-        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0"/>
-    </padding>
+<AnchorPane xmlns="http://javafx.com/javafx"
+            xmlns:fx="http://javafx.com/fxml"
+            fx:controller="com.example.projetopoo.HelloController"
+            prefWidth="1280" prefHeight="720"
+            style="-fx-background-color: black;">
 
-    <Label fx:id="welcomeText"/>
-    <Button text="Hello!" onAction="#onHelloButtonClick"/>
-</VBox>
+    <!-- Fundo com imagem ou gradiente -->
+    <StackPane prefWidth="1280" prefHeight="720">
+        <Rectangle width="1280" height="720" fill="linear-gradient(to bottom, #000000, #111111)" />
+
+        <!-- "Highway" principal (onde as notas descem) -->
+        <Pane fx:id="highwayPane" prefWidth="600" prefHeight="720" layoutX="340" layoutY="0">
+            <Rectangle width="600" height="720" fill="linear-gradient(to bottom, #1a1a1a, #000000)" opacity="0.8"/>
+
+            <!-- Trilhas das notas -->
+            <Rectangle layoutX="50"  width="80" height="720" fill="#00FF00" opacity="0.05"/>
+            <Rectangle layoutX="150" width="80" height="720" fill="#FFFF00" opacity="0.05"/>
+            <Rectangle layoutX="250" width="80" height="720" fill="#FF0000" opacity="0.05"/>
+            <Rectangle layoutX="350" width="80" height="720" fill="#00AAFF" opacity="0.05"/>
+            <Rectangle layoutX="450" width="80" height="720" fill="#FF00FF" opacity="0.05"/>
+
+            <!-- Zona de acerto (no fim do highway) -->
+            <Rectangle fx:id="hitZone" layoutY="640" width="600" height="10" fill="#FFFFFF" opacity="0.3"/>
+
+            <!-- Notas (exemplo, serão criadas dinamicamente no jogo) -->
+            <Circle fx:id="noteGreen" radius="30" fill="#00FF00" layoutX="90" layoutY="100"/>
+            <Circle fx:id="noteRed" radius="30" fill="#FF0000" layoutX="290" layoutY="300"/>
+        </Pane>
+
+        <!-- HUD (pontuação, multiplicador, energia etc.) -->
+        <AnchorPane>
+            <Label fx:id="scoreLabel"
+                   text="Score: 000000"
+                   layoutX="50" layoutY="30"
+                   textFill="white"
+                   style="-fx-font-size: 24; -fx-font-weight: bold;"/>
+
+            <Label fx:id="multiplierLabel"
+                   text="x1"
+                   layoutX="600" layoutY="30"
+                   textFill="yellow"
+                   style="-fx-font-size: 28; -fx-font-weight: bold;"/>
+
+            <Label fx:id="comboLabel"
+                   text="COMBO 0"
+                   layoutX="1100" layoutY="30"
+                   textFill="white"
+                   style="-fx-font-size: 20;"/>
+
+            <!-- Barra de energia -->
+            <Rectangle layoutX="50" layoutY="70" width="200" height="20" fill="#333333" arcWidth="10" arcHeight="10"/>
+            <Rectangle fx:id="energyBar" layoutX="50" layoutY="70" width="100" height="20" fill="#00FFFF" arcWidth="10" arcHeight="10"/>
+
+            <!-- Indicadores de botões -->
+            <HBox layoutX="490" layoutY="660" spacing="10">
+                <Circle fx:id="keyGreen" radius="25" fill="#005500" stroke="#00FF00" strokeWidth="3"/>
+                <Circle fx:id="keyRed" radius="25" fill="#550000" stroke="#FF0000" strokeWidth="3"/>
+                <Circle fx:id="keyYellow" radius="25" fill="#555500" stroke="#FFFF00" strokeWidth="3"/>
+                <Circle fx:id="keyBlue" radius="25" fill="#000055" stroke="#00AAFF" strokeWidth="3"/>
+                <Circle fx:id="keyOrange" radius="25" fill="#552200" stroke="#FF8800" strokeWidth="3"/>
+            </HBox>
+        </AnchorPane>
+    </StackPane>
+</AnchorPane>
