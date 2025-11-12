@@ -6,14 +6,14 @@
 <?import javafx.scene.shape.Rectangle?>
 
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetopoo.Main">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetopoo.SeletorMusicaController">
    <children>
       <AnchorPane layoutX="261.0" layoutY="176.0">
          <children>
-            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="624.0" layoutX="5.0" stroke="BLACK" strokeType="INSIDE" width="398.0" />
-            <ImageView fitHeight="626.0" fitWidth="404.0">
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="624.0" layoutX="5.0" smooth="false" stroke="BLACK" strokeType="INSIDE" width="398.0" />
+            <ImageView fitHeight="626.0" fitWidth="404.0" smooth="false">
                <image>
-                  <Image url="@../../../Images/shrek%20album.jpg" />
+                  <Image url="@../../../Images/shrekalbum.jpg" />
                </image>
             </ImageView>
          </children>
