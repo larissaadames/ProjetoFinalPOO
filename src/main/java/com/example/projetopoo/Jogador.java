@@ -1,6 +1,7 @@
 package com.example.projetopoo;
 
 import java.time.LocalDateTime;
+import java.util.ArrayList;
 
 public class Jogador {
     private String nickName;
@@ -18,8 +19,6 @@ public class Jogador {
         this.ultimaPartida = ultimaPartida;
         this.totalPartidas = totalPartidas;
     }
-
-
 
     public int getTotalPartidas() {
         return totalPartidas;

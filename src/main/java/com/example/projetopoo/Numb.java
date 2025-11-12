@@ -1,4 +1,4 @@
 package com.example.projetopoo;
 
-public class Numb {
+public class Numb extends Musica {
 }
