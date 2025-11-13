@@ -25,7 +25,7 @@ public class MenuController extends ControladorCenas{
         botaoJogar.setOnAction(actionEvent -> {
             Stage stage = (Stage) botaoSair.getScene().getWindow(); // pega o stage que o botao esta e define como stage
             try {
-                ControladorCenas.carregarCena("Teste.fxml", stage);
+                ControladorCenas.carregarCena("cenaSeletorMusica.fxml", stage);
             } catch (IOException e) {
                 throw new RuntimeException(e);
             }
