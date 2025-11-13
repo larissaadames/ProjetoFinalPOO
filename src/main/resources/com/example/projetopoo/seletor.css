@@ -1,0 +1,11 @@
+.song-card {
+    -fx-background-radius: 16;
+}
+
+/* Quando o card estiver selecionado, estilize o cursor (que tem classe .cursor) */
+.song-card.selected .cursor {
+    -fx-stroke: #FFD54A;
+    -fx-stroke-width: 6;
+    -fx-fill: transparent;
+    -fx-effect: dropshadow(gaussian, rgba(255,213,74,0.45), 24, 0.2, 0, 0);
+}

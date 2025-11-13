@@ -18,13 +18,61 @@ public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
 
-        Parent rootSeletorMusica = FXMLLoader.load
-                (getClass().getResource("cenaSeletorMusica.fxml"));
+        // Tenta localizar o FXML
+        // OPÇÃO A: caminho absoluto desde a raiz de resource
+
+        var url = Main.class.getResource("cenaSeletorMusica.fxml");
+        System.out.println("URL = " + url);
 
 
-        Scene cenaSeletor = new Scene(rootSeletorMusica);
-        stage.setScene(cenaSeletor);
+        // OPÇÃO B (Não teste a b, ela não funciona mas n quero tirar por enquanto):
+        // var url = getClass().getResource("SeletorMusica.fxml");
+
+        System.out.println("URL FXML = " + url); // debug
+
+        if (url == null) {
+            throw new IllegalStateException(
+                    "FXML não encontrado. Verifique se o arquivo está em: " +
+                            "/com.example.projetopoo/cenaSeletorMusica.fxml"
+            );
+        }
+
+        FXMLLoader fx = new FXMLLoader(url);
+        Parent root = fx.load();
+        SeletorMusicaController ctrl = fx.getController();
+
+        ctrl.setOnBack(() -> {
+            try {
+                stage.setScene(new MenuScene(stage)); // quando você quiser voltar pro menu
+            } catch (Exception e) {
+                e.printStackTrace();
+            }
+        });
+
+        ctrl.setOnConfirm(idx -> {
+            System.out.println("Selecionou card #" + idx);
+            // aqui você depois muda pra cena do jogo
+        });
+
+        Scene scene = new Scene(root, 900, 600); // ou 1920x1080 se quiser tela cheia
+        stage.setScene(scene);
+        stage.setTitle("Arcade Rock - Seletor de Música");
         stage.show();
+    }
+
+
+
+    public static void main(String[] args) {
+        launch();
+    }
+
+//        Parent rootSeletorMusica = FXMLLoader.load
+//                (getClass().getResource("cenaSeletorMusica.fxml"));
+//
+//
+//        Scene cenaSeletor = new Scene(rootSeletorMusica);
+//        stage.setScene(cenaSeletor);
+//        stage.show();
 //        Group rootMenu = new Group();
 //        Scene cenaMenu = new Scene(rootMenu, 1920,1080);
 //        Button botaoJogar = new Button("JOGAR");
@@ -55,6 +103,6 @@ public class Main extends Application {
 //        jogo.iniciar();
 
 
-        
+
     }
-}
+
