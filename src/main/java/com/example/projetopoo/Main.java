@@ -17,15 +17,12 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class Main extends Application {
-    @FXML
-    private Button botaoJogar;
-
     @Override
     public void start(Stage stage) throws IOException {
-        ControladorCenas controladorCenas = new ControladorCenas();
-
+        ControladorCenas controlador = new ControladorCenas(stage);
+        MenuController menuController = new MenuController();
+        menuController.setStage(stage);
         ControladorCenas.carregarCena("Menu.fxml", stage);
-        botaoJogar.setOnAction(event -> );
 
 
 //        Parent rootMenu = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
