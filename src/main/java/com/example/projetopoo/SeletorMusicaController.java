@@ -78,16 +78,24 @@ public class SeletorMusicaController {
     }
 
     private void applyHighlight() {
-        for (int i = 0; i < cards.size(); i++) {
-            StackPane card = cards.get(i);
-            if (i == index) {
-                if (!card.getStyleClass().contains("selected")) {
-                    card.getStyleClass().add("selected");
+            for (int i = 0; i < cards.size(); i++) {
+                StackPane card = cards.get(i);
+                boolean selected = (i == index);
+
+                if (selected) {
+                    if (!card.getStyleClass().contains("selected")) {
+                        card.getStyleClass().add("selected");
+                    }
+                    // card destacado fica maior
+                    card.setScaleX(1.10);
+                    card.setScaleY(1.10);
+                } else {
+                    card.getStyleClass().remove("selected");
+                    // cards não selecionados um pouco menores
+                    card.setScaleX(0.95);
+                    card.setScaleY(0.95);
                 }
-            } else {
-                card.getStyleClass().remove("selected");
             }
-        }
     }
 
     private void animateBump(StackPane node) {

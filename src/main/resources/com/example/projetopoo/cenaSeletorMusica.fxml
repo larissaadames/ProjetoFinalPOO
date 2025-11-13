@@ -6,6 +6,8 @@
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.shape.Rectangle?>
 
+<?import javafx.scene.shape.Polygon?>
+<?import java.lang.Double?>
 <AnchorPane fx:id="root"
             prefHeight="1080.0" prefWidth="1920.0"
             xmlns="http://javafx.com/javafx/21"
@@ -14,69 +16,164 @@
 
     <children>
 
-        <!-- CARD 1 -->
-        <StackPane fx:id="card1"
-                   layoutX="261.0" layoutY="176.0"
+        <StackPane fx:id="card1" layoutX="261.0" layoutY="176.0"
                    prefWidth="404.0" prefHeight="626.0"
                    styleClass="song-card">
             <children>
                 <Rectangle arcHeight="16.0" arcWidth="16.0"
                            width="404.0" height="626.0"
                            fill="#111111" stroke="#2a2a2a" strokeWidth="3"/>
+
                 <ImageView fitHeight="610.0" fitWidth="388.0">
                     <image>
-                        <!-- ajuste o caminho conforme sua pasta de imagens -->
                         <Image url="@Images/shrekalbum.jpg"/>
                     </image>
                 </ImageView>
+
+                <!-- contorno -->
                 <Rectangle fx:id="cursor1" styleClass="cursor"
                            arcHeight="20.0" arcWidth="20.0"
                            width="404.0" height="626.0"
                            fill="transparent" strokeWidth="0"/>
+
+                <!-- TRIÂNGULO DE CIMA (apontando pra BAIXO) -->
+                <Polygon styleClass="cursor-arrow" translateY="-300">
+                    <points>
+                        <!-- ponta embaixo, base em cima -->
+                        <Double fx:value="0"/>   <!-- ponta -->
+                        <Double fx:value="24"/>
+                        <Double fx:value="-18"/> <!-- canto esquerdo da base -->
+                        <Double fx:value="-8"/>
+                        <Double fx:value="18"/>  <!-- canto direito da base -->
+                        <Double fx:value="-8"/>
+                    </points>
+                </Polygon>
+
+
+                <!-- TRIÂNGULO DE BAIXO (apontando pra CIMA) -->
+                <Polygon styleClass="cursor-arrow" translateY="300">
+                    <points>
+                        <!-- ponta em cima, base embaixo -->
+                        <Double fx:value="0"/>   <!-- ponta -->
+                        <Double fx:value="-24"/>
+                        <Double fx:value="-18"/> <!-- canto esquerdo da base -->
+                        <Double fx:value="8"/>
+                        <Double fx:value="18"/>  <!-- canto direito da base -->
+                        <Double fx:value="8"/>
+                    </points>
+                </Polygon>
+
+
             </children>
         </StackPane>
 
-        <!-- CARD 2 -->
-        <StackPane fx:id="card2"
-                   layoutX="750.0" layoutY="176.0"
+
+        <!-- card 2 -->
+        <StackPane fx:id="card2" layoutX="750" layoutY="176.0"
                    prefWidth="404.0" prefHeight="626.0"
                    styleClass="song-card">
             <children>
                 <Rectangle arcHeight="16.0" arcWidth="16.0"
                            width="404.0" height="626.0"
                            fill="#111111" stroke="#2a2a2a" strokeWidth="3"/>
+
                 <ImageView fitHeight="610.0" fitWidth="388.0">
                     <image>
                         <Image url="@Images/numb.jpg"/>
                     </image>
                 </ImageView>
+
+                <!-- contorno -->
                 <Rectangle fx:id="cursor2" styleClass="cursor"
                            arcHeight="20.0" arcWidth="20.0"
                            width="404.0" height="626.0"
                            fill="transparent" strokeWidth="0"/>
+
+                <!-- TRIÂNGULO DE CIMA (apontando pra BAIXO) -->
+                <Polygon styleClass="cursor-arrow" translateY="-300">
+                    <points>
+                        <!-- ponta embaixo, base em cima -->
+                        <Double fx:value="0"/>   <!-- ponta -->
+                        <Double fx:value="24"/>
+                        <Double fx:value="-18"/> <!-- canto esquerdo da base -->
+                        <Double fx:value="-8"/>
+                        <Double fx:value="18"/>  <!-- canto direito da base -->
+                        <Double fx:value="-8"/>
+                    </points>
+                </Polygon>
+
+
+                <!-- TRIÂNGULO DE BAIXO (apontando pra CIMA) -->
+                <Polygon styleClass="cursor-arrow" translateY="300">
+                    <points>
+                        <!-- ponta em cima, base embaixo -->
+                        <Double fx:value="0"/>   <!-- ponta -->
+                        <Double fx:value="-24"/>
+                        <Double fx:value="-18"/> <!-- canto esquerdo da base -->
+                        <Double fx:value="8"/>
+                        <Double fx:value="18"/>  <!-- canto direito da base -->
+                        <Double fx:value="8"/>
+                    </points>
+                </Polygon>
+
+
             </children>
         </StackPane>
 
-        <!-- CARD 3 -->
-        <StackPane fx:id="card3"
-                   layoutX="1254.0" layoutY="176.0"
+
+        <!-- card 3 -->
+        <StackPane fx:id="card3" layoutX="1254" layoutY="176.0"
                    prefWidth="404.0" prefHeight="626.0"
                    styleClass="song-card">
             <children>
                 <Rectangle arcHeight="16.0" arcWidth="16.0"
                            width="404.0" height="626.0"
                            fill="#111111" stroke="#2a2a2a" strokeWidth="3"/>
+
                 <ImageView fitHeight="610.0" fitWidth="388.0">
                     <image>
                         <Image url="@Images/trazPaVida.jpg"/>
                     </image>
                 </ImageView>
+
+                <!-- contorno -->
                 <Rectangle fx:id="cursor3" styleClass="cursor"
                            arcHeight="20.0" arcWidth="20.0"
                            width="404.0" height="626.0"
                            fill="transparent" strokeWidth="0"/>
+
+                <!-- TRIÂNGULO DE CIMA (apontando pra BAIXO) -->
+                <Polygon styleClass="cursor-arrow" translateY="-300">
+                    <points>
+                        <!-- ponta embaixo, base em cima -->
+                        <Double fx:value="0"/>   <!-- ponta -->
+                        <Double fx:value="24"/>
+                        <Double fx:value="-18"/> <!-- canto esquerdo da base -->
+                        <Double fx:value="-8"/>
+                        <Double fx:value="18"/>  <!-- canto direito da base -->
+                        <Double fx:value="-8"/>
+                    </points>
+                </Polygon>
+
+
+                <!-- TRIÂNGULO DE BAIXO (apontando pra CIMA) -->
+                <Polygon styleClass="cursor-arrow" translateY="300">
+                    <points>
+                        <!-- ponta em cima, base embaixo -->
+                        <Double fx:value="0"/>   <!-- ponta -->
+                        <Double fx:value="-24"/>
+                        <Double fx:value="-18"/> <!-- canto esquerdo da base -->
+                        <Double fx:value="8"/>
+                        <Double fx:value="18"/>  <!-- canto direito da base -->
+                        <Double fx:value="8"/>
+                    </points>
+                </Polygon>
+
+
             </children>
         </StackPane>
+
+
 
     </children>
 </AnchorPane>

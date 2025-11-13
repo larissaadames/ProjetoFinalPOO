@@ -54,9 +54,11 @@ public class Main extends Application {
             // aqui você depois muda pra cena do jogo
         });
 
-        Scene scene = new Scene(root, 900, 600); // ou 1920x1080 se quiser tela cheia
+        Scene scene = new Scene(root, 1920, 1080);
+        // ou 1920x1080 se quiser tela cheia
         stage.setScene(scene);
-        stage.setTitle("Arcade Rock - Seletor de Música");
+        scene.getStylesheets().add(Main.class.getResource("seletor.css").toExternalForm());
+        stage.setTitle("PowerJorge - Seletor de Música");
         stage.show();
     }
 
