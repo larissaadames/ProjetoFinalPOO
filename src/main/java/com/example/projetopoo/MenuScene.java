@@ -72,7 +72,6 @@ public class MenuScene extends Scene {
             // ENTER → por enquanto só imprime; depois você coloca a cena do jogo
             ctrl.setOnConfirm(idx -> {
                 System.out.println("Selecionou card #" + idx);
-                // TODO: stage.setScene(new GameScene(stage, idx));
             });
 
             stage.setScene(scene);
