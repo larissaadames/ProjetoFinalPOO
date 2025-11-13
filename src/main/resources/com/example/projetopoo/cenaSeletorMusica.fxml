@@ -18,7 +18,7 @@
             </ImageView>
          </children>
       </AnchorPane>
-      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="624.0" layoutX="750.0" layoutY="176.0" stroke="BLACK" strokeType="INSIDE" width="398.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#808080" height="624.0" layoutX="750.0" layoutY="176.0" stroke="BLACK" strokeType="INSIDE" width="398.0" />
       <Rectangle arcHeight="5.0" arcWidth="5.0" fill="DODGERBLUE" height="624.0" layoutX="1254.0" layoutY="176.0" stroke="BLACK" strokeType="INSIDE" width="398.0" />
       <ImageView fitHeight="626.0" fitWidth="406.0" layoutX="1248.0" layoutY="174.0">
          <image>
