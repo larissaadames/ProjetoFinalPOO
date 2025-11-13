@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" xmlns="http://javafx.com/javafx/17.0.12" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetopoo.TesteController">
+   <children>
+      <DialogPane layoutX="143.0" layoutY="174.0" />
+      <DialogPane layoutX="120.0" layoutY="193.0" />
+      <PieChart layoutX="50.0" layoutY="35.0" />
+      <ComboBox layoutX="254.0" layoutY="193.0" prefWidth="150.0" />
+   </children>
+</AnchorPane>

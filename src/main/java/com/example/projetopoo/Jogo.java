@@ -2,15 +2,13 @@ package com.example.projetopoo;
 
 import javafx.animation.AnimationTimer;
 import javafx.scene.Group;
+import javafx.scene.Parent;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
 
 public class Jogo {
-    Group root;
-    public Jogo(Group root){
-        this.root = root;
-    }
+    Group root = new Group();
 
     public void iniciar() {
 
