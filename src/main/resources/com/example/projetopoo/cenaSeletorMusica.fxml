@@ -5,9 +5,12 @@
 <?import javafx.scene.image.ImageView?>
 <?import javafx.scene.image.Image?>
 <?import javafx.scene.shape.Rectangle?>
-
+<?import javafx.scene.control.Label?>
 <?import javafx.scene.shape.Polygon?>
 <?import java.lang.Double?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.VBox?>
+
 <AnchorPane fx:id="root"
             prefHeight="1080.0" prefWidth="1920.0"
             xmlns="http://javafx.com/javafx/21"
@@ -24,20 +27,21 @@
                            width="404.0" height="626.0"
                            fill="#111111" stroke="#2a2a2a" strokeWidth="3"/>
 
-                <ImageView fitHeight="610.0" fitWidth="388.0">
+                <!-- CAPA COM fx:id -->
+                <ImageView fx:id="cover1" fitHeight="610.0" fitWidth="388.0">
                     <image>
                         <Image url="@Images/shrekalbum.jpg"/>
                     </image>
                 </ImageView>
 
-                <!-- contorno -->
+                <!-- CONTORNO -->
                 <Rectangle fx:id="cursor1" styleClass="cursor"
                            arcHeight="20.0" arcWidth="20.0"
                            width="404.0" height="626.0"
                            fill="transparent" strokeWidth="0"/>
 
                 <!-- TRIÂNGULO DE CIMA (apontando pra BAIXO) -->
-                <Polygon styleClass="cursor-arrow" translateY="-300">
+                <Polygon fx:id="arrowTop1" styleClass="cursor-arrow" translateY="-370">
                     <points>
                         <!-- ponta embaixo, base em cima -->
                         <Double fx:value="0"/>   <!-- ponta -->
@@ -51,7 +55,7 @@
 
 
                 <!-- TRIÂNGULO DE BAIXO (apontando pra CIMA) -->
-                <Polygon styleClass="cursor-arrow" translateY="300">
+                <Polygon fx:id="arrowBottom1" styleClass="cursor-arrow" translateY="370">
                     <points>
                         <!-- ponta em cima, base embaixo -->
                         <Double fx:value="0"/>   <!-- ponta -->
@@ -62,14 +66,33 @@
                         <Double fx:value="8"/>
                     </points>
                 </Polygon>
+                <!-- TÍTULO DA MÚSICA -->
+                <Label text="All Star"
+                       styleClass="song-title"
+                       StackPane.alignment="BOTTOM_CENTER"
+                       translateY="-40"/>
 
+                <!-- PLACAR (inicialmente invisível) -->
+                <VBox fx:id="scoreBox1"
+                      alignment="TOP_CENTER"
+                      spacing="6"
+                      visible="false"
+                      opacity="0.0"
+                      maxWidth="360"
+                      StackPane.alignment="CENTER">
+                    <children>
+                        <Label text="All Star - Top Scores"
+                               styleClass="score-title"/>
+                        <!-- as linhas do TOP 10 serão criadas via código -->
+                    </children>
+                </VBox>
 
             </children>
         </StackPane>
 
 
         <!-- card 2 -->
-        <StackPane fx:id="card2" layoutX="750" layoutY="176.0"
+        <StackPane fx:id="card2" layoutX="758.0" layoutY="176.0"
                    prefWidth="404.0" prefHeight="626.0"
                    styleClass="song-card">
             <children>
@@ -77,20 +100,21 @@
                            width="404.0" height="626.0"
                            fill="#111111" stroke="#2a2a2a" strokeWidth="3"/>
 
-                <ImageView fitHeight="610.0" fitWidth="388.0">
+                <!-- CAPA COM fx:id -->
+                <ImageView fx:id="cover2" fitHeight="610.0" fitWidth="388.0">
                     <image>
                         <Image url="@Images/numb.jpg"/>
                     </image>
                 </ImageView>
 
-                <!-- contorno -->
+                <!-- CONTORNO -->
                 <Rectangle fx:id="cursor2" styleClass="cursor"
                            arcHeight="20.0" arcWidth="20.0"
                            width="404.0" height="626.0"
                            fill="transparent" strokeWidth="0"/>
 
                 <!-- TRIÂNGULO DE CIMA (apontando pra BAIXO) -->
-                <Polygon styleClass="cursor-arrow" translateY="-300">
+                <Polygon fx:id="arrowTop2" styleClass="cursor-arrow" translateY="-370">
                     <points>
                         <!-- ponta embaixo, base em cima -->
                         <Double fx:value="0"/>   <!-- ponta -->
@@ -104,7 +128,7 @@
 
 
                 <!-- TRIÂNGULO DE BAIXO (apontando pra CIMA) -->
-                <Polygon styleClass="cursor-arrow" translateY="300">
+                <Polygon fx:id="arrowBottom2" styleClass="cursor-arrow" translateY="370">
                     <points>
                         <!-- ponta em cima, base embaixo -->
                         <Double fx:value="0"/>   <!-- ponta -->
@@ -115,14 +139,33 @@
                         <Double fx:value="8"/>
                     </points>
                 </Polygon>
+                <!-- TÍTULO DA MÚSICA -->
+                <Label text="Numb"
+                       styleClass="song-title"
+                       StackPane.alignment="BOTTOM_CENTER"
+                       translateY="-40"/>
 
+                <!-- PLACAR (inicialmente invisível) -->
+                <VBox fx:id="scoreBox2"
+                      alignment="TOP_CENTER"
+                      spacing="6"
+                      visible="false"
+                      opacity="0.0"
+                      maxWidth="360"
+                      StackPane.alignment="CENTER">
+                    <children>
+                        <Label text="Numb - Top Scores"
+                               styleClass="score-title"/>
+                        <!-- as linhas do TOP 10 serão criadas via código -->
+                    </children>
+                </VBox>
 
             </children>
         </StackPane>
 
 
         <!-- card 3 -->
-        <StackPane fx:id="card3" layoutX="1254" layoutY="176.0"
+        <StackPane fx:id="card3" layoutX="1254.0" layoutY="176.0"
                    prefWidth="404.0" prefHeight="626.0"
                    styleClass="song-card">
             <children>
@@ -130,20 +173,21 @@
                            width="404.0" height="626.0"
                            fill="#111111" stroke="#2a2a2a" strokeWidth="3"/>
 
-                <ImageView fitHeight="610.0" fitWidth="388.0">
+                <!-- CAPA COM fx:id -->
+                <ImageView fx:id="cover3" fitHeight="610.0" fitWidth="388.0">
                     <image>
                         <Image url="@Images/trazPaVida.jpg"/>
                     </image>
                 </ImageView>
 
-                <!-- contorno -->
+                <!-- CONTORNO -->
                 <Rectangle fx:id="cursor3" styleClass="cursor"
                            arcHeight="20.0" arcWidth="20.0"
                            width="404.0" height="626.0"
                            fill="transparent" strokeWidth="0"/>
 
                 <!-- TRIÂNGULO DE CIMA (apontando pra BAIXO) -->
-                <Polygon styleClass="cursor-arrow" translateY="-300">
+                <Polygon fx:id="arrowTop3" styleClass="cursor-arrow" translateY="-370">
                     <points>
                         <!-- ponta embaixo, base em cima -->
                         <Double fx:value="0"/>   <!-- ponta -->
@@ -157,7 +201,7 @@
 
 
                 <!-- TRIÂNGULO DE BAIXO (apontando pra CIMA) -->
-                <Polygon styleClass="cursor-arrow" translateY="300">
+                <Polygon fx:id="arrowBottom3" styleClass="cursor-arrow" translateY="370">
                     <points>
                         <!-- ponta em cima, base embaixo -->
                         <Double fx:value="0"/>   <!-- ponta -->
@@ -168,7 +212,25 @@
                         <Double fx:value="8"/>
                     </points>
                 </Polygon>
+                <Label text="Bring Me to Life"
+                       styleClass="song-title"
+                       StackPane.alignment="BOTTOM_CENTER"
+                       translateY="-40"/>
 
+                <!-- PLACAR (inicialmente invisível) -->
+                <VBox fx:id="scoreBox3"
+                      alignment="TOP_CENTER"
+                      spacing="6"
+                      visible="false"
+                      opacity="0.0"
+                      maxWidth="360"
+                      StackPane.alignment="CENTER">
+                    <children>
+                        <Label text="Bring Me to Life - Top Scores"
+                               styleClass="score-title"/>
+                        <!-- as linhas do TOP 10 serão criadas via código -->
+                    </children>
+                </VBox>
 
             </children>
         </StackPane>

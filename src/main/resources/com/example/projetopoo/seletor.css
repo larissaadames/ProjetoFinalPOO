@@ -27,3 +27,32 @@
     -fx-opacity: 1;
     -fx-effect: dropshadow(gaussian, rgba(255,213,74,0.60), 16, 0.2, 0, 0);
 }
+
+.song-title {
+    -fx-text-fill: #f5f5f5;
+    -fx-font-family: "Consolas";
+    -fx-font-size: 20;
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 8, 0.4, 0, 2);
+}
+
+/* quando o card está selecionado, deixa o título dourado */
+.song-card.selected .song-title {
+    -fx-text-fill: #FFD54A;
+}
+
+.score-title {
+    -fx-text-fill: #FFD54A;
+    -fx-font-family: "Consolas";
+    -fx-font-size: 18;
+    -fx-padding: 8 0 4 0;
+}
+
+.score-entry {
+    -fx-text-fill: #f5f5f5;
+    -fx-font-family: "Consolas";
+    -fx-font-size: 16;
+}
+
+.score-entry.me {
+    -fx-text-fill: #80ffb0; /* se quiser destacar o próprio jogador no futuro */
+}
