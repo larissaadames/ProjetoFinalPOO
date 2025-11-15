@@ -17,6 +17,18 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.projetopoo.SeletorMusicaController">
 
+    <ImageView fx:id="bgFire"
+               fitWidth="1920"
+               fitHeight="1080"
+               preserveRatio="false"
+               opacity="0.35"
+               layoutX="0"
+               layoutY="0">
+        <image>
+            <Image url="@Images/fogo.gif" />
+        </image>
+    </ImageView>
+
     <children>
 
         <StackPane fx:id="card1" layoutX="261.0" layoutY="176.0"

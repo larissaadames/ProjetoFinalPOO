@@ -23,6 +23,7 @@ import java.util.function.Consumer;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 import javafx.util.Duration;
+import javafx.scene.effect.GaussianBlur;
 
 
 public class SeletorMusicaController {
@@ -30,6 +31,8 @@ public class SeletorMusicaController {
     private MediaPlayer previewPlayer;
 
     @FXML private AnchorPane root;
+
+    @FXML private ImageView bgFire;
 
     @FXML private StackPane card1;
     @FXML private StackPane card2;
@@ -76,6 +79,8 @@ public class SeletorMusicaController {
         playEntranceAnimation();
         startTrianglePulse();
         Platform.runLater(() -> playPreview(index));
+        startFireBreathing();
+        applyFireSoftening();
 
 
         Platform.runLater(() -> {
@@ -356,12 +361,9 @@ public class SeletorMusicaController {
 
     private void playPreview(int index) {
 
-        // se ainda está carregando outro preview → ignore
-        if (previewLoading) return;
-
-        previewLoading = true;
-
+        // para animação limpa ao trocar de música
         stopPreview(() -> {
+
             try {
                 String path = previewPaths[index];
                 Media media = new Media(getClass().getResource(path).toExternalForm());
@@ -371,32 +373,56 @@ public class SeletorMusicaController {
                 previewPlayer.setStopTime(Duration.seconds(30));
                 previewPlayer.setCycleCount(MediaPlayer.INDEFINITE);
 
+                // 🔥 Quando o áudio estiver pronto pra tocar…
                 previewPlayer.setOnReady(() -> {
 
+                    // volume inicial
                     previewPlayer.setVolume(0);
+
+                    // CONFIGURAÇÃO DO SPECTRUM (tem que estar AQUI)
+                    previewPlayer.setAudioSpectrumInterval(0.03);   // ~33 FPS
+                    previewPlayer.setAudioSpectrumNumBands(32);     // 32 bandas
+                    previewPlayer.setAudioSpectrumListener((t, d, mags, phases) -> {
+
+                        //System.out.println("MAG0 = " + mags[0]);  //Print pra debug, dependendo do valor tem que mudar o mp3
+
+                        // energia média do áudio
+                        double energy = 0;
+                        for (double m : mags) {
+                            energy += (m + 60); // normaliza -60dB → 0
+                        }
+                        energy /= mags.length;
+
+                        // efeitos visuais
+                        double scale = 1.0 + (energy / 120.0);
+                        double opacity = 0.30 + (energy / 350.0);
+
+                        Platform.runLater(() -> {
+                            bgFire.setScaleX(scale);
+                            bgFire.setScaleY(scale);
+                            bgFire.setOpacity(opacity);
+                        });
+                    });
+
+                    // tocar
                     previewPlayer.play();
 
-                    // FADE IN
+                    // fade in suave
                     Timeline fadeIn = new Timeline(
-                            new KeyFrame(Duration.seconds(0.0), new KeyValue(previewPlayer.volumeProperty(), 0.0)),
-                            new KeyFrame(Duration.seconds(1.0), new KeyValue(previewPlayer.volumeProperty(), 0.15))
+                            new KeyFrame(Duration.seconds(0.0),
+                                    new KeyValue(previewPlayer.volumeProperty(), 0.0)),
+                            new KeyFrame(Duration.seconds(1.0),
+                                    new KeyValue(previewPlayer.volumeProperty(), 0.25))
                     );
                     fadeIn.play();
-
-                    previewLoading = false;
-                });
-
-                previewPlayer.setOnError(() -> {
-                    System.err.println("Media error: " + previewPlayer.getError());
-                    previewLoading = false;
                 });
 
             } catch (Exception e) {
                 System.err.println("Erro ao tocar preview: " + e.getMessage());
-                previewLoading = false;
             }
         });
     }
+
 
 
 
@@ -406,13 +432,23 @@ public class SeletorMusicaController {
             MediaPlayer old = previewPlayer;
             previewPlayer = null;
 
+            // fade out
             Timeline fadeOut = new Timeline(
-                    new KeyFrame(Duration.seconds(0.2), new KeyValue(old.volumeProperty(), 0.0))
+                    new KeyFrame(Duration.seconds(0.2),
+                            new KeyValue(old.volumeProperty(), 0.0))
             );
 
             fadeOut.setOnFinished(e -> {
-                try { old.stop(); } catch(Exception ignored){}
-                try { old.dispose(); } catch(Exception ignored){}
+                try { old.stop(); } catch (Exception ignored) {}
+                try { old.dispose(); } catch (Exception ignored) {}
+
+                // reset do fogo
+                Platform.runLater(() -> {
+                    bgFire.setScaleX(1);
+                    bgFire.setScaleY(1);
+                    bgFire.setOpacity(0.35);
+                });
+
                 onStopped.run();
             });
 
@@ -423,6 +459,34 @@ public class SeletorMusicaController {
         }
     }
 
+    private void startFireBreathing() {
+
+        if (bgFire == null) return;
+
+        Timeline slowBreath = new Timeline(
+                new KeyFrame(Duration.seconds(0.0),
+                        new KeyValue(bgFire.scaleXProperty(), 1.0),
+                        new KeyValue(bgFire.scaleYProperty(), 1.0)),
+                new KeyFrame(Duration.seconds(3.0),
+                        new KeyValue(bgFire.scaleXProperty(), 1.08),
+                        new KeyValue(bgFire.scaleYProperty(), 1.08)),
+                new KeyFrame(Duration.seconds(6.0),
+                        new KeyValue(bgFire.scaleXProperty(), 1.0),
+                        new KeyValue(bgFire.scaleYProperty(), 1.0))
+        );
+
+        slowBreath.setCycleCount(Timeline.INDEFINITE);
+        slowBreath.setAutoReverse(true);
+        slowBreath.play();
+    }
+
+
+    private void applyFireSoftening() {
+        if (bgFire == null) return;
+
+        bgFire.setOpacity(0.28);        // antes 0.35
+        bgFire.setEffect(new GaussianBlur(6)); // esfumaça levemente
+    }
 
 
 

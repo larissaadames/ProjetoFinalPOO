@@ -43,16 +43,21 @@
 .score-title {
     -fx-text-fill: #FFD54A;
     -fx-font-family: "Consolas";
-    -fx-font-size: 18;
+    -fx-font-size: 30;
     -fx-padding: 8 0 4 0;
 }
 
 .score-entry {
     -fx-text-fill: #f5f5f5;
     -fx-font-family: "Consolas";
-    -fx-font-size: 16;
+    -fx-font-size: 26;
 }
 
 .score-entry.me {
     -fx-text-fill: #80ffb0; /* se quiser destacar o próprio jogador no futuro */
+}
+
+.score-box {
+    -fx-alignment: top-center;
+    -fx-padding: 40px 10px 10px 10px; /* cima direita baixo esquerda */
 }
