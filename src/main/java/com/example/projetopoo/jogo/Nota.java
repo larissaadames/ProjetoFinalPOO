@@ -8,6 +8,8 @@ public abstract class Nota {
     private double hitTime; // ms
     private double scrollSpeed;
     private double tempoStart;
+    private double x;
+    private double y;
     private boolean ativa = true;
 
     // esses enums sao formas boas de organizar e salvar
@@ -47,8 +49,8 @@ public abstract class Nota {
         }
     }
 
-
-    public abstract void update(double deltaTime, double momentoAtualMusica);
+    // depois adicionar tempo musica
+    public abstract void atualizar(double deltaTime);
 
 //    public void onHit() {
 //        hit = true;
@@ -67,8 +69,18 @@ public abstract class Nota {
     public double getHitTime() { return hitTime; }
     public double getScrollSpeed() {return scrollSpeed;}
     public double getTempoStart() {return tempoStart;}
+    public double getX() {return x;}
+    public double getY() {return y;}
     public int getLane() {return lane;}
     public boolean isAtiva() {return ativa;}
+
+    public void setY(double y) {
+        this.y = y;
+    }
+
+    public void setX(double x) {
+        this.x = x;
+    }
 
 //    Nota(double posX,double posY,String cor, float scrollSpeed) {
 //        circle = new Circle(posX, posY, 25, Color.web(cor));

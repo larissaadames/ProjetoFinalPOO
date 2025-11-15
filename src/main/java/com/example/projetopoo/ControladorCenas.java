@@ -1,11 +1,11 @@
 package com.example.projetopoo;
 
+import com.example.projetopoo.jogo.Jogo;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
-import javafx.scene.control.Control;
 import javafx.stage.Stage;
 
 import java.io.IOException;

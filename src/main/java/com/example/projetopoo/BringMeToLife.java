@@ -1,4 +1,6 @@
 package com.example.projetopoo;
 
-public class BringMeToLife extends Musica{
+import com.example.projetopoo.jogo.Musica;
+
+public class BringMeToLife extends Musica {
 }

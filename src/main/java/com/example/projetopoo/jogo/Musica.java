@@ -1,5 +1,5 @@
-package com.example.projetopoo;
+package com.example.projetopoo.jogo;
 
-public abstract class Musica {
+public abstract class JogoMusica {
 
 }
