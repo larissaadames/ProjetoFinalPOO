@@ -20,8 +20,14 @@ import javafx.scene.transform.Rotate;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
+import javafx.scene.media.Media;
+import javafx.scene.media.MediaPlayer;
+import javafx.util.Duration;
+
 
 public class SeletorMusicaController {
+
+    private MediaPlayer previewPlayer;
 
     @FXML private AnchorPane root;
 
@@ -69,6 +75,8 @@ public class SeletorMusicaController {
         showBack(index);          // card inicial já começa mostrando o placar
         playEntranceAnimation();
         startTrianglePulse();
+        Platform.runLater(() -> playPreview(index));
+
 
         Platform.runLater(() -> {
             root.setFocusTraversable(true);
@@ -115,19 +123,21 @@ public class SeletorMusicaController {
     private void move(int dir) {
         int old = index;
         index = Math.max(0, Math.min(cards.size() - 1, index + dir));
+
         if (index != old) {
             scrollOffset = 0;
 
-            // antigo selecionado: volta a mostrar capa
             flipToFront(old);
-
-            // novo selecionado: mostra o placar com flip
             flipToBack(index);
 
             applyHighlight();
             animateBump(cards.get(index));
+
+            stopPreview(() -> {});
+            playPreview(index);  // 🔥 toca a música nova
         }
     }
+
 
 
     private void scroll(int dir) {
@@ -335,12 +345,105 @@ public class SeletorMusicaController {
         tl.play();
     }
 
+    private final String[] previewPaths = {
+            "/musics/allstar.mp3",
+            "/musics/numb.mp3",
+            "/musics/bmtl.mp3"
+    };
+
+    // evita criar vários players
+    private boolean previewLoading = false;
+
+    private void playPreview(int index) {
+
+        // se ainda está carregando outro preview → ignore
+        if (previewLoading) return;
+
+        previewLoading = true;
+
+        stopPreview(() -> {
+            try {
+                String path = previewPaths[index];
+                Media media = new Media(getClass().getResource(path).toExternalForm());
+                previewPlayer = new MediaPlayer(media);
+
+                previewPlayer.setStartTime(Duration.seconds(20));
+                previewPlayer.setStopTime(Duration.seconds(30));
+                previewPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+
+                previewPlayer.setOnReady(() -> {
+
+                    previewPlayer.setVolume(0);
+                    previewPlayer.play();
+
+                    // FADE IN
+                    Timeline fadeIn = new Timeline(
+                            new KeyFrame(Duration.seconds(0.0), new KeyValue(previewPlayer.volumeProperty(), 0.0)),
+                            new KeyFrame(Duration.seconds(1.0), new KeyValue(previewPlayer.volumeProperty(), 0.15))
+                    );
+                    fadeIn.play();
+
+                    previewLoading = false;
+                });
+
+                previewPlayer.setOnError(() -> {
+                    System.err.println("Media error: " + previewPlayer.getError());
+                    previewLoading = false;
+                });
+
+            } catch (Exception e) {
+                System.err.println("Erro ao tocar preview: " + e.getMessage());
+                previewLoading = false;
+            }
+        });
+    }
+
+
+
+    private void stopPreview(Runnable onStopped) {
+        if (previewPlayer != null) {
+
+            MediaPlayer old = previewPlayer;
+            previewPlayer = null;
+
+            Timeline fadeOut = new Timeline(
+                    new KeyFrame(Duration.seconds(0.2), new KeyValue(old.volumeProperty(), 0.0))
+            );
+
+            fadeOut.setOnFinished(e -> {
+                try { old.stop(); } catch(Exception ignored){}
+                try { old.dispose(); } catch(Exception ignored){}
+                onStopped.run();
+            });
+
+            fadeOut.play();
+
+        } else {
+            onStopped.run();
+        }
+    }
+
+
+
+
 
     // --------- callbacks para Main/MenuScene ---------
 
-    public void setOnBack(Runnable r) { this.onBack = r; }
+    public void setOnBack(Runnable r) {
+        this.onBack = () -> {
+            stopPreview(() -> {});
+            r.run();
+        };
+    }
 
-    public void setOnConfirm(Consumer<Integer> c) { this.onConfirm = c; }
+
+    public void setOnConfirm(Consumer<Integer> c) {
+        this.onConfirm = (idx) -> {
+            stopPreview(() -> {});
+            c.accept(idx);
+        };
+    }
+
 
     public void setInitialIndex(int i) {
         index = Math.max(0, Math.min(cards.size() - 1, i));
