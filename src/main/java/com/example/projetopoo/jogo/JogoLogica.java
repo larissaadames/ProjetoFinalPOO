@@ -1,4 +1,4 @@
 package com.example.projetopoo.jogo;
 
-public class GameLoop {
+public class JogoLogica {
 }
