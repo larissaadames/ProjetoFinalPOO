@@ -12,48 +12,47 @@
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.projetopoo.MenuController">
 
-    <!-- CAMADA DO FUNDO (cor sólida ou imagem se quiser depois) -->
+    <!-- FUNDO -->
     <AnchorPane style="-fx-background-color: #0d0020;">
         <children>
 
-            <!-- CAMADA DOS RAIOS -->
+            <!-- RAIO -->
             <Pane fx:id="lightningLayer"
                   prefWidth="1920"
                   prefHeight="1080"
                   style="-fx-background-color: transparent;"
             />
 
-            <!-- TÍTULO CENTRAL -->
-            <Label fx:id="title"
-                   text="POWERJORGE"
-                   layoutX="560"
-                   layoutY="180"
-                   style="-fx-text-fill: white;"
-            >
-                <font>
-                    <Font size="96"/>
-                </font>
-            </Label>
+            <!-- CONTAINER CENTRAL PARA TÍTULO + MENU -->
+            <VBox spacing="80"
+                  prefWidth="1920"
+                  layoutY="180"
+                  style="-fx-alignment: top-center;">
 
-            <!-- MENU PRINCIPAL -->
-            <VBox fx:id="menuBox"
-                  layoutX="780"
-                  layoutY="400"
-                  spacing="25"
-                  style="-fx-alignment: center;">
-                <children>
+                <!-- TÍTULO -->
+                <Label fx:id="title"
+                       text="POWERJORGE"
+                       style="-fx-text-fill: white;">
+                    <font>
+                        <Font size="110"/>
+                    </font>
+                </Label>
 
-                    <Label text="JOGAR"
-                           style="-fx-text-fill: white; -fx-font-size: 48;"
-                    />
-                    <Label text="CRÉDITOS"
-                           style="-fx-text-fill: white; -fx-font-size: 48;"
-                    />
-                    <Label text="SAIR"
-                           style="-fx-text-fill: white; -fx-font-size: 48;"
-                    />
+                <!-- MENU -->
+                <VBox fx:id="menuBox"
+                      spacing="35"
+                      style="-fx-alignment: center;">
+                    <children>
 
-                </children>
+                        <Label text="JOGAR"
+                               style="-fx-text-fill: white; -fx-font-size: 54;" />
+                        <Label text="CRÉDITOS"
+                               style="-fx-text-fill: white; -fx-font-size: 54;" />
+                        <Label text="SAIR"
+                               style="-fx-text-fill: white; -fx-font-size: 54;" />
+
+                    </children>
+                </VBox>
             </VBox>
 
         </children>
