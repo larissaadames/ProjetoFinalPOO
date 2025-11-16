@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.shape.*?>
+
+<AnchorPane fx:id="root"
+            prefWidth="1920" prefHeight="1080"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.projetopoo.MenuController">
+
+    <children>
+
+        <!-- camada dos raios -->
+        <Pane fx:id="lightningLayer"
+              prefWidth="1920" prefHeight="1080"
+              mouseTransparent="true"/>
+
+        <!-- Título -->
+        <Label fx:id="title"
+               text="POWER JORGE"
+               layoutX="620" layoutY="150"/>
+
+        <!-- Menu -->
+        <VBox fx:id="menuBox"
+              layoutX="820" layoutY="420"
+              spacing="40"
+              alignment="CENTER">
+
+            <children>
+                <Label text="START GAME" styleClass="menu-item"/>
+                <Label text="CREDITS" styleClass="menu-item"/>
+                <Label text="EXIT" styleClass="menu-item"/>
+            </children>
+
+        </VBox>
+
+    </children>
+</AnchorPane>
