@@ -1,8 +1,18 @@
 package com.example.projetopoo.jogo;
 
 public class NotaHold extends Nota {
-    public NotaHold(double hitTime, int lane) {
-        super(hitTime, lane);
+    public NotaHold(int lane, double momentoHit) {
+        super(lane, momentoHit);
+    }
+
+    @Override
+    public void tentaHit(long momentoAtualMusicaMs) {
+
+    }
+
+    @Override
+    public void atualizar(double deltaTime, double tempoMusicaMs) {
+
     }
 
     @Override

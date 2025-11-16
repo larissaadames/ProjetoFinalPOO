@@ -5,43 +5,52 @@ import javafx.scene.input.KeyCode;
 import javafx.scene.shape.Circle;
 
 public abstract class Nota {
-    private double hitTime; // ms
-    private double scrollSpeed;
-    private double tempoStart;
     private double x;
     private double y;
     private boolean ativa = true;
 
-    // esses enums sao formas boas de organizar e salvar
-    public enum NotaEstado {
-        PENDENTE,
-        ACERTO,
-        SEGURANDO,
-        SOLTA,
-        ERROU
-    }
-
-    public enum Julgamento {
-        PERFEITO,
-        OTIMO,
-        RUIM,
-        ERRO
-    }
-
+    protected static final double SCROLL_SPEED = 0.25;
+    protected static final double SPAWN_OFFSET_MS = 2000;
     protected final long momentoHit;
     protected final int lane;
+
     protected NotaEstado estado = NotaEstado.PENDENTE;
     protected Julgamento julgamento = null;
-    protected long windowHitPerfeito = 40;
-    protected long windowHitOtimo = 80;
-    protected long windowHitRuim = 120;
 
-    public Nota(long momentoHit, int lane){
+    protected double windowHitPerfeito = 40;
+    protected double windowHitOtimo = 80;
+    protected double windowHitRuim = 120;
+
+    public Nota(int lane, long momentoHit){
         this.momentoHit = momentoHit;
         this.lane = lane;
+        this.x = getLaneX();
+        this.y = -200;
     }
 
     public abstract void tentaHit(long momentoAtualMusicaMs);
+
+    public void onHit(double momentoAtualMusicaMs) {
+        if(estado != NotaEstado.PENDENTE) return;
+
+        estado = NotaEstado.ACERTO;
+        double diff = Math.abs(momentoAtualMusicaMs - momentoHit);
+
+        if (diff <= windowHitPerfeito) {
+            julgamento = Julgamento.PERFEITO;
+        }
+        else if (diff <= windowHitOtimo) {
+            julgamento = Julgamento.OTIMO;
+        }
+        else if (diff <= windowHitRuim) {
+            julgamento = Julgamento.RUIM;
+        }
+        else {
+            estado = NotaEstado.ERROU;
+            julgamento = Julgamento.ERRO;
+        }
+    }
+
     public void atualizaErro(long momentoAtualMusicaMs) {
         if(estado == NotaEstado.PENDENTE && momentoAtualMusicaMs > momentoHit + windowHitRuim){
             estado = NotaEstado.ERROU;
@@ -49,29 +58,44 @@ public abstract class Nota {
         }
     }
 
-    // depois adicionar tempo musica
-    public abstract void atualizar(double deltaTime);
+    public abstract void atualizar(double deltaTime, double tempoMusicaMs);
 
-//    public void onHit() {
-//        hit = true;
-//        ativa = false;
-//        view.setVisible(false);
-//    }
-//
-//    public void onMiss() {
-//        ativa = false;
-//        view.setVisible(false);
-//    }
+    public boolean deveDespawnar(double tempoMusicaMs) {
+
+        if (estado == NotaEstado.ACERTO) {
+            return true;
+        }
+
+        if (estado == NotaEstado.ERROU) {
+            return true;
+        }
+
+        if (tempoMusicaMs > momentoHit + windowHitRuim) {
+            return true;
+        }
+
+        if (y > 900) { // ajuste conforme seu layout
+            return true;
+        }
+
+        return false;
+    }
+
+
+
 
     public NotaEstado getEstado() { return estado; }
+
     public Julgamento getJulgamento() { return julgamento; }
-    public long getMomentoHit() { return momentoHit; }
-    public double getHitTime() { return hitTime; }
-    public double getScrollSpeed() {return scrollSpeed;}
-    public double getTempoStart() {return tempoStart;}
+
+    public double getMomentoHit() { return momentoHit; }
+
     public double getX() {return x;}
+
     public double getY() {return y;}
+
     public int getLane() {return lane;}
+
     public boolean isAtiva() {return ativa;}
 
     public void setY(double y) {
@@ -82,24 +106,17 @@ public abstract class Nota {
         this.x = x;
     }
 
-//    Nota(double posX,double posY,String cor, float scrollSpeed) {
-//        circle = new Circle(posX, posY, 25, Color.web(cor));
-//        this.scrollSpeed = scrollSpeed;
-//
-//    }
+    public double getLaneX() {
+        return switch (lane) {
+            case 0 -> 100;
+            case 1 -> 200;
+            case 2 -> 300;
+            case 3 -> 400;
+            case 4 -> 500;
+            default -> 100;
+        };
+    }
 
-//
-//    public Circle getCircle() {
-//        return circle;
-//    }
-//
-//    public void moverNota(double deltaTime) {
-//        this.circle.setCenterY(this.circle.getCenterY() + scrollSpeed * deltaTime);
-//    }
-//
-//    public void foraDatela() {
-//        if(this.circle.getCenterY() >= 1000) this.circle.setCenterY(100);
-//    }
 
 }
 

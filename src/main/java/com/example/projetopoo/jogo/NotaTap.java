@@ -2,14 +2,24 @@ package com.example.projetopoo.jogo;
 
 public class NotaTap extends Nota {
 
-    @Override
-    public void tentaHit(long momentoAtualMusicaMs) {
-
+    public NotaTap(int lane, double momentoHit) {
+        super(lane, momentoHit);
     }
 
     @Override
-    public void atualizar(double deltaTime) {
-        this.setX(this.getX() + 10);
-        this.setY(this.getY() + 10);
+    public void tentaHit(long momentoAtualMusicaMs) {
+        if (!isAtiva()) return;
+
+        onHit(momentoAtualMusicaMs);
+    }
+
+    @Override
+    public void atualizar(double deltaTime, double tempoMusicaMs) {
+
+        double restante = momentoHit - tempoMusicaMs;
+
+        double posY = (restante - SPAWN_OFFSET_MS) * SCROLL_SPEED;
+
+        this.setY(posY);
     }
 }

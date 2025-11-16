@@ -13,10 +13,10 @@ public class Jogo {
         ArrayList<Nota> notas = new ArrayList<>();
         float testeX = 100;
 
-        for(int i = 0; i < 10; i++) {
-            notas.add(new NotaTap(testeX, 100, "FF00FF", 1000));
-            testeX += 50;
-        }
+//        for(int i = 0; i < 10; i++) {
+//            notas.add(new NotaTap(testeX, 100, "FF00FF", 1000));
+//            testeX += 50;
+//        }
 
         for(Nota nota : notas) {
             root.getChildren().add(nota.getCircle());
