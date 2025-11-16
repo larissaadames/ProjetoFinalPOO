@@ -4,46 +4,59 @@ import java.util.*;
 
 public class HighScoreManager {
 
-    private static final HighScoreManager INSTANCE = new HighScoreManager();
+    private static HighScoreManager instance;
 
-    // chave = id da música ("allstar", "numb", "bmtl")
+    public static HighScoreManager getInstance() {
+        if (instance == null) instance = new HighScoreManager();
+        return instance;
+    }
+
+    // Mapa: songId → lista de scores
     private final Map<String, List<ScoreEntry>> scores = new HashMap<>();
 
     private HighScoreManager() {
-        // DADOS FAKE PARA TESTE INICIAL
-        addScore("allstar", "Quint", 98765);
-        addScore("allstar", "Player2", 85000);
-        addScore("allstar", "AAA", 70000);
-
-        addScore("numb", "Eu", 123456);
-        addScore("numb", "XYZ", 95000);
-
-        addScore("bmtl", "Larica", 110000);
-        addScore("bmtl", "Noob", 50000);
+        carregarDoCSV();
     }
 
-    public static HighScoreManager getInstance() {
-        return INSTANCE;
+    private void carregarDoCSV() {
+        List<ScoreEntry> lista = ScoreStorageCSV.loadScores();
+
+        for (ScoreEntry e : lista) {
+            scores.computeIfAbsent(e.getSongId(), k -> new ArrayList<>()).add(e);
+        }
+
+        ordenarTudo();
     }
 
-    public synchronized void addScore(String songId, String playerName, int score) {
-        List<ScoreEntry> list = scores.computeIfAbsent(songId, k -> new ArrayList<>());
-        list.add(new ScoreEntry(playerName, score));
-        Collections.sort(list); // usa compareTo (maior primeiro)
-        // se quiser guardar só os top 100, 50, etc., corta aqui
+    private void ordenarTudo() {
+        for (List<ScoreEntry> l : scores.values()) {
+            l.sort((a,b) -> Integer.compare(b.getScore(), a.getScore())); // maior primeiro
+        }
     }
 
-    /** Retorna uma lista imutável com todos os scores da música (ordenados) */
-    public synchronized List<ScoreEntry> getScores(String songId) {
-        return Collections.unmodifiableList(scores.getOrDefault(songId, Collections.emptyList()));
+    public List<ScoreEntry> getScores(String songId) {
+        return scores.getOrDefault(songId, new ArrayList<>());
     }
 
-    /** Versão já limitada (ex: top 10) */
-    public synchronized List<ScoreEntry> getTopScores(String songId, int limit) {
-        List<ScoreEntry> list = scores.getOrDefault(songId, Collections.emptyList());
-        int toIndex = Math.min(limit, list.size());
-        return Collections.unmodifiableList(list.subList(0, toIndex));
+    /** Adiciona score e salva no CSV */
+    public void addScore(String songId, String player, int score) {
+
+        ScoreEntry entry = new ScoreEntry(player, score, songId);
+        scores.computeIfAbsent(songId, k -> new ArrayList<>()).add(entry);
+
+        ordenarTudo();
+
+        // salvar persistência
+        salvarCSV();
     }
 
-    // Futuro: métodos load()/save() para persistir em arquivo.
+    private void salvarCSV() {
+        List<ScoreEntry> all = new ArrayList<>();
+
+        for (var list : scores.values()) {
+            all.addAll(list);
+        }
+
+        ScoreStorageCSV.saveScores(all);
+    }
 }
