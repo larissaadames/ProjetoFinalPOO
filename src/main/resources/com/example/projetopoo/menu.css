@@ -33,3 +33,15 @@
 }
 
 /* Animação elétrica aplicada por Java */
+.menu-item {
+    -fx-text-fill: #ffffff;
+    -fx-font-size: 40;
+    -fx-font-family: "Consolas";
+    -fx-effect: dropshadow(gaussian, rgba(0,0,0,0.8), 20, 0.5, 0, 0);
+}
+
+.menu-selected {
+    -fx-text-fill: #FFD54A;
+    -fx-font-size: 44;
+    -fx-effect: dropshadow(gaussian, rgba(255,213,74,0.75), 30, 0.5, 0, 0);
+}

@@ -1,40 +1,62 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.layout.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.shape.*?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
 
 <AnchorPane fx:id="root"
-            prefWidth="1920" prefHeight="1080"
+            prefHeight="1080" prefWidth="1920"
             xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
             fx:controller="com.example.projetopoo.MenuController">
 
-    <children>
+    <!-- CAMADA DO FUNDO (cor sólida ou imagem se quiser depois) -->
+    <AnchorPane style="-fx-background-color: #0d0020;">
+        <children>
 
-        <!-- camada dos raios -->
-        <Pane fx:id="lightningLayer"
-              prefWidth="1920" prefHeight="1080"
-              mouseTransparent="true"/>
+            <!-- CAMADA DOS RAIOS -->
+            <Pane fx:id="lightningLayer"
+                  prefWidth="1920"
+                  prefHeight="1080"
+                  style="-fx-background-color: transparent;"
+            />
 
-        <!-- Título -->
-        <Label fx:id="title"
-               text="POWER JORGE"
-               layoutX="620" layoutY="150"/>
+            <!-- TÍTULO CENTRAL -->
+            <Label fx:id="title"
+                   text="POWERJORGE"
+                   layoutX="560"
+                   layoutY="180"
+                   style="-fx-text-fill: white;"
+            >
+                <font>
+                    <Font size="96"/>
+                </font>
+            </Label>
 
-        <!-- Menu -->
-        <VBox fx:id="menuBox"
-              layoutX="820" layoutY="420"
-              spacing="40"
-              alignment="CENTER">
+            <!-- MENU PRINCIPAL -->
+            <VBox fx:id="menuBox"
+                  layoutX="780"
+                  layoutY="400"
+                  spacing="25"
+                  style="-fx-alignment: center;">
+                <children>
 
-            <children>
-                <Label text="START GAME" styleClass="menu-item"/>
-                <Label text="CREDITS" styleClass="menu-item"/>
-                <Label text="EXIT" styleClass="menu-item"/>
-            </children>
+                    <Label text="JOGAR"
+                           style="-fx-text-fill: white; -fx-font-size: 48;"
+                    />
+                    <Label text="CRÉDITOS"
+                           style="-fx-text-fill: white; -fx-font-size: 48;"
+                    />
+                    <Label text="SAIR"
+                           style="-fx-text-fill: white; -fx-font-size: 48;"
+                    />
 
-        </VBox>
+                </children>
+            </VBox>
 
-    </children>
+        </children>
+    </AnchorPane>
+
 </AnchorPane>
