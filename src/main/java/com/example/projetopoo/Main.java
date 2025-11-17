@@ -1,5 +1,6 @@
 package com.example.projetopoo;
 
+import com.example.projetopoo.jogo.JogoEngine;
 import javafx.application.Application;
 import javafx.fxml.FXML;
 import javafx.fxml.FXMLLoader;
@@ -19,10 +20,16 @@ import java.util.Objects;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        ControladorCenas controlador = new ControladorCenas(stage);
-        MenuController menuController = new MenuController();
-        menuController.setStage(stage);
-        ControladorCenas.carregarCena("Menu.fxml", stage);
+        JogoEngine engine = new JogoEngine("allstar");
+
+        engine.iniciar();
+
+
+//        ControladorCenas controlador = new ControladorCenas(stage);
+//        MenuController menuController = new MenuController();
+//        menuController.setStage(stage);
+//        ControladorCenas.carregarCena("Menu.fxml", stage);
+
 
 
 //        Parent rootMenu = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));

@@ -3,13 +3,14 @@ package com.example.projetopoo.jogo;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
+import java.net.URL;
 import java.util.Objects;
 
 public class JogoMusica {
     private final MediaPlayer player;
 
     public JogoMusica(String caminhoMusica) {
-        Media media = new Media(Objects.requireNonNull(getClass().getResource(caminhoMusica)).toString());
+        Media media = new Media(Objects.requireNonNull(getClass().getResource(caminhoMusica)).toExternalForm());
         player = new MediaPlayer(media);
     }
 

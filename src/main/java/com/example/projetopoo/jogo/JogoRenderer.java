@@ -1,13 +1,25 @@
 package com.example.projetopoo.jogo;
 
+import javafx.scene.Group;
+import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
+import javafx.stage.Stage;
 
 import java.util.HashMap;
 import java.util.Map;
 
 public class JogoRenderer {
+    private Stage stage;
+
+
+    public void iniciarCena(Stage stage) {
+        Group root = new Group();
+        Scene cena = new Scene(root);
+        stage.setScene(cena);
+        stage.show();
+    }
 
     private Pane root = new Pane();
     private final Map<Nota, Rectangle> mapaSprites = new HashMap<>();
@@ -30,7 +42,7 @@ public class JogoRenderer {
         return root;
     }
 
-    public void atualizarRender(JogoLogica logica) {
+    public void atualizarRender(JogoLogica logica, double tempoMusicaMs) {
 
         for (Nota nota : logica.getNotasAtivas()) {
             if (!mapaSprites.containsKey(nota)) {
@@ -51,8 +63,7 @@ public class JogoRenderer {
         });
 
         logica.getNotasAtivas().removeIf(nota -> {
-            double tempoMusicaMs;
-            if (nota.deveDespawnar(tempoMusicaMs) {
+            if (nota.deveDespawnar(tempoMusicaMs)){
                 Rectangle r = mapaSprites.remove(nota);
                 root.getChildren().remove(r);
                 return true;

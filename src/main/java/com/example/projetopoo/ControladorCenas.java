@@ -1,6 +1,5 @@
 package com.example.projetopoo;
 
-import com.example.projetopoo.jogo.Jogo;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
@@ -40,10 +39,10 @@ public class ControladorCenas {
         carregarCena(fxml, stage);
     }
 
-    public void iniciarJogo() {
-        Jogo jogo = new Jogo();
-        jogo.iniciar();
-    }
+//    public void iniciarJogo() {
+//        Jogo jogo = new Jogo();
+//        jogo.iniciar();
+//    }
 
     public Parent getRoot(){
         return root;

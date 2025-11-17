@@ -1,9 +1,5 @@
 package com.example.projetopoo.jogo;
 
-import javafx.scene.Node;
-import javafx.scene.input.KeyCode;
-import javafx.scene.shape.Circle;
-
 public abstract class Nota {
     private double x;
     private double y;
@@ -11,7 +7,7 @@ public abstract class Nota {
 
     protected static final double SCROLL_SPEED = 0.25;
     protected static final double SPAWN_OFFSET_MS = 2000;
-    protected final long momentoHit;
+    protected final double momentoHit;
     protected final int lane;
 
     protected NotaEstado estado = NotaEstado.PENDENTE;
@@ -21,7 +17,7 @@ public abstract class Nota {
     protected double windowHitOtimo = 80;
     protected double windowHitRuim = 120;
 
-    public Nota(int lane, long momentoHit){
+    public Nota(int lane, double momentoHit){
         this.momentoHit = momentoHit;
         this.lane = lane;
         this.x = getLaneX();
