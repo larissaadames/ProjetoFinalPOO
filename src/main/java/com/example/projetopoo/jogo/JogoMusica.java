@@ -3,7 +3,6 @@ package com.example.projetopoo.jogo;
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;
 
-import java.net.URL;
 import java.util.Objects;
 
 public class JogoMusica {
@@ -13,7 +12,6 @@ public class JogoMusica {
         Media media = new Media(Objects.requireNonNull(getClass().getResource(caminhoMusica)).toExternalForm());
         player = new MediaPlayer(media);
         player.setVolume(0.25);
-
     }
 
     public void play() {

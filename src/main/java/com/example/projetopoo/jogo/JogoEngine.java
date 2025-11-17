@@ -38,6 +38,7 @@ public class JogoEngine {
                 double deltaTime = timer.getDeltatime();
                 logica.atualizar(deltaTime, musica.getTempoMusicaMs());
                 renderer.atualizar(logica, musica.getTempoMusicaMs());
+                System.out.println("Ativas: " + logica.getNotasAtivas().size());
             }
         };
 

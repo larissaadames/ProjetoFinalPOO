@@ -4,20 +4,18 @@ import javafx.scene.Group;
 import javafx.scene.Scene;
 import javafx.scene.layout.Pane;
 import javafx.scene.paint.Color;
+import javafx.scene.shape.Circle;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class JogoRenderer {
     private Stage stage;
     private List<NotaSprite> sprites = new ArrayList<>();
 
     public JogoRenderer() {
-        root.setPrefSize(800, 800);
+        root.setPrefSize(1920, 1080);
 
         // linha onde a nota deve ser acertada
         Rectangle hitLine = new Rectangle(0, HIT_LINE, 800, 20);
@@ -33,10 +31,8 @@ public class JogoRenderer {
 
     private Pane root = new Pane();
 
-    private static final double NOTE_WIDTH = 80;
-    private static final double NOTE_HEIGHT = 40;
-
-    private static final double HIT_LINE = 600;
+    private static
+    final double HIT_LINE = 600;
 
 
 
@@ -45,16 +41,41 @@ public class JogoRenderer {
     }
 
     public void atualizar(JogoLogica logica, double tempoMusicaMs) {
-        for (Nota n : logica.getNotasAtivas()) {
-            boolean existe = sprites.stream().anyMatch(s -> s.nota == n);
+        List<Nota> notasAtivas = logica.getNotasAtivas();
 
-            if (!existe) {
-                Rectangle r = new Rectangle(n.getX(), n.getY(), NOTE_WIDTH, NOTE_HEIGHT);
-                r.setFill(Color.CYAN);
+            for (Nota nota : logica.getNotasAtivas()) {
 
-                sprites.add(new NotaSprite(n, r));
-                root.getChildren().add(r);
+                NotaSprite sprite = encontrarSprite(nota);
+
+                if (sprite == null) {
+                    Circle c = new Circle(40) ;
+                    c.setFill(Color.CYAN);
+
+                    sprite = new NotaSprite(nota, c);
+                    sprites.add(sprite);
+                    root.getChildren().add(c);
+                }
+
+                sprite.getCircle().setLayoutX(nota.getLaneX());
+                sprite.getCircle().setLayoutY(nota.getY());
             }
+
+            sprites.removeIf(sprite -> {
+                if (!sprite.getNota().isAtiva()) {
+                    root.getChildren().remove(sprite.getCircle());
+                    return true;
+                }
+                return false;
+            });
         }
+
+        private NotaSprite encontrarSprite(Nota nota) {
+            for (NotaSprite sprite : sprites) {
+                if(sprite.getNota() == nota) {
+                    return sprite;
+                }
+            }
+        return null;
     }
+
 }

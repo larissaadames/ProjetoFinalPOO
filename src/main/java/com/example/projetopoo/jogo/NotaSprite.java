@@ -5,8 +5,19 @@ import javafx.scene.shape.Circle;
 
 public class NotaSprite {
 
-    public NotaSprite() {
-        Nota nota;
-        Circle circle;
+    private Nota nota;
+    private Circle circle;
+
+    public NotaSprite(Nota nota, Circle circle) {
+        this.nota = nota;
+        this.circle = circle;
+    }
+
+    public Nota getNota() {
+        return nota;
+    }
+
+    public Circle getCircle() {
+        return circle;
     }
 }

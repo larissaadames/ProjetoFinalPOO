@@ -5,7 +5,7 @@ public abstract class Nota {
     private double y;
     private boolean ativa = true;
 
-    protected static final double SCROLL_SPEED = 0.25;
+    protected static final double SCROLL_SPEED = 1.0;
     protected static final double SPAWN_OFFSET_MS = 2000;
     protected final double momentoHit;
     protected final int lane;
@@ -21,7 +21,7 @@ public abstract class Nota {
         this.momentoHit = momentoHit;
         this.lane = lane;
         this.x = getLaneX();
-        this.y = -200;
+        this.y = -100;
     }
 
     public abstract void tentaHit(long momentoAtualMusicaMs);
@@ -70,7 +70,7 @@ public abstract class Nota {
             return true;
         }
 
-        if (y > 900) { // ajuste conforme seu layout
+        if (y > 1200) { // ajuste conforme seu layout
             return true;
         }
 

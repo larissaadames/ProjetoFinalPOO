@@ -2,6 +2,8 @@ package com.example.projetopoo.jogo;
 
 public class NotaTap extends Nota {
 
+    private static final double HIT_LINE = 600;
+
     public NotaTap(int lane, double momentoHit) {
         super(lane, momentoHit);
     }
@@ -18,7 +20,7 @@ public class NotaTap extends Nota {
 
         double restante = momentoHit - tempoMusicaMs;
 
-        double posY = (restante - SPAWN_OFFSET_MS) * SCROLL_SPEED;
+        double posY = HIT_LINE - (restante * SCROLL_SPEED);
 
         this.setY(posY);
     }

@@ -1,6 +1,31 @@
 {
   "notas": [
     {
+      "lane": 1,
+      "tempoMs": 2000,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 2200,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 2400,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 2500,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 2600,
+      "tipo": "TAP"
+    },
+    {
       "lane": 5,
       "tempoMs": 30839,
       "tipo": "HOLD",

@@ -11,9 +11,11 @@ public class JogoLogica {
 
     public JogoLogica(JogoChart chart) {
         this.chartNotas = chart.getNotas();
-    }
+
+            }
 
     public void atualizar(double deltaTime, double tempoMusicaMs) {
+        System.out.println("tempoMusicaMs = " + tempoMusicaMs);
         checarSpawn(tempoMusicaMs);
 
         Iterator<Nota> iterator = notasAtivas.iterator(); //iterator serve pra nao dar erro quando remover a nota enquanto itera
