@@ -26,8 +26,11 @@ public class JogoEngine {
         renderer.iniciarCena(stage);
     }
 
+
     public void iniciar() {
 
+        InputHandler inputHandler = new InputHandler(logica, renderer, musica);
+        inputHandler.ativar(renderer.getRoot().getScene());
         musica.play();
 
         AnimationTimer gameLoop = new AnimationTimer() {
@@ -37,8 +40,8 @@ public class JogoEngine {
                 timer.atualizar(agora);
                 double deltaTime = timer.getDeltatime();
                 logica.atualizar(deltaTime, musica.getTempoMusicaMs());
-                renderer.atualizar(logica, musica.getTempoMusicaMs());
-                System.out.println("Ativas: " + logica.getNotasAtivas().size());
+                renderer.atualizar(logica, musica.getTempoMusicaMs(), deltaTime);
+//               System.out.println("Ativas: " + logica.getNotasAtivas().size());
             }
         };
 

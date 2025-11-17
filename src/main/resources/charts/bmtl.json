@@ -16,6 +16,12 @@
       "tipo": "TAP"
     },
     {
+      "lane": 3,
+      "tempoMs": 2450,
+      "tipo": "HOLD",
+      "holdMs": 79
+    },
+    {
       "lane": 4,
       "tempoMs": 2500,
       "tipo": "TAP"

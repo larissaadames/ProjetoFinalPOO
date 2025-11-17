@@ -4,14 +4,16 @@ public abstract class Nota {
     private double x;
     private double y;
     private boolean ativa = true;
+    private NotaTipo tipo;
 
     protected static final double SCROLL_SPEED = 1.0;
     protected static final double SPAWN_OFFSET_MS = 2000;
+    protected static final double HIT_LINE = 850;
     protected final double momentoHit;
     protected final int lane;
 
     protected NotaEstado estado = NotaEstado.PENDENTE;
-    protected Julgamento julgamento = null;
+    protected Julgamento julgamento;
 
     protected double windowHitPerfeito = 40;
     protected double windowHitOtimo = 80;
@@ -24,10 +26,11 @@ public abstract class Nota {
         this.y = -100;
     }
 
-    public abstract void tentaHit(long momentoAtualMusicaMs);
+    public abstract void tentaHit(double momentoAtualMusicaMs);
 
     public void onHit(double momentoAtualMusicaMs) {
         if(estado != NotaEstado.PENDENTE) return;
+        ativa = false;
 
         estado = NotaEstado.ACERTO;
         double diff = Math.abs(momentoAtualMusicaMs - momentoHit);
@@ -47,7 +50,7 @@ public abstract class Nota {
         }
     }
 
-    public void atualizaErro(long momentoAtualMusicaMs) {
+    public void atualizaErro(double momentoAtualMusicaMs) {
         if(estado == NotaEstado.PENDENTE && momentoAtualMusicaMs > momentoHit + windowHitRuim){
             estado = NotaEstado.ERROU;
             julgamento = Julgamento.ERRO;
@@ -55,6 +58,9 @@ public abstract class Nota {
     }
 
     public abstract void atualizar(double deltaTime, double tempoMusicaMs);
+
+    public abstract void segurar(double tempoMusicaMs);
+
 
     public boolean deveDespawnar(double tempoMusicaMs) {
 
@@ -70,7 +76,11 @@ public abstract class Nota {
             return true;
         }
 
-        if (y > 1200) { // ajuste conforme seu layout
+        if (y > HIT_LINE + 500) {
+            return true;
+        }
+
+        if(!ativa) {
             return true;
         }
 
@@ -102,18 +112,27 @@ public abstract class Nota {
         this.x = x;
     }
 
+    public void setAtiva(boolean ativa) {this.ativa = ativa;}
+
     public double getLaneX() {
+
         return switch (lane) {
-            case 1 -> 100;
-            case 2 -> 200;
-            case 3 -> 300;
-            case 4 -> 400;
-            case 5 -> 500;
-            default -> 100;
+            case 1 -> Layout.INICIO_X;
+            case 2 -> Layout.INICIO_X + 150;
+            case 3 -> Layout.INICIO_X + 300;
+            case 4 -> Layout.INICIO_X + 450;
+            case 5 -> Layout.INICIO_X + 600;
+            default -> Layout.INICIO_X;
         };
     }
 
+    public NotaTipo getTipo() {
+        return this.tipo;
+    }
 
+    public void setTipo(NotaTipo tipo) {
+        this.tipo = tipo;
+    }
 }
 
 

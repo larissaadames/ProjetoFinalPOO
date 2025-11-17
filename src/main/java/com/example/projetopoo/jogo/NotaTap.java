@@ -2,15 +2,16 @@ package com.example.projetopoo.jogo;
 
 public class NotaTap extends Nota {
 
-    private static final double HIT_LINE = 600;
-
     public NotaTap(int lane, double momentoHit) {
         super(lane, momentoHit);
+        this.setTipo(NotaTipo.TAP);
     }
 
     @Override
-    public void tentaHit(long momentoAtualMusicaMs) {
-        if (!isAtiva()) return;
+    public void tentaHit(double momentoAtualMusicaMs) {
+        double diff = Math.abs(momentoAtualMusicaMs - momentoHit);
+
+        if (!isAtiva() || diff > windowHitRuim) return;
 
         onHit(momentoAtualMusicaMs);
     }
@@ -20,8 +21,13 @@ public class NotaTap extends Nota {
 
         double restante = momentoHit - tempoMusicaMs;
 
-        double posY = HIT_LINE - (restante * SCROLL_SPEED);
+        double posY = Nota.HIT_LINE - (restante * SCROLL_SPEED);
 
         this.setY(posY);
+    }
+
+    @Override
+    public void segurar(double tempoMusicaMs) {
+        return;
     }
 }

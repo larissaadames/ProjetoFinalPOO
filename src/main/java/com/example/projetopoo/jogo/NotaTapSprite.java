@@ -1,14 +1,13 @@
 package com.example.projetopoo.jogo;
 
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-public class NotaSprite {
+public class NotaTapSprite {
 
     private Nota nota;
     private Circle circle;
 
-    public NotaSprite(Nota nota, Circle circle) {
+    public NotaTapSprite(Nota nota, Circle circle) {
         this.nota = nota;
         this.circle = circle;
     }

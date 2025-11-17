@@ -11,11 +11,10 @@ public class JogoLogica {
 
     public JogoLogica(JogoChart chart) {
         this.chartNotas = chart.getNotas();
-
-            }
+    }
 
     public void atualizar(double deltaTime, double tempoMusicaMs) {
-        System.out.println("tempoMusicaMs = " + tempoMusicaMs);
+//        System.out.println("tempoMusicaMs = " + tempoMusicaMs);
         checarSpawn(tempoMusicaMs);
 
         Iterator<Nota> iterator = notasAtivas.iterator(); //iterator serve pra nao dar erro quando remover a nota enquanto itera
@@ -23,8 +22,10 @@ public class JogoLogica {
 
         // percorre a lista
         while (iterator.hasNext()) {
-
             Nota nota = iterator.next();
+
+            nota.atualizaErro(tempoMusicaMs);
+
             nota.atualizar(deltaTime, tempoMusicaMs);
             if (nota.deveDespawnar(tempoMusicaMs)) {
                 iterator.remove();
@@ -36,10 +37,10 @@ public class JogoLogica {
     private void checarSpawn(double tempoMusicaMs){
 
         // enquanto nao tiver acabado a chart, e ja tiver dado o tempo das notas spawnarem
-        while (proxima < chartNotas.size() && chartNotas.get(proxima).getTempoMs() <= tempoMusicaMs) {
+        while (proxima < chartNotas.size() && chartNotas.get(proxima).getTempoMs() - Nota.SPAWN_OFFSET_MS <= tempoMusicaMs) {
             JogoChartNota raw = chartNotas.get(proxima);
 
-            Nota nota = null;
+            Nota nota;
 
             switch (raw.getTipo()) {
                 case TAP:
@@ -48,8 +49,8 @@ public class JogoLogica {
                     break;
 
                 case HOLD:
-                    // nota = new NotaHold();
-                    // notasAtivas.add(nota);
+                    nota = new NotaHold(raw.getLane(), raw.getTempoMs(), raw.getDuracaoMs());
+                    notasAtivas.add(nota);
                     break;
             }
 
