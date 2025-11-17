@@ -7,68 +7,54 @@ import javafx.scene.paint.Color;
 import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 public class JogoRenderer {
     private Stage stage;
+    private List<NotaSprite> sprites = new ArrayList<>();
 
+    public JogoRenderer() {
+        root.setPrefSize(800, 800);
+
+        // linha onde a nota deve ser acertada
+        Rectangle hitLine = new Rectangle(0, HIT_LINE, 800, 20);
+        hitLine.setFill(Color.GOLDENROD);
+        root.getChildren().add(hitLine);
+    }
 
     public void iniciarCena(Stage stage) {
-        Group root = new Group();
         Scene cena = new Scene(root);
         stage.setScene(cena);
         stage.show();
     }
 
     private Pane root = new Pane();
-    private final Map<Nota, Rectangle> mapaSprites = new HashMap<>();
 
     private static final double NOTE_WIDTH = 80;
     private static final double NOTE_HEIGHT = 40;
 
     private static final double HIT_LINE = 600;
 
-    public JogoRenderer() {
-        root.setPrefSize(800, 800);
 
-        // linha onde a nota deve ser acertada
-        Rectangle hitLine = new Rectangle(0, HIT_LINE, 800, 5);
-        hitLine.setFill(Color.RED);
-        root.getChildren().add(hitLine);
-    }
 
     public Pane getRoot() {
         return root;
     }
 
-    public void atualizarRender(JogoLogica logica, double tempoMusicaMs) {
+    public void atualizar(JogoLogica logica, double tempoMusicaMs) {
+        for (Nota n : logica.getNotasAtivas()) {
+            boolean existe = sprites.stream().anyMatch(s -> s.nota == n);
 
-        for (Nota nota : logica.getNotasAtivas()) {
-            if (!mapaSprites.containsKey(nota)) {
-                Rectangle r = new Rectangle(
-                        nota.getLane() * 100 + 100,
-                        nota.getY(),
-                        NOTE_WIDTH,
-                        NOTE_HEIGHT
-                );
+            if (!existe) {
+                Rectangle r = new Rectangle(n.getX(), n.getY(), NOTE_WIDTH, NOTE_HEIGHT);
                 r.setFill(Color.CYAN);
-                mapaSprites.put(nota, r);
+
+                sprites.add(new NotaSprite(n, r));
                 root.getChildren().add(r);
             }
         }
-
-        mapaSprites.forEach((nota, rect) -> {
-            rect.setY(nota.getY());
-        });
-
-        logica.getNotasAtivas().removeIf(nota -> {
-            if (nota.deveDespawnar(tempoMusicaMs)){
-                Rectangle r = mapaSprites.remove(nota);
-                root.getChildren().remove(r);
-                return true;
-            }
-            return false;
-        });
     }
 }

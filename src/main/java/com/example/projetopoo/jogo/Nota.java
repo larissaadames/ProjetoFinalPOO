@@ -104,11 +104,11 @@ public abstract class Nota {
 
     public double getLaneX() {
         return switch (lane) {
-            case 0 -> 100;
-            case 1 -> 200;
-            case 2 -> 300;
-            case 3 -> 400;
-            case 4 -> 500;
+            case 1 -> 100;
+            case 2 -> 200;
+            case 3 -> 300;
+            case 4 -> 400;
+            case 5 -> 500;
             default -> 100;
         };
     }

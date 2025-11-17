@@ -12,6 +12,8 @@ public class JogoMusica {
     public JogoMusica(String caminhoMusica) {
         Media media = new Media(Objects.requireNonNull(getClass().getResource(caminhoMusica)).toExternalForm());
         player = new MediaPlayer(media);
+        player.setVolume(0.25);
+
     }
 
     public void play() {
