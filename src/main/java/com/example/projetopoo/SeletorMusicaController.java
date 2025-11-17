@@ -255,12 +255,29 @@ public class SeletorMusicaController {
     private void showFront(int i) {
         covers.get(i).setVisible(true);
         scoreBoxes.get(i).setVisible(false);
+
+        // restaura opacidade caso esteja 0 por erro anterior
+        scoreBoxes.get(i).setOpacity(1.0);
+
+        // título aparece
+        Label title = (Label) cards.get(i).lookup("#title" + (i + 1));
+        if (title != null) title.setVisible(true);
     }
 
     private void showBack(int i) {
         covers.get(i).setVisible(false);
         scoreBoxes.get(i).setVisible(true);
+        scoreBoxes.get(i).setOpacity(1.0);  // <-- 🔥 ESSENCIAL
+
+        // título some para liberar espaço para o placar
+        Label title = (Label) cards.get(i).lookup("#title" + (i + 1));
+        if (title != null) title.setVisible(false);
+
+        // garante que scoreBox está na frente do fundo
+        scoreBoxes.get(i).toFront();
     }
+
+
 
 
     // ============================================================

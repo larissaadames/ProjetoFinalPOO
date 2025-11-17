@@ -1,49 +1,129 @@
 package com.example.projetopoo;
 
+import java.io.*;
+import java.nio.file.*;
 import java.util.*;
 
 public class HighScoreManager {
 
-    private static final HighScoreManager INSTANCE = new HighScoreManager();
+    private static HighScoreManager instance;
 
-    // chave = id da música ("allstar", "numb", "bmtl")
     private final Map<String, List<ScoreEntry>> scores = new HashMap<>();
-
-    private HighScoreManager() {
-        // DADOS FAKE PARA TESTE INICIAL
-        addScore("allstar", "Quint", 98765);
-        addScore("allstar", "Player2", 85000);
-        addScore("allstar", "AAA", 70000);
-
-        addScore("numb", "Eu", 123456);
-        addScore("numb", "XYZ", 95000);
-
-        addScore("bmtl", "Larica", 110000);
-        addScore("bmtl", "Noob", 50000);
-    }
+    private final String basePath = "scores"; // pasta na raiz do projeto
 
     public static HighScoreManager getInstance() {
-        return INSTANCE;
+        if (instance == null)
+            instance = new HighScoreManager();
+        return instance;
     }
 
-    public synchronized void addScore(String songId, String playerName, int score) {
-        List<ScoreEntry> list = scores.computeIfAbsent(songId, k -> new ArrayList<>());
-        list.add(new ScoreEntry(playerName, score));
-        Collections.sort(list); // usa compareTo (maior primeiro)
-        // se quiser guardar só os top 100, 50, etc., corta aqui
+    private HighScoreManager() {
+        criarPastaSeNaoExiste();
+        carregarTodosOsScores();
     }
 
-    /** Retorna uma lista imutável com todos os scores da música (ordenados) */
-    public synchronized List<ScoreEntry> getScores(String songId) {
-        return Collections.unmodifiableList(scores.getOrDefault(songId, Collections.emptyList()));
+    // ===========================================
+    // CRIA A PASTA /scores SE NÃO EXISTIR
+    // ===========================================
+    private void criarPastaSeNaoExiste() {
+        try {
+            Files.createDirectories(Paths.get(basePath));
+        } catch (IOException e) {
+            System.err.println("Erro ao criar pasta de scores: " + e.getMessage());
+        }
     }
 
-    /** Versão já limitada (ex: top 10) */
-    public synchronized List<ScoreEntry> getTopScores(String songId, int limit) {
-        List<ScoreEntry> list = scores.getOrDefault(songId, Collections.emptyList());
-        int toIndex = Math.min(limit, list.size());
-        return Collections.unmodifiableList(list.subList(0, toIndex));
+    // ===========================================
+    // CARREGA TODOS OS ARQUIVOS
+    // ===========================================
+    private void carregarTodosOsScores() {
+        carregar("allstar");
+        carregar("numb");
+        carregar("bmtl");
     }
 
-    // Futuro: métodos load()/save() para persistir em arquivo.
+    // ===========================================
+    // LER UM ARQUIVO CSV
+    // ===========================================
+    private void carregar(String musicaId) {
+
+        String path = basePath + "/" + musicaId + ".csv";
+        List<ScoreEntry> lista = new ArrayList<>();
+
+        File file = new File(path);
+
+        if (!file.exists()) {
+            scores.put(musicaId, lista);
+            return;
+        }
+
+        try (BufferedReader br = new BufferedReader(new FileReader(file))) {
+
+            String linha;
+            while ((linha = br.readLine()) != null) {
+                String[] partes = linha.split(",");
+                if (partes.length == 2) {
+                    String nome = partes[0].trim();
+                    int score = Integer.parseInt(partes[1].trim());
+
+                    // COMPATÍVEL COM ScoreEntry(player, score, songId)
+                    lista.add(new ScoreEntry(nome, score, musicaId));
+                }
+            }
+
+        } catch (Exception e) {
+            System.err.println("Erro lendo CSV de " + musicaId + ": " + e.getMessage());
+        }
+
+        lista.sort(Comparator.comparingInt(ScoreEntry::getScore).reversed());
+        scores.put(musicaId, lista);
+    }
+
+    // ===========================================
+    // SALVAR PARA CSV
+    // ===========================================
+    private void salvar(String musicaId) {
+
+        String path = basePath + "/" + musicaId + ".csv";
+
+        try (PrintWriter pw = new PrintWriter(new FileWriter(path))) {
+
+            for (ScoreEntry se : scores.get(musicaId)) {
+                pw.println(se.getPlayerName() + "," + se.getScore());
+            }
+
+        } catch (Exception e) {
+            System.err.println("Erro escrevendo CSV de " + musicaId + ": " + e.getMessage());
+        }
+    }
+
+    // ===========================================
+    // ADICIONAR UM SCORE + SALVAR
+    // ===========================================
+    public void addScore(String musicaId, String player, int score) {
+
+        List<ScoreEntry> lista = scores.get(musicaId);
+
+        if (lista == null) {
+            lista = new ArrayList<>();
+            scores.put(musicaId, lista);
+        }
+
+        // AGORA COMPATÍVEL COM SEU CONSTRUTOR REAL
+        lista.add(new ScoreEntry(player, score, musicaId));
+
+        // mantém só top 10
+        lista.sort(Comparator.comparingInt(ScoreEntry::getScore).reversed());
+        if (lista.size() > 10)
+            lista.subList(10, lista.size()).clear();
+
+        salvar(musicaId);
+    }
+
+    // ===========================================
+    // OBTER SCORES (usado pelo seletor)
+    // ===========================================
+    public List<ScoreEntry> getScores(String musicaId) {
+        return scores.getOrDefault(musicaId, new ArrayList<>());
+    }
 }

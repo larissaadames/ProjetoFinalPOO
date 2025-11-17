@@ -1,26 +1,18 @@
 package com.example.projetopoo;
 
-public class ScoreEntry implements Comparable<ScoreEntry> {
+public class ScoreEntry {
 
     private final String playerName;
     private final int score;
+    private final String songId;
 
-    public ScoreEntry(String playerName, int score) {
+    public ScoreEntry(String playerName, int score, String songId) {
         this.playerName = playerName;
         this.score = score;
+        this.songId = songId;
     }
 
-    public String getPlayerName() {
-        return playerName;
-    }
-
-    public int getScore() {
-        return score;
-    }
-
-    @Override
-    public int compareTo(ScoreEntry other) {
-        // maior score primeiro
-        return Integer.compare(other.score, this.score);
-    }
+    public String getPlayerName() { return playerName; }
+    public int getScore() { return score; }
+    public String getSongId() { return songId; }
 }

@@ -63,7 +63,8 @@ public class ControladorCenas {
             );
             Parent root = loader.load();
 
-            Scene cena = new Scene(root, stageAtual.getWidth(), stageAtual.getHeight());
+            Scene cena = new Scene(root, 1920, 1080);
+
 
             // CSS DO SELETOR — ESSENCIAL
             cena.getStylesheets().add(
