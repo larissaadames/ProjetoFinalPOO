@@ -1,4 +1,4 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.logica;
 
 public enum Julgamento {
     PERFEITO,

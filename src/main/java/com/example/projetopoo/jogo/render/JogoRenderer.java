@@ -1,5 +1,12 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.render;
 
+import com.example.projetopoo.jogo.core.JogoEstado;
+import com.example.projetopoo.jogo.core.Layout;
+import com.example.projetopoo.jogo.logica.JogoLogica;
+import com.example.projetopoo.jogo.logica.Julgamento;
+import com.example.projetopoo.jogo.notas.Nota;
+import com.example.projetopoo.jogo.notas.NotaHold;
+import com.example.projetopoo.jogo.notas.NotaTap;
 import javafx.animation.FadeTransition;
 import javafx.animation.ParallelTransition;
 import javafx.animation.ScaleTransition;

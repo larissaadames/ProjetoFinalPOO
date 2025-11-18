@@ -1,6 +1,11 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.core;
 
 import com.example.projetopoo.ControladorCenas;
+import com.example.projetopoo.jogo.chart.CarregaJogoChart;
+import com.example.projetopoo.jogo.chart.JogoChart;
+import com.example.projetopoo.jogo.logica.JogoLogica;
+import com.example.projetopoo.jogo.notas.Nota;
+import com.example.projetopoo.jogo.render.JogoRenderer;
 import javafx.animation.AnimationTimer;
 import javafx.stage.Stage;
 

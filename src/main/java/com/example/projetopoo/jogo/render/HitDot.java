@@ -1,5 +1,6 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.render;
 
+import com.example.projetopoo.jogo.core.Layout;
 import javafx.animation.KeyFrame;
 import javafx.animation.KeyValue;
 import javafx.animation.Timeline;

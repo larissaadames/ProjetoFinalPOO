@@ -1,5 +1,9 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.render;
 
+import com.example.projetopoo.jogo.core.Layout;
+import com.example.projetopoo.jogo.notas.Nota;
+import com.example.projetopoo.jogo.notas.NotaHold;
+import com.example.projetopoo.jogo.notas.NotaTap;
 import javafx.scene.Group;
 import javafx.scene.Node;
 import javafx.scene.paint.Color;
@@ -18,7 +22,6 @@ public class NotaHoldSprite implements INotaSprite {
 
         double tailWidth = Layout.RAIO_CIRCLE * 1.6;
         this.tail = new Rectangle(tailWidth, 0);
-
         this.tail.setArcWidth(50);
         this.tail.setArcHeight(50);
         this.tail.setOpacity(0.6);

@@ -1,4 +1,4 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.core;
 
 import javafx.scene.media.Media;
 import javafx.scene.media.MediaPlayer;

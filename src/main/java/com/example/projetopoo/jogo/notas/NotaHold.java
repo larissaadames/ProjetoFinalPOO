@@ -1,4 +1,10 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.notas;
+
+import com.example.projetopoo.jogo.render.INotaSprite;
+import com.example.projetopoo.jogo.render.JogoRenderer;
+import com.example.projetopoo.jogo.chart.NotaTipo;
+import com.example.projetopoo.jogo.core.Layout;
+import com.example.projetopoo.jogo.logica.Julgamento;
 
 public class NotaHold extends Nota {
 

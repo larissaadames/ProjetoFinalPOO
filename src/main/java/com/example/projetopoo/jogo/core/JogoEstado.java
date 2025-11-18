@@ -1,5 +1,6 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.core;
 
+import com.example.projetopoo.jogo.logica.Julgamento;
 import javafx.beans.property.IntegerProperty;
 import javafx.beans.property.SimpleIntegerProperty;
 

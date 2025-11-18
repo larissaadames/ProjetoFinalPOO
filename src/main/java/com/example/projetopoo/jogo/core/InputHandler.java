@@ -1,5 +1,11 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.core;
 
+import com.example.projetopoo.jogo.logica.JogoLogica;
+import com.example.projetopoo.jogo.logica.Julgamento;
+import com.example.projetopoo.jogo.notas.Nota;
+import com.example.projetopoo.jogo.notas.NotaEstado;
+import com.example.projetopoo.jogo.render.HitDot;
+import com.example.projetopoo.jogo.render.JogoRenderer;
 import javafx.scene.Scene;
 import javafx.scene.input.KeyCode;
 

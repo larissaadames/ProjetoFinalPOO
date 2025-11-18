@@ -1,4 +1,4 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.chart;
 
 import java.util.List;
 

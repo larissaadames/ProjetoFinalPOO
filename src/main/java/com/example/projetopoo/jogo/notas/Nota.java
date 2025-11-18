@@ -1,4 +1,10 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.notas;
+
+import com.example.projetopoo.jogo.render.INotaSprite;
+import com.example.projetopoo.jogo.render.JogoRenderer;
+import com.example.projetopoo.jogo.chart.NotaTipo;
+import com.example.projetopoo.jogo.core.Layout;
+import com.example.projetopoo.jogo.logica.Julgamento;
 
 public abstract class Nota {
     private double x;
@@ -7,8 +13,8 @@ public abstract class Nota {
     private NotaTipo tipo;
     public abstract INotaSprite obterSprite(JogoRenderer renderer);
 
-    protected static final double SCROLL_SPEED = 1.5;
-    protected static final double SPAWN_OFFSET_MS = 2000;
+    public static final double SPAWN_OFFSET_MS = 2000;
+    public static final double SCROLL_SPEED = 1.5;
     protected final double momentoHit;
     protected final int lane;
 

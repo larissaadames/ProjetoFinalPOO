@@ -1,7 +1,10 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.render;
 
+import com.example.projetopoo.jogo.core.Layout;
+import com.example.projetopoo.jogo.notas.Nota;
+import com.example.projetopoo.jogo.notas.NotaHold;
+import com.example.projetopoo.jogo.notas.NotaTap;
 import javafx.scene.Node;
-import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
 public class NotaTapSprite implements INotaSprite {

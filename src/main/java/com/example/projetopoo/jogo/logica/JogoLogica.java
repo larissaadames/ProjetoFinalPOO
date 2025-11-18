@@ -1,4 +1,10 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.logica;
+
+import com.example.projetopoo.jogo.notas.Nota;
+import com.example.projetopoo.jogo.notas.NotaHold;
+import com.example.projetopoo.jogo.notas.NotaTap;
+import com.example.projetopoo.jogo.chart.JogoChart;
+import com.example.projetopoo.jogo.chart.JogoChartNota;
 
 import java.util.ArrayList;
 import java.util.Iterator;

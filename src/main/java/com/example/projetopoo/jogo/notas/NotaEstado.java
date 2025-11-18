@@ -1,4 +1,4 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.notas;
 
 public enum NotaEstado {
     PENDENTE,

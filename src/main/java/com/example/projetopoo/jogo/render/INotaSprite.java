@@ -1,5 +1,8 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo.jogo.render;
 
+import com.example.projetopoo.jogo.notas.Nota;
+import com.example.projetopoo.jogo.notas.NotaHold;
+import com.example.projetopoo.jogo.notas.NotaTap;
 import javafx.scene.Node;
 
 public interface INotaSprite {
