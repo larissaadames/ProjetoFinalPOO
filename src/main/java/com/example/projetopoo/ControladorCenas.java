@@ -1,5 +1,6 @@
 package com.example.projetopoo;
 
+import com.example.projetopoo.jogo.JogoEstado;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Group;
 import javafx.scene.Parent;
@@ -34,15 +35,18 @@ public class ControladorCenas {
         stage.show();
     }
 
-    public void mudarCenaPorBotao(Button botao, String fxml) throws IOException {
-        Stage stage = (Stage) botao.getScene().getWindow();
-        carregarCena(fxml, stage);
-    }
+    public static void irParaResultados(Stage stage, JogoEstado estadoFinal) throws IOException {
+        FXMLLoader loader = new FXMLLoader(ControladorCenas.class.getResource("Resultados.fxml"));
+        Parent root = loader.load();
 
-//    public void iniciarJogo() {
-//        Jogo jogo = new Jogo();
-//        jogo.iniciar();
-//    }
+        ResultadosController controller = loader.getController();
+
+        controller.setDadosFinais(estadoFinal);
+
+        Scene cena = new Scene(root);
+        stage.setScene(cena);
+        stage.show();
+    }
 
     public Parent getRoot(){
         return root;

@@ -34,13 +34,12 @@ public class JogoEngine {
     }
 
     public void finalizarJogo() {
-        if (gameLoop != null) {
-            gameLoop.stop();
-        }
+        if (gameLoop != null) gameLoop.stop();
         musica.stop();
 
         try {
-            ControladorCenas.carregarCena("Resultados.fxml", stage);
+            ControladorCenas.irParaResultados(stage, this.estado);
+
         } catch (IOException e) {
             e.printStackTrace();
         }

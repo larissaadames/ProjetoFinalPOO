@@ -22,7 +22,7 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         JogoEngine bmtl = new JogoEngine("bmtl", stage);
 
-        bmtl.iniciar(25);
+        bmtl.iniciar(210);
 
     }
 }
