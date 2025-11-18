@@ -74,4 +74,9 @@ public class NotaHold extends Nota {
     public double getDuracaoMs() {
         return this.duracaoMs;
     }
+
+    @Override
+    public INotaSprite criarSprite() {
+        return new NotaHoldSprite(this);
+    }
 }

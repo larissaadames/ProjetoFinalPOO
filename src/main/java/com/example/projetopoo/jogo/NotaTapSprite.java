@@ -1,22 +1,30 @@
 package com.example.projetopoo.jogo;
 
+import javafx.scene.Node;
+import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 
-public class NotaTapSprite {
+public class NotaTapSprite implements INotaSprite {
 
-    private Nota nota;
-    private Circle circle;
+    private final Nota nota;
+    private final Circle circle;
 
-    public NotaTapSprite(Nota nota, Circle circle) {
+    public NotaTapSprite(Nota nota) {
         this.nota = nota;
-        this.circle = circle;
+        this.circle = new Circle(Layout.RAIO_CIRCLE);
+        this.circle.setFill(Color.CYAN);
+        atualizar();
     }
 
-    public Nota getNota() {
-        return nota;
+    @Override
+    public void atualizar() {
+        circle.setLayoutX(nota.getLaneX());
+        circle.setLayoutY(nota.getY());
     }
 
-    public Circle getCircle() {
-        return circle;
-    }
+    @Override
+    public Node getNode() { return circle; }
+
+    @Override
+    public Nota getNota() { return nota; }
 }

@@ -5,6 +5,7 @@ public abstract class Nota {
     private double y;
     private boolean ativa = true;
     private NotaTipo tipo;
+    public abstract INotaSprite criarSprite();
 
     protected static final double SCROLL_SPEED = 1.0;
     protected static final double SPAWN_OFFSET_MS = 2000;

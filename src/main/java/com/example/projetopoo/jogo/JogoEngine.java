@@ -22,7 +22,6 @@ public class JogoEngine {
         chart = CarregaJogoChart.carregar(caminhoChart);
 
         this.logica = new JogoLogica(this.chart);
-        this.chart = CarregaJogoChart.carregar(caminhoChart);
         renderer.iniciarCena(stage);
     }
 
