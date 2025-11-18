@@ -28,6 +28,7 @@ public class JogoLogica {
 
             nota.atualizar(deltaTime, tempoMusicaMs);
             if (nota.deveDespawnar(tempoMusicaMs)) {
+                nota.setAtiva(false);
                 iterator.remove();
             }
         }
