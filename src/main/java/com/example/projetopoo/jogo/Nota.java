@@ -133,6 +133,11 @@ public abstract class Nota {
     public void setTipo(NotaTipo tipo) {
         this.tipo = tipo;
     }
+
+    public boolean checarTick(double tempoMusicaMs) {
+        return false;
+    }
+
 }
 
 

@@ -39,38 +39,27 @@ public class NotaHoldSprite implements INotaSprite {
 
 
     @Override
-    public void atualizar(double tempoMusicaMs) { // Recebe o tempo
-        double yHead = nota.getY(); // A cabeça já está no lugar certo (tratado pela lógica da Nota)
+    public void atualizar(double tempoMusicaMs) {
+        double yHead = nota.getY();
         double x = nota.getLaneX();
 
-        // 1. Posiciona a Cabeça
         head.setLayoutX(x);
         head.setLayoutY(yHead);
 
-        // 2. Calcula onde deveria estar o FIM (Topo) da nota no mundo
-        // Fórmula: HitLine - (TempoFinal - TempoAtual) * Velocidade
         double tempoFinal = nota.getMomentoHit() + nota.getDuracaoMs();
         double tempoRestanteVisivel = tempoFinal - tempoMusicaMs;
 
-        // O topo da cauda é calculado em relação à HitLine
         double yTailTop = Layout.HIT_LINE - (tempoRestanteVisivel * Nota.SCROLL_SPEED);
 
-        // A altura é a distância entre a Cabeça (embaixo) e o Topo (em cima)
-        // Nota: No JavaFX o Y cresce para baixo, então yHead é maior que yTailTop
         double alturaTail = yHead - yTailTop;
 
-        // Garante que não fique negativo nem gigante (bug visual)
-        // Limitamos ao tamanho máximo original para evitar glitches quando a nota nasce
         double alturaMaxima = nota.getDuracaoMs() * Nota.SCROLL_SPEED;
         alturaTail = Math.max(0, Math.min(alturaTail, alturaMaxima));
 
-        // 3. Atualiza a Cauda
         tail.setHeight(alturaTail);
         tail.setLayoutX(x - (tail.getWidth() / 2));
 
-        // A cauda desenha do topo para baixo, então posicionamos no topo calculado
-        // Mas para garantir que ela "grude" na cabeça, usamos (yHead - altura)
-        tail.setLayoutY(yHead - alturaTail + 5); // +5 para overlap visual
+        tail.setLayoutY(yHead - alturaTail + 5);
     }
 
     @Override

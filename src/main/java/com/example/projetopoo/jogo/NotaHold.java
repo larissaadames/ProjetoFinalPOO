@@ -5,8 +5,9 @@ public class NotaHold extends Nota {
     private final double duracaoMs;
     private boolean segurando = false;
     private boolean acertoRegistrado = false;
+    private static final double INTERVALO_TICK_MS = 100;
+    private double ultimoTickMs = 0;
 
-    // Essa flag é o segredo. Ela precisa ser resetada todo frame.
     private boolean recebeuInput = false;
 
     public NotaHold(int lane, double momentoHit, double duracaoMs) {
@@ -85,6 +86,17 @@ public class NotaHold extends Nota {
     @Override
     public INotaSprite criarSprite() {
         return new NotaHoldSprite(this);
+    }
+
+    @Override
+    public boolean checarTick(double tempoMusicaMs) {
+        if (segurando && (tempoMusicaMs - ultimoTickMs >= INTERVALO_TICK_MS)) {
+
+            ultimoTickMs += INTERVALO_TICK_MS;
+
+            return true;
+        }
+        return false;
     }
 
     public double getDuracaoMs() { return this.duracaoMs; }

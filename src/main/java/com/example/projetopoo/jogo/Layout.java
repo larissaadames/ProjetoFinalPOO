@@ -8,7 +8,7 @@ public class Layout {
     protected static final double LANE_SIZE = (INICIO_X + AREA_JOGO_SIZE) / 5;
     protected static final double FINAL_X = INICIO_X + AREA_JOGO_SIZE;
     protected static final double RAIO_CIRCLE = 60;
-    public static final double HIT_LINE = 850;
+    public static final double HIT_LINE = 900;
 
     public static Color getCorLane(int lane) {
         return switch (lane) {

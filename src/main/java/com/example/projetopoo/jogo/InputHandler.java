@@ -10,15 +10,17 @@ public class InputHandler {
     private final JogoLogica logica;
     private final JogoRenderer renderer;
     private final JogoMusica musica;
+    private final JogoEstado estado;
 
     // OTIMIZAÇÃO: Array primitivo em vez de HashSet<Integer>.
     // Index 0 não usado, índices 1-5 representam as lanes.
     private final boolean[] teclasPressionadas = new boolean[6];
 
-    public InputHandler(JogoLogica logica, JogoRenderer renderer, JogoMusica musica) {
+    public InputHandler(JogoLogica logica, JogoRenderer renderer, JogoMusica musica, JogoEstado estado) {
         this.logica = logica;
         this.renderer = renderer;
         this.musica = musica;
+        this.estado = estado;
     }
 
     public void ativar(Scene scene) {
@@ -58,17 +60,24 @@ public class InputHandler {
         for (Nota nota : logica.getNotasAtivas()) {
             if (nota.getLane() == lane && nota.isAtiva()) {
                 nota.tentaHit(musica.getTempoMusicaMs());
-                // Pequena otimização: Se acertou, paramos de procurar
-                if (nota.getEstado() != NotaEstado.PENDENTE && nota.getEstado() != NotaEstado.ERROU) {
+
+                if (nota.getJulgamento() != null && nota.getEstado() != NotaEstado.ERROU) {
+                    // --- AQUI ACONTECE O FEEDBACK ---
+                    Julgamento j = nota.getJulgamento();
+
+                    // 1. Atualiza pontos
+                    estado.registrarHit(j);
+
+                    // 2. Mostra na tela
+                    renderer.mostrarFeedback(j);
+
                     acerto = true;
                     break;
                 }
             }
         }
 
-        // Feedback visual nos HitDots
         List<HitDot> dots = renderer.getHitDots();
-        // Otimização: Acesso direto por índice se possível, ou loop simples
         for (int i = 0; i < dots.size(); i++) {
             HitDot dot = dots.get(i);
             if (dot.getLane() == lane) {
@@ -81,19 +90,21 @@ public class InputHandler {
     public void atualizarHolds() {
         double tempoAtual = musica.getTempoMusicaMs();
 
-        // 1. Atualiza efeitos visuais dos Dots
         List<HitDot> dots = renderer.getHitDots();
         for (int i = 0; i < dots.size(); i++) {
             HitDot dot = dots.get(i);
-            // Verifica o array de boolean diretamente
             dot.manter(teclasPressionadas[dot.getLane()]);
         }
 
-        // 2. Processa a lógica de Segurar (Hold)
         for (Nota nota : logica.getNotasAtivas()) {
             if (nota.isAtiva() && teclasPressionadas[nota.getLane()]) {
                 nota.segurar(tempoAtual);
             }
+
+            if (nota.checarTick(tempoAtual)) {
+                estado.adicionarPontosTick();
+            }
         }
+
     }
 }

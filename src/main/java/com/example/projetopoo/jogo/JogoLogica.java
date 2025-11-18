@@ -5,8 +5,9 @@ import java.util.Iterator;
 import java.util.List;
 
 public class JogoLogica {
-    private List<JogoChartNota> chartNotas;
-    private List<Nota> notasAtivas = new ArrayList<>();
+    private final List<JogoChartNota> chartNotas;
+    private final List<Nota> notasAtivas = new ArrayList<>();
+    private final List<Nota> notasFinalizadasNesteFrame = new ArrayList<>();
     private int proxima = 0;
 
     public JogoLogica(JogoChart chart) {
@@ -15,6 +16,7 @@ public class JogoLogica {
 
     public void atualizar(double deltaTime, double tempoMusicaMs) {
 //        System.out.println("tempoMusicaMs = " + tempoMusicaMs);
+        notasFinalizadasNesteFrame.clear();
         checarSpawn(tempoMusicaMs);
 
         Iterator<Nota> iterator = notasAtivas.iterator(); //iterator serve pra nao dar erro quando remover a nota enquanto itera
@@ -28,13 +30,21 @@ public class JogoLogica {
 
             nota.atualizar(deltaTime, tempoMusicaMs);
             if (nota.deveDespawnar(tempoMusicaMs)) {
+
+                if (nota.getJulgamento() != null) {
+                    notasFinalizadasNesteFrame.add(nota);
+                }
+
                 nota.setAtiva(false);
                 iterator.remove();
             }
         }
-
-
     }
+
+    public List<Nota> getNotasFinalizadasNesteFrame() {
+        return notasFinalizadasNesteFrame;
+    }
+
     private void checarSpawn(double tempoMusicaMs){
 
         // enquanto nao tiver acabado a chart, e ja tiver dado o tempo das notas spawnarem
