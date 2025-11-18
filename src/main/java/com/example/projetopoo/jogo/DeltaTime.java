@@ -1,7 +1,5 @@
 package com.example.projetopoo.jogo;
 
-import javafx.animation.AnimationTimer;
-
 public class DeltaTime {
     private double deltatime;
     private double fps;

@@ -13,6 +13,11 @@ public class NotaHold extends Nota {
 
     }
 
+    @Override
+    public NotaSprite criarSprite() {
+        return null;
+    }
+
     // tenta iniciar o hold
     @Override
     public void tentaHit(double momentoAtualMusicaMs) {
@@ -74,4 +79,6 @@ public class NotaHold extends Nota {
     public double getDuracaoMs() {
         return this.duracaoMs;
     }
+
+
 }

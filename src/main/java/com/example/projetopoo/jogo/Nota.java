@@ -1,6 +1,9 @@
 package com.example.projetopoo.jogo;
 
+import javafx.scene.Group;
+
 public abstract class Nota {
+    public abstract NotaSprite criarSprite();
     private double x;
     private double y;
     private boolean ativa = true;

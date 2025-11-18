@@ -30,4 +30,12 @@ public class NotaTap extends Nota {
     public void segurar(double tempoMusicaMs) {
         return;
     }
+
+    @Override
+    public NotaSprite criarSprite() {
+        return new NotaSpriteTap(this);
+    }
+
+
+
 }
