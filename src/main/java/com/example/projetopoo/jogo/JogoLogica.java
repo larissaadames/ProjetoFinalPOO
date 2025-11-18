@@ -41,6 +41,16 @@ public class JogoLogica {
         }
     }
 
+    public void pularParaTempo(double tempoMs) {
+        for (int i = 0; i < chartNotas.size(); i++) {
+            if (chartNotas.get(i).getTempoMs() >= tempoMs) {
+                proxima = i;
+                return;
+            }
+        }
+        proxima = chartNotas.size();
+    }
+
     public List<Nota> getNotasFinalizadasNesteFrame() {
         return notasFinalizadasNesteFrame;
     }

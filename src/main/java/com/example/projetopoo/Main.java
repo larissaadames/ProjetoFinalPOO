@@ -20,51 +20,9 @@ import java.util.Objects;
 public class Main extends Application {
     @Override
     public void start(Stage stage) throws IOException {
-        JogoEngine engine = new JogoEngine("bmtl", stage);
+        JogoEngine bmtl = new JogoEngine("bmtl", stage);
 
-        engine.iniciar();
-
-
-//        ControladorCenas controlador = new ControladorCenas(stage);
-//        MenuController menuController = new MenuController();
-//        menuController.setStage(stage);
-//        ControladorCenas.carregarCena("Menu.fxml", stage);
-
-
-
-//        Parent rootMenu = FXMLLoader.load(Objects.requireNonNull(getClass().getResource("Menu.fxml")));
-//        Scene cenaMenu = new Scene(rootMenu);
-//        stage.setScene(cenaMenu);
-//        stage.show();
-//        stage.setFullScreen(true);
-//        Button botaoJogar = new Button("JOGAR");
-//        botaoJogar.setPrefWidth(300);
-//        botaoJogar.setPrefHeight(250);
-//        botaoJogar.setLayoutX(960);
-//        botaoJogar.setLayoutY(540);
-
-
-//        Text titulo = new Text("POWERJORGE");
-
-//        rootMenu.getChildren().add(botaoJogar);
-//        rootMenu.getChildren().add(titulo);
-
-
-//        Group root = new Group();
-//        Scene cenaJogo = new Scene(root, 1920, 1080);
-//        stage.setTitle("Gameplay");
-//        stage.setFullScreen(true);
-
-//        botaoJogar.setOnAction(evento -> stage.setScene(cenaJogo) );
-//        // stage.setScene(cenaJogo);
-//
-//
-//
-//
-//        Jogo jogo = new Jogo(root);
-//        jogo.iniciar();
-
-
+        bmtl.iniciar(25);
 
     }
 }

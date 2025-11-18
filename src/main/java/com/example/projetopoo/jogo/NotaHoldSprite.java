@@ -63,6 +63,20 @@ public class NotaHoldSprite implements INotaSprite {
     }
 
     @Override
+    public void reusar(NotaHold novaNota) {
+        this.nota = novaNota;
+        Color cor = Layout.getCorLane(novaNota.getLane());
+        head.setFill(cor);
+        tail.setFill(cor);
+        atualizar(0);
+    }
+
+    @Override
+    public void reusar(NotaTap nota) {
+        throw new UnsupportedOperationException("HoldSprite não pode reusar NotaTap.");
+    }
+
+    @Override
     public Node getNode() {
         return group;
     }
@@ -70,6 +84,11 @@ public class NotaHoldSprite implements INotaSprite {
     @Override
     public Nota getNota() {
         return nota;
+    }
+
+    @Override
+    public void devolverPara(JogoRenderer renderer) {
+        renderer.reciclarHold(this);
     }
 
 }

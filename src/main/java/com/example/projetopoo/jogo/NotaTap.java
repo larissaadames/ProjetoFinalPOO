@@ -32,7 +32,8 @@ public class NotaTap extends Nota {
     }
 
     @Override
-    public INotaSprite criarSprite() {
-        return new NotaTapSprite(this);
+    public INotaSprite obterSprite(JogoRenderer renderer) {
+        return renderer.obterTapDaPool(this);
     }
+
 }

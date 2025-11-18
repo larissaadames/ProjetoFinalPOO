@@ -14,15 +14,19 @@ import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
 
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class JogoRenderer {
     private final List<HitDot> hitDots = new ArrayList<>();
+
     private final Map<Nota, INotaSprite> spritesMap = new HashMap<>();
+
+    private final Queue<NotaTapSprite> tapPool = new LinkedList<>();
+    private final Queue<NotaHoldSprite> holdPool = new LinkedList<>();
+
     private final Group root = new Group();
+    private final Group grupoNotas = new Group();
+
     private final Text textScore = new Text("000000");
     private final Text textCombo = new Text("0");
     private final Text textFeedback = new Text("");
@@ -34,8 +38,9 @@ public class JogoRenderer {
 
         Rectangle hitLine = new Rectangle(Layout.INICIO_X - 20, Layout.HIT_LINE, Layout.AREA_JOGO_SIZE, 20);
         hitLine.setFill(Color.GOLDENROD);
-        root.getChildren().add(hitLine);
 
+        root.getChildren().add(hitLine);
+        root.getChildren().add(grupoNotas);
         configurarFPS();
         criarHitDots();
 
@@ -187,33 +192,33 @@ public class JogoRenderer {
     }
 
     public void atualizar(JogoLogica logica, double tempoMusicaMs, double deltaTime, double fpsAtual) {
+        textFPS.setText("FPS: " + (int) fpsAtual);
+        if (fpsAtual < 59) textFPS.setFill(Color.RED);
+        else textFPS.setFill(Color.LIME);
 
         for (Nota nota : logica.getNotasAtivas()) {
-
-            textFPS.setText("FPS: " + (int) fpsAtual);
-
-            if (fpsAtual < 58) textFPS.setFill(Color.RED);
-            else textFPS.setFill(Color.LIME);
 
             INotaSprite sprite = spritesMap.get(nota);
 
             if (sprite == null) {
-                sprite = nota.criarSprite();
+                sprite = nota.obterSprite(this);
 
                 spritesMap.put(nota, sprite);
-                root.getChildren().add(sprite.getNode());
+
+                if (!grupoNotas.getChildren().contains(sprite.getNode())) {
+                    grupoNotas.getChildren().add(sprite.getNode());
+                }
             }
 
             sprite.atualizar(tempoMusicaMs);
         }
 
         spritesMap.entrySet().removeIf(entry -> {
-            Nota nota = entry.getKey();
             INotaSprite sprite = entry.getValue();
+            if (!sprite.getNota().isAtiva()) {
+                sprite.devolverPara(this);
 
-            if(!nota.isAtiva()) {
-                root.getChildren().remove(sprite.getNode());
-                return true;
+                return true; // Remove do mapa
             }
             return false;
         });
@@ -234,5 +239,35 @@ public class JogoRenderer {
 
     public List<HitDot> getHitDots() {
         return hitDots;
+    }
+
+    public NotaTapSprite obterTapDaPool(NotaTap nota) {
+        if (!tapPool.isEmpty()) {
+            NotaTapSprite s = tapPool.poll();
+            s.reusar(nota);
+            s.getNode().setVisible(true);
+            return s;
+        }
+        return new NotaTapSprite(nota);
+    }
+
+    public void reciclarTap(NotaTapSprite sprite) {
+        sprite.getNode().setVisible(false);
+        tapPool.add(sprite);
+    }
+
+    public NotaHoldSprite obterHoldDaPool(NotaHold nota) {
+        if (!holdPool.isEmpty()) {
+            NotaHoldSprite s = holdPool.poll();
+            s.reusar(nota);
+            s.getNode().setVisible(true);
+            return s;
+        }
+        return new NotaHoldSprite(nota);
+    }
+
+    public void reciclarHold(NotaHoldSprite sprite) {
+        sprite.getNode().setVisible(false);
+        holdPool.add(sprite);
     }
 }

@@ -6,4 +6,9 @@ public interface INotaSprite {
     void atualizar(double tempoMusicaMs);
     Node getNode();
     Nota getNota();
+
+    void reusar(NotaTap nota);
+    void reusar(NotaHold nota);
+    void devolverPara(JogoRenderer renderer);
+
 }

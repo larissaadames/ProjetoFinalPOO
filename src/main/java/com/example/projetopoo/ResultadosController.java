@@ -1,6 +1,5 @@
-package com.example.projetopoo.jogo;
+package com.example.projetopoo;
 
-import com.example.projetopoo.ControladorCenas;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;
 import javafx.stage.Stage;

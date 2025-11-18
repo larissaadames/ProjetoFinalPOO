@@ -12,7 +12,6 @@ public class InputHandler {
     private final JogoMusica musica;
     private final JogoEstado estado;
 
-    // OTIMIZAÇÃO: Array primitivo em vez de HashSet<Integer>.
     // Index 0 não usado, índices 1-5 representam as lanes.
     private final boolean[] teclasPressionadas = new boolean[6];
 
@@ -25,13 +24,14 @@ public class InputHandler {
 
     public void ativar(Scene scene) {
         scene.setOnKeyPressed(event -> {
+
             int lane = teclaParaLane(event.getCode());
             if (lane == -1) return;
 
             // Se a tecla já não estava pressionada (evita spam do evento)
             if (!teclasPressionadas[lane]) {
                 teclasPressionadas[lane] = true;
-                checarHit(lane); // TAP
+                checarHit(lane);
             }
         });
 
@@ -39,7 +39,7 @@ public class InputHandler {
             int lane = teclaParaLane(event.getCode());
             if (lane == -1) return;
 
-            teclasPressionadas[lane] = false; // Libera a tecla
+            teclasPressionadas[lane] = false;
         });
     }
 
@@ -62,13 +62,10 @@ public class InputHandler {
                 nota.tentaHit(musica.getTempoMusicaMs());
 
                 if (nota.getJulgamento() != null && nota.getEstado() != NotaEstado.ERROU) {
-                    // --- AQUI ACONTECE O FEEDBACK ---
                     Julgamento j = nota.getJulgamento();
 
-                    // 1. Atualiza pontos
                     estado.registrarHit(j);
 
-                    // 2. Mostra na tela
                     renderer.mostrarFeedback(j);
 
                     acerto = true;

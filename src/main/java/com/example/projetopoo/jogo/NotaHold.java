@@ -46,8 +46,7 @@ public class NotaHold extends Nota {
             segurando = false;
 
             if (!acertoRegistrado) {
-                estado = NotaEstado.ERROU;
-                julgamento = Julgamento.ERRO;
+                julgamento = Julgamento.OTIMO;
                 setAtiva(false);
             }
         }
@@ -84,11 +83,6 @@ public class NotaHold extends Nota {
     }
 
     @Override
-    public INotaSprite criarSprite() {
-        return new NotaHoldSprite(this);
-    }
-
-    @Override
     public boolean checarTick(double tempoMusicaMs) {
         if (segurando && (tempoMusicaMs - ultimoTickMs >= INTERVALO_TICK_MS)) {
 
@@ -100,4 +94,9 @@ public class NotaHold extends Nota {
     }
 
     public double getDuracaoMs() { return this.duracaoMs; }
+
+    @Override
+    public INotaSprite obterSprite(JogoRenderer renderer) {
+        return renderer.obterHoldDaPool(this);
+    }
 }
