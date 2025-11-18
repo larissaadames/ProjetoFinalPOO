@@ -38,6 +38,7 @@ public class JogoEngine {
             public void handle(long agora) {
                 timer.atualizar(agora);
                 double deltaTime = timer.getDeltatime();
+                inputHandler.atualizarHolds();
                 logica.atualizar(deltaTime, musica.getTempoMusicaMs());
                 renderer.atualizar(logica, musica.getTempoMusicaMs(), deltaTime);
 //               System.out.println("Ativas: " + logica.getNotasAtivas().size());

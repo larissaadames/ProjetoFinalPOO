@@ -9,7 +9,6 @@ public abstract class Nota {
 
     protected static final double SCROLL_SPEED = 1.0;
     protected static final double SPAWN_OFFSET_MS = 2000;
-    protected static final double HIT_LINE = 850;
     protected final double momentoHit;
     protected final int lane;
 
@@ -77,7 +76,7 @@ public abstract class Nota {
             return true;
         }
 
-        if (y > HIT_LINE + 500) {
+        if (y > Layout.HIT_LINE + 500) {
             return true;
         }
 

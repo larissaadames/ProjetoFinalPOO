@@ -2,28 +2,31 @@ package com.example.projetopoo.jogo;
 
 public class NotaHold extends Nota {
 
-    private final double duracaoMs; // duração da nota HOLD
-    private boolean segurando = false; // se o jogador está segurando a nota
-    private boolean acertoRegistrado = false; // se já registrou o acerto total
+    private final double duracaoMs;
+    private boolean segurando = false;
+    private boolean acertoRegistrado = false;
+
+    // Essa flag é o segredo. Ela precisa ser resetada todo frame.
+    private boolean recebeuInput = false;
 
     public NotaHold(int lane, double momentoHit, double duracaoMs) {
         super(lane, momentoHit);
         this.duracaoMs = duracaoMs;
         this.setTipo(NotaTipo.HOLD);
-
     }
 
-    // tenta iniciar o hold
     @Override
     public void tentaHit(double momentoAtualMusicaMs) {
         if (!isAtiva()) return;
 
         double diff = momentoAtualMusicaMs - momentoHit;
 
-        // só permite iniciar o hold se estiver dentro da janela de hit
         if (Math.abs(diff) <= windowHitRuim) {
             segurando = true;
-            estado = NotaEstado.ACERTO; // marca como “acerto” temporário
+            estado = NotaEstado.SEGURANDO;
+
+            // Marca que recebeu input neste frame exato
+            recebeuInput = true;
         } else if (diff > windowHitRuim) {
             estado = NotaEstado.ERROU;
             julgamento = Julgamento.ERRO;
@@ -31,52 +34,58 @@ public class NotaHold extends Nota {
     }
 
     @Override
-    public void atualizar(double deltaTime, double tempoMusicaMs) {
-        // movimento vertical da nota
-        double restante = momentoHit - tempoMusicaMs;
-        double posY = Nota.HIT_LINE - (restante * SCROLL_SPEED);
-        setY(posY);
+    public void segurar(double tempoMusicaMs) {
+        this.recebeuInput = true;
+    }
 
-        // verifica se o tempo da nota terminou
+    @Override
+    public void atualizar(double deltaTime, double tempoMusicaMs) {
+
+        if (segurando && !recebeuInput) {
+            segurando = false;
+
+            if (!acertoRegistrado) {
+                estado = NotaEstado.ERROU;
+                julgamento = Julgamento.ERRO;
+                setAtiva(false);
+            }
+        }
+
+        recebeuInput = false;
+
+        if (segurando) {
+            setY(Layout.HIT_LINE);
+        } else {
+            double restante = momentoHit - tempoMusicaMs;
+            double posY = Layout.HIT_LINE - (restante * SCROLL_SPEED);
+            setY(posY);
+        }
+
         if (tempoMusicaMs >= momentoHit + duracaoMs) {
             if (segurando) {
-                // acerto perfeito se segurou até o final
                 julgamento = Julgamento.PERFEITO;
+                estado = NotaEstado.ACERTO;
             } else if (!acertoRegistrado) {
-                // erro se soltou cedo
                 julgamento = Julgamento.ERRO;
+                estado = NotaEstado.ERROU;
             }
             this.setAtiva(false);
             acertoRegistrado = true;
         }
     }
 
-    // chamada pelo InputHandler enquanto tecla estiver pressionada
-    public void segurar(double tempoMusicaMs) {
-        if (!isAtiva()) return;
-
-        // se soltou antes do final
-        if (tempoMusicaMs > momentoHit + duracaoMs) {
-            segurando = false;
-            this.setAtiva(false);
-
-            if (!acertoRegistrado) {
-                estado = NotaEstado.ERROU;
-                julgamento = Julgamento.ERRO;
-            }
-        }
-    }
-
-    public boolean isSegurando() {
-        return segurando;
-    }
-
-    public double getDuracaoMs() {
-        return this.duracaoMs;
+    @Override
+    public boolean deveDespawnar(double tempoMusicaMs) {
+        if (estado == NotaEstado.ACERTO || estado == NotaEstado.ERROU) return true;
+        if (!isAtiva()) return true;
+        if (tempoMusicaMs > momentoHit + duracaoMs + windowHitRuim) return true;
+        return false;
     }
 
     @Override
     public INotaSprite criarSprite() {
         return new NotaHoldSprite(this);
     }
+
+    public double getDuracaoMs() { return this.duracaoMs; }
 }

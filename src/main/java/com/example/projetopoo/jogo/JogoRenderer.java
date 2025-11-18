@@ -20,7 +20,7 @@ public class JogoRenderer {
     public JogoRenderer() {
         root.resize(1920, 1080);
 
-        Rectangle hitLine = new Rectangle(Layout.INICIO_X - 20, Nota.HIT_LINE, Layout.AREA_JOGO_SIZE, 20);
+        Rectangle hitLine = new Rectangle(Layout.INICIO_X - 20, Layout.HIT_LINE, Layout.AREA_JOGO_SIZE, 20);
         hitLine.setFill(Color.GOLDENROD);
         root.getChildren().add(hitLine);
 
@@ -51,7 +51,7 @@ public class JogoRenderer {
                 root.getChildren().add(sprite.getNode());
             }
 
-            sprite.atualizar();
+            sprite.atualizar(tempoMusicaMs);
         }
 
         spritesMap.entrySet().removeIf(entry -> {

@@ -1,8 +1,9 @@
 package com.example.projetopoo.jogo;
 
 import javafx.scene.Scene;
-import java.util.HashSet;
-import java.util.Set;
+import javafx.scene.input.KeyCode;
+
+import java.util.List;
 
 public class InputHandler {
 
@@ -10,7 +11,9 @@ public class InputHandler {
     private final JogoRenderer renderer;
     private final JogoMusica musica;
 
-    private final Set<Integer> teclasSeguradas = new HashSet<>();
+    // OTIMIZAÇÃO: Array primitivo em vez de HashSet<Integer>.
+    // Index 0 não usado, índices 1-5 representam as lanes.
+    private final boolean[] teclasPressionadas = new boolean[6];
 
     public InputHandler(JogoLogica logica, JogoRenderer renderer, JogoMusica musica) {
         this.logica = logica;
@@ -23,8 +26,9 @@ public class InputHandler {
             int lane = teclaParaLane(event.getCode());
             if (lane == -1) return;
 
-            if (!teclasSeguradas.contains(lane)) {
-                teclasSeguradas.add(lane);
+            // Se a tecla já não estava pressionada (evita spam do evento)
+            if (!teclasPressionadas[lane]) {
+                teclasPressionadas[lane] = true;
                 checarHit(lane); // TAP
             }
         });
@@ -32,11 +36,12 @@ public class InputHandler {
         scene.setOnKeyReleased(event -> {
             int lane = teclaParaLane(event.getCode());
             if (lane == -1) return;
-            teclasSeguradas.remove(lane); // libera a tecla
+
+            teclasPressionadas[lane] = false; // Libera a tecla
         });
     }
 
-    private int teclaParaLane(javafx.scene.input.KeyCode code) {
+    private int teclaParaLane(KeyCode code) {
         return switch (code) {
             case D -> 1;
             case F -> 2;
@@ -53,13 +58,19 @@ public class InputHandler {
         for (Nota nota : logica.getNotasAtivas()) {
             if (nota.getLane() == lane && nota.isAtiva()) {
                 nota.tentaHit(musica.getTempoMusicaMs());
-                acerto = nota.getJulgamento() != Julgamento.ERRO;
-                break;
+                // Pequena otimização: Se acertou, paramos de procurar
+                if (nota.getEstado() != NotaEstado.PENDENTE && nota.getEstado() != NotaEstado.ERROU) {
+                    acerto = true;
+                    break;
+                }
             }
         }
 
-        // pisca HitDot
-        for (HitDot dot : renderer.getHitDots()) {
+        // Feedback visual nos HitDots
+        List<HitDot> dots = renderer.getHitDots();
+        // Otimização: Acesso direto por índice se possível, ou loop simples
+        for (int i = 0; i < dots.size(); i++) {
+            HitDot dot = dots.get(i);
             if (dot.getLane() == lane) {
                 dot.piscar(acerto);
                 break;
@@ -68,25 +79,20 @@ public class InputHandler {
     }
 
     public void atualizarHolds() {
+        double tempoAtual = musica.getTempoMusicaMs();
 
-        for (int lane : teclasSeguradas) {
-            for (HitDot dot : renderer.getHitDots()) {
-                if (dot.getLane() == lane) {
-                    dot.manter(true); // brilho constante enquanto tecla pressionada
-                }
-            }
-
-            for (Nota nota : logica.getNotasAtivas()) {
-                if (nota.getLane() == lane && nota.isAtiva()) {
-                    nota.segurar(musica.getTempoMusicaMs());
-                }
-            }
+        // 1. Atualiza efeitos visuais dos Dots
+        List<HitDot> dots = renderer.getHitDots();
+        for (int i = 0; i < dots.size(); i++) {
+            HitDot dot = dots.get(i);
+            // Verifica o array de boolean diretamente
+            dot.manter(teclasPressionadas[dot.getLane()]);
         }
 
-        // reset dots não pressionados
-        for (HitDot dot : renderer.getHitDots()) {
-            if (!teclasSeguradas.contains(dot.getLane())) {
-                dot.manter(false);
+        // 2. Processa a lógica de Segurar (Hold)
+        for (Nota nota : logica.getNotasAtivas()) {
+            if (nota.isAtiva() && teclasPressionadas[nota.getLane()]) {
+                nota.segurar(tempoAtual);
             }
         }
     }

@@ -6,18 +6,18 @@ import javafx.scene.shape.Circle;
 
 public class NotaTapSprite implements INotaSprite {
 
-    private final Nota nota;
+    private Nota nota;
     private final Circle circle;
 
     public NotaTapSprite(Nota nota) {
         this.nota = nota;
         this.circle = new Circle(Layout.RAIO_CIRCLE);
-        this.circle.setFill(Color.CYAN);
-        atualizar();
+        this.circle.setFill(Layout.getCorLane(nota.getLane()));
     }
 
     @Override
-    public void atualizar() {
+    public void atualizar(double tempoMusicaMs) {
+        // aqui nao precisa de tempo por que ele nao usa posição, mas o pai implementou por causa da hold note
         circle.setLayoutX(nota.getLaneX());
         circle.setLayoutY(nota.getY());
     }

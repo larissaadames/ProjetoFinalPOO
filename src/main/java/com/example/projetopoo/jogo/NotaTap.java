@@ -21,7 +21,7 @@ public class NotaTap extends Nota {
 
         double restante = momentoHit - tempoMusicaMs;
 
-        double posY = Nota.HIT_LINE - (restante * SCROLL_SPEED);
+        double posY = Layout.HIT_LINE - (restante * SCROLL_SPEED);
 
         this.setY(posY);
     }
