@@ -2,11 +2,8 @@ package com.example.projetopoo;
 
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
-import javafx.scene.shape.Shape;
 
-import java.awt.*;
-
-public class Nota extends ElementoJogo {
+public class Nota {
     private final float scrollSpeed;
     private final Circle circle;
     private double posX;

@@ -1,5 +1,6 @@
 package com.example.projetopoo;
 
+import com.example.projetopoo.exceptions.SongNotFoundException;
 import javafx.animation.*;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
@@ -24,10 +25,8 @@ import java.util.function.Consumer;
 
 public class SeletorMusicaController {
 
-    // --- Audio preview ---
     private MediaPlayer previewPlayer;
 
-    // --- FXML ---
     @FXML private AnchorPane root;
     @FXML private ImageView bgFire;
 
@@ -50,7 +49,6 @@ public class SeletorMusicaController {
     @FXML private Polygon arrowTop3;
     @FXML private Polygon arrowBottom3;
 
-    // --- Estruturas ---
     private List<StackPane> cards;
     private List<ImageView> covers;
     private List<VBox> scoreBoxes;
@@ -68,10 +66,6 @@ public class SeletorMusicaController {
     private Runnable onBack;
     private Consumer<Integer> onConfirm;
 
-
-    // ============================================================
-    // INIT
-    // ============================================================
     @FXML
     private void initialize() {
 
@@ -84,7 +78,6 @@ public class SeletorMusicaController {
                 new Polygon[]{arrowTop3, arrowBottom3}
         );
 
-        // --- Estado inicial ---
         for (int i = 0; i < 3; i++) {
             showFront(i);
         }
@@ -100,7 +93,6 @@ public class SeletorMusicaController {
         applyFireSoftening();
         playEntranceAnimation();
 
-        // --- Eventos ---
         Platform.runLater(() -> {
             root.requestFocus();
             root.addEventFilter(KeyEvent.KEY_PRESSED, this::handleKey);
@@ -109,14 +101,12 @@ public class SeletorMusicaController {
     }
 
 
-    // ============================================================
-    // CONTROLE DE TECLAS
-    // ============================================================
     private void handleKey(KeyEvent e) {
         switch (e.getCode()) {
             case LEFT, A -> move(-1);
             case RIGHT, D -> move(+1);
             case ENTER, SPACE -> {
+                validarMusica(index);
                 if (onConfirm != null) onConfirm.accept(index);
             }
             case ESCAPE -> {
@@ -127,16 +117,12 @@ public class SeletorMusicaController {
     }
 
 
-    // ============================================================
-    // MUDANÇA DE CARD
-    // ============================================================
     private void move(int dir) {
         int old = index;
         index = Math.max(0, Math.min(cards.size() - 1, index + dir));
 
         if (index == old) return;
 
-        // Remover highlight do card antigo
         cards.get(old).getStyleClass().remove("selected");
 
         flipToFront(old);
@@ -144,7 +130,6 @@ public class SeletorMusicaController {
 
         applyHighlight();
 
-        // Aplicar highlight ao novo card
         cards.get(index).getStyleClass().add("selected");
 
         animateBump(cards.get(index));
@@ -153,9 +138,6 @@ public class SeletorMusicaController {
     }
 
 
-    // ============================================================
-    // HIGHLIGHT
-    // ============================================================
     private void applyHighlight() {
 
         for (int i = 0; i < cards.size(); i++) {
@@ -163,16 +145,13 @@ public class SeletorMusicaController {
             StackPane card = cards.get(i);
             boolean selected = (i == index);
 
-            // Visual geral
             card.setScaleX(selected ? 1.12 : 0.92);
             card.setScaleY(selected ? 1.12 : 0.92);
             card.setOpacity(selected ? 1.0 : 0.75);
 
-            // Cursor (borda)
             Rectangle cursor = (Rectangle) card.lookup("#cursor" + (i + 1));
             if (cursor != null) cursor.setStrokeWidth(selected ? 6 : 0);
 
-            // Setas
             Polygon top = arrows.get(i)[0];
             Polygon bot = arrows.get(i)[1];
 
@@ -182,10 +161,9 @@ public class SeletorMusicaController {
     }
 
 
-    // ============================================================
-    // SCOREBOARD
-    // ============================================================
     private void updateScoreboard() {
+
+        validarMusica(index);
 
         VBox box = scoreBoxes.get(index);
 
@@ -216,9 +194,6 @@ public class SeletorMusicaController {
     }
 
 
-    // ============================================================
-    // FLIP
-    // ============================================================
     private void flipToBack(int i) {
         StackPane card = cards.get(i);
         card.setRotationAxis(Rotate.Y_AXIS);
@@ -249,17 +224,11 @@ public class SeletorMusicaController {
     }
 
 
-    // ============================================================
-    // FRONT/BACK
-    // ============================================================
     private void showFront(int i) {
         covers.get(i).setVisible(true);
         scoreBoxes.get(i).setVisible(false);
-
-        // restaura opacidade caso esteja 0 por erro anterior
         scoreBoxes.get(i).setOpacity(1.0);
 
-        // título aparece
         Label title = (Label) cards.get(i).lookup("#title" + (i + 1));
         if (title != null) title.setVisible(true);
     }
@@ -267,22 +236,15 @@ public class SeletorMusicaController {
     private void showBack(int i) {
         covers.get(i).setVisible(false);
         scoreBoxes.get(i).setVisible(true);
-        scoreBoxes.get(i).setOpacity(1.0);  // <-- 🔥 ESSENCIAL
+        scoreBoxes.get(i).setOpacity(1.0);
 
-        // título some para liberar espaço para o placar
         Label title = (Label) cards.get(i).lookup("#title" + (i + 1));
         if (title != null) title.setVisible(false);
 
-        // garante que scoreBox está na frente do fundo
         scoreBoxes.get(i).toFront();
     }
 
 
-
-
-    // ============================================================
-    // ANIMAÇÕES
-    // ============================================================
     private void animateBump(StackPane card) {
         Timeline tl = new Timeline(
                 new KeyFrame(Duration.ZERO, new KeyValue(card.scaleXProperty(), 1.12)),
@@ -291,6 +253,7 @@ public class SeletorMusicaController {
         );
         tl.play();
     }
+
 
     private void playEntranceAnimation() {
         double offset = 80;
@@ -315,6 +278,7 @@ public class SeletorMusicaController {
         }
     }
 
+
     private void startTrianglePulse() {
 
         for (Polygon[] pair : arrows) {
@@ -337,6 +301,7 @@ public class SeletorMusicaController {
         }
     }
 
+
     private void startFireBreathing() {
         Timeline tl = new Timeline(
                 new KeyFrame(Duration.ZERO,
@@ -354,21 +319,30 @@ public class SeletorMusicaController {
         tl.play();
     }
 
+
     private void applyFireSoftening() {
         bgFire.setOpacity(0.28);
         bgFire.setEffect(new GaussianBlur(6));
     }
 
 
-    // ============================================================
-    // PREVIEW
-    // ============================================================
     private void playPreview(int index) {
+
+        validarMusica(index);
 
         stopPreview(() -> {
 
             try {
-                Media media = new Media(getClass().getResource(previewPaths[index]).toExternalForm());
+                String path = previewPaths[index];
+
+                if (getClass().getResource(path) == null) {
+                    throw new SongNotFoundException("Arquivo MP3 não encontrado: " + path);
+                }
+
+                Media media = new Media(
+                        getClass().getResource(path).toExternalForm()
+                );
+
                 MediaPlayer mp = new MediaPlayer(media);
                 previewPlayer = mp;
 
@@ -410,10 +384,11 @@ public class SeletorMusicaController {
                 });
 
             } catch (Exception e) {
-                System.err.println("Erro ao tocar preview: " + e.getMessage());
+                throw new SongNotFoundException("Erro ao tocar preview: " + e.getMessage());
             }
         });
     }
+
 
     private void stopPreview(Runnable after) {
         if (previewPlayer == null) {
@@ -446,20 +421,33 @@ public class SeletorMusicaController {
     }
 
 
-    // ============================================================
-    // CALLBACKS
-    // ============================================================
     public void setOnBack(Runnable r) {
         this.onBack = () -> stopPreview(r);
     }
 
     public void setOnConfirm(Consumer<Integer> c) {
-        this.onConfirm = idx -> stopPreview(() -> c.accept(idx));
+        this.onConfirm = idx -> {
+            validarMusica(idx);
+            stopPreview(() -> c.accept(idx));
+        };
     }
 
     public void setInitialIndex(int i) {
         index = Math.max(0, Math.min(cards.size() - 1, i));
         applyHighlight();
         updateScoreboard();
+    }
+
+
+    // 🔥 NOVA FUNÇÃO — valida antes de tocar/selecionar música
+    private void validarMusica(int idx) {
+        if (idx < 0 || idx >= songIds.length)
+            throw new SongNotFoundException("Índice inválido de música: " + idx);
+
+        if (songIds[idx] == null || songIds[idx].isBlank())
+            throw new SongNotFoundException("songId vazio para índice: " + idx);
+
+        if (previewPaths[idx] == null)
+            throw new SongNotFoundException("Preview de música ausente no índice: " + idx);
     }
 }
