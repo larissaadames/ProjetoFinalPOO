@@ -7,13 +7,14 @@ import javafx.scene.shape.Rectangle;
 import javafx.stage.Stage;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 public class JogoRenderer {
     private final List<HitDot> hitDots = new ArrayList<>();
     private Stage stage;
-
-    private final List<INotaSprite> sprites = new ArrayList<>();
+    private final Map<Nota, INotaSprite> spritesMap = new HashMap<>();
     private final Group root = new Group();
 
     public JogoRenderer() {
@@ -41,20 +42,23 @@ public class JogoRenderer {
 
         for (Nota nota : logica.getNotasAtivas()) {
 
-            INotaSprite sprite = encontrarSprite(nota);
+            INotaSprite sprite = spritesMap.get(nota);
 
             if (sprite == null) {
                 sprite = nota.criarSprite();
 
-                sprites.add(sprite);
+                spritesMap.put(nota, sprite);
                 root.getChildren().add(sprite.getNode());
             }
 
             sprite.atualizar();
         }
 
-        sprites.removeIf(sprite -> {
-            if (!sprite.getNota().isAtiva()) {
+        spritesMap.entrySet().removeIf(entry -> {
+            Nota nota = entry.getKey();
+            INotaSprite sprite = entry.getValue();
+
+            if(!nota.isAtiva()) {
                 root.getChildren().remove(sprite.getNode());
                 return true;
             }
@@ -73,15 +77,6 @@ public class JogoRenderer {
             hitDots.add(dot);
             root.getChildren().add(dot.getCircle());
         }
-    }
-
-    private INotaSprite encontrarSprite(Nota nota) {
-        for (INotaSprite sprite : sprites) {
-            if(sprite.getNota() == nota) {
-                return sprite;
-            }
-        }
-        return null;
     }
 
     public List<HitDot> getHitDots() {
