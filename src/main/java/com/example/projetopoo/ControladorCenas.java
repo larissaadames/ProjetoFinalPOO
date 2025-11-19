@@ -16,6 +16,9 @@ public class ControladorCenas {
 
     private static Stage stageAtual;
 
+    // Lista de IDs de música (baseado no SeletorMusicaController: allstar, numb, bmtl)
+    private static final String[] ALL_SONG_IDS = { "allstar", "numb", "bmtl" };
+
     public static void iniciar(Stage stage) {
         stageAtual = stage;
 
@@ -24,6 +27,11 @@ public class ControladorCenas {
         stageAtual.setHeight(1080);
         stageAtual.setResizable(false);
         stageAtual.centerOnScreen();
+
+        // Adiciona o Gancho de Desligamento (Shutdown Hook) para a persistência.
+        stageAtual.setOnCloseRequest(event -> {
+            HighScoreManager.getInstance().persistAll();
+        });
 
         irParaMenu();
         stageAtual.show();
@@ -85,8 +93,11 @@ public class ControladorCenas {
 
             controller.setOnBack(ControladorCenas::irParaMenu);
 
-            // ⚠️ MANTIDO EXATAMENTE COMO VOCÊ TINHA NO CÓDIGO ORIGINAL
-            controller.setOnConfirm(i -> irParaJogo());
+            // 🌟 MUDANÇA: Agora passa o songId (String) em vez do índice (int) para o jogo.
+            controller.setOnConfirm(i -> {
+                String songId = ALL_SONG_IDS[i];
+                irParaJogo(songId); // Chama a nova versão de irParaJogo
+            });
 
             stageAtual.setScene(cena);
             Platform.runLater(() -> root.requestFocus());
@@ -96,17 +107,26 @@ public class ControladorCenas {
         }
     }
 
-    public static void irParaJogo() {
+    // 🌟 NOVO: Recebe o songId da música selecionada para iniciar a partida.
+    public static void irParaJogo(String songId) {
         try {
+            // O controller da TelaJogo.fxml deve ser adaptado para receber este songId.
             Scene cena = carregarComCSS("TelaJogo.fxml", "jogo.css");
             stageAtual.setScene(cena);
+
+            // Ao final do jogo, o TelaJogoController chamará:
+            // ControladorCenas.irParaTelaFinal(songId, scoreFinal);
+
         } catch (Exception e) {
             throw new SceneLoadException("Erro ao carregar TelaJogo.fxml", e);
         }
     }
 
-    public static void irParaTelaFinal() {
+    // 🌟 NOVO: Recebe o songId e o score para a tela de finalização/salvamento.
+    public static void irParaTelaFinal(String songId, int score) {
         try {
+            // O controller da TelaFinal.fxml será responsável por obter o nome do jogador
+            // e chamar HighScoreManager.getInstance().addScore(songId, playerName, score);
             Scene cena = carregarComCSS("TelaFinal.fxml", null);
             stageAtual.setScene(cena);
         } catch (Exception e) {
