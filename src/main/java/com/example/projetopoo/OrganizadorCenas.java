@@ -1,15 +1,20 @@
 package com.example.projetopoo;
 
-import javafx.fxml.FXML;
+import javafx.application.Platform;
+import javafx.scene.Node;
 
 public abstract class OrganizadorCenas {
 
-    // Contrato para liberar recursos (mídia, timers) ao sair da cena.
+    // Contrato para liberar recursos ao sair
     public abstract void exitSceneCleanup();
 
-    // Pode ser usado para configuração após a injeção FXML.
-    @FXML
-    public void postLoadSetup() {
-        // Metodo de convenção para setup.
+    /**
+     * Configuração padrão pós-carregamento.
+     * Garante que a raiz da cena receba o foco do teclado.
+     */
+    public void postLoadSetup(Node root) {
+        if (root != null) {
+            Platform.runLater(root::requestFocus);
+        }
     }
 }
