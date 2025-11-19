@@ -1,12 +1,14 @@
 package com.example.projetopoo;
 
 import com.example.projetopoo.jogo.core.JogoEngine;
+import com.example.projetopoo.jogo.core.JogoEstado;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.Objects;
 
 // Apenas adicionamos as EXCEPTIONS aqui.
 import com.example.projetopoo.exceptions.SceneLoadException;
@@ -110,10 +112,10 @@ public class ControladorFluxo {
     public static void irParaJogo(String songId) {
         try {
             // O controller da TelaJogo.fxml deve ser adaptado para receber este songId.
-            JogoEngine bmtl = new JogoEngine("bmtl", getStageAtual());
-            bmtl.iniciar(25);
+            JogoEngine engine = new JogoEngine(songId, getStageAtual());
+            if (Objects.equals(songId, "bmtl")) engine.iniciar(200);
+            else engine.iniciar(0);
 
-            // Ao final do jogo, o TelaJogoController chamará:
             // ControladorCenas.irParaTelaFinal(songId, scoreFinal);
 
         } catch (Exception e) {
@@ -122,14 +124,32 @@ public class ControladorFluxo {
     }
 
     // NOVO: Recebe o songId e o score para a tela de finalização/salvamento.
-    public static void irParaTelaFinal(String songId, int score) {
+    public static void irParaTelaFinal(String songId, JogoEstado estadoFinal) {
         try {
-            // O controller da TelaFinal.fxml será responsável por obter o nome do jogador
-            // e chamar HighScoreManager.getInstance().addScore(songId, playerName, score);
-            Scene cena = carregarComCSS("TelaFinal.fxml", null);
+            FXMLLoader loader = new FXMLLoader(ControladorFluxo.class.getResource("Resultados.fxml"));
+
+            if (loader.getLocation() == null) {
+                throw new SceneLoadException("FXML de Resultados não encontrado.");
+            }
+
+            Parent root = loader.load();
+
+            // Obtém o controlador e passa os dados
+            ResultadosController controller = loader.getController();
+            controller.setDadosFinais(estadoFinal);
+
+            // Opcional: Se você quiser salvar o nome da música no controller para usar no HighScore depois
+            // controller.setSongId(songId);
+
+            Scene cena = new Scene(root, stageAtual.getWidth(), stageAtual.getHeight());
+
+            // cena.getStylesheets().add();
+
             stageAtual.setScene(cena);
-        } catch (Exception e) {
-            throw new SceneLoadException("Erro ao carregar TelaFinal.fxml", e);
+
+
+        } catch (IOException e) {
+            throw new SceneLoadException("Erro ao carregar Resultados.fxml", e);
         }
     }
 
