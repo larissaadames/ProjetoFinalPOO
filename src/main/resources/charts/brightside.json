@@ -1,33 +1,6 @@
 {
   "notas": [
     {
-      "lane": 1,
-      "tempoMs": 16,
-      "tipo": "HOLD",
-      "duracaoMs": 405
-    },
-    {
-      "lane": 3,
-      "tempoMs": 218,
-      "tipo": "TAP"
-    },
-    {
-      "lane": 2,
-      "tempoMs": 421,
-      "tipo": "HOLD",
-      "duracaoMs": 405
-    },
-    {
-      "lane": 4,
-      "tempoMs": 826,
-      "tipo": "TAP"
-    },
-    {
-      "lane": 4,
-      "tempoMs": 1232,
-      "tipo": "TAP"
-    },
-    {
       "lane": 3,
       "tempoMs": 1435,
       "tipo": "HOLD",

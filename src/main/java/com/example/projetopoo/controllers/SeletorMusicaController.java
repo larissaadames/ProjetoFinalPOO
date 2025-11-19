@@ -80,7 +80,7 @@ public class SeletorMusicaController extends OrganizadorCenas {
 
     @Override
     public void exitSceneCleanup() {
-        stopPreview(() -> {});
+        stopPreview(); // Chamada direta, sem lambda
     }
 
     // ... (métodos handleKey, move, applyHighlight, updateScoreboard, flipToBack, flipToFront, showFront, showBack, animateBump, playEntranceAnimation, startTrianglePulse, startFireBreathing, applyFireSoftening permanecem iguais)
@@ -113,7 +113,10 @@ public class SeletorMusicaController extends OrganizadorCenas {
         applyHighlight();
         cards.get(index).getStyleClass().add("selected");
         animateBump(cards.get(index));
-        stopPreview(() -> playPreview(index));
+
+        // Lógica simplificada: Para o anterior e toca o novo
+        // Isso evita o delay do fade-out que causava a sobreposição
+        playPreview(index);
     }
 
     private void applyHighlight() {
@@ -252,94 +255,98 @@ public class SeletorMusicaController extends OrganizadorCenas {
 
     private void playPreview(int index) {
         validarMusica(index);
-        stopPreview(() -> {
-            try {
-                String path = previewPaths[index];
-                if (getClass().getResource(path) == null) throw new SongNotFoundException("MP3 não encontrado: " + path);
 
-                Media media = new Media(getClass().getResource(path).toExternalForm());
-                previewPlayer = new MediaPlayer(media);
-                previewPlayer.setStartTime(Duration.seconds(20));
-                previewPlayer.setStopTime(Duration.seconds(30));
-                previewPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+        // Garante que qualquer som anterior morra antes de começar um novo
+        stopPreview();
 
-                previewPlayer.setOnReady(() -> {
-                    if (previewPlayer == null) return;
+        try {
+            String path = previewPaths[index];
+            if (getClass().getResource(path) == null) throw new SongNotFoundException("MP3 não encontrado: " + path);
 
-                    previewPlayer.setVolume(0.0);
-                    previewPlayer.setAudioSpectrumNumBands(32);
-                    previewPlayer.setAudioSpectrumInterval(0.03);
-                    previewPlayer.setAudioSpectrumListener((time, dur, mags, phases) -> {
-                        double energy = 0;
-                        for (double m : mags) energy += (m + 60);
-                        energy /= mags.length;
-                        double scale = 1.0 + (energy / 140.0);
-                        double opacity = 0.25 + (energy / 300.0);
-                        Platform.runLater(() -> {
+            Media media = new Media(getClass().getResource(path).toExternalForm());
+            previewPlayer = new MediaPlayer(media);
+
+            // Começa num ponto interessante da música
+            previewPlayer.setStartTime(Duration.seconds(20));
+            previewPlayer.setStopTime(Duration.seconds(30));
+            previewPlayer.setCycleCount(MediaPlayer.INDEFINITE);
+
+            previewPlayer.setOnReady(() -> {
+                if (previewPlayer == null) return;
+
+                // Volume inicial baixo para fazer um fade-in suave
+                previewPlayer.setVolume(0.0);
+
+                // Configuração do visualizer de fogo
+                previewPlayer.setAudioSpectrumNumBands(32);
+                previewPlayer.setAudioSpectrumInterval(0.03);
+                previewPlayer.setAudioSpectrumListener((time, dur, mags, phases) -> {
+                    double energy = 0;
+                    for (double m : mags) energy += (m + 60);
+                    energy /= mags.length;
+                    double scale = 1.0 + (energy / 140.0);
+                    double opacity = 0.25 + (energy / 300.0);
+                    Platform.runLater(() -> {
+                        if(bgFire != null) {
                             bgFire.setScaleX(scale);
                             bgFire.setScaleY(scale);
                             bgFire.setOpacity(opacity);
-                        });
+                        }
                     });
-
-                    previewPlayer.play();activeFadeInTimeline = new Timeline(
-                            new KeyFrame(Duration.seconds(1), new KeyValue(previewPlayer.volumeProperty(), 0.25))
-                    );
-                    activeFadeInTimeline.play();
                 });
-            } catch (Exception e) {
-                throw new SongNotFoundException("Erro preview: " + e.getMessage());
-            }
-        });
+
+                previewPlayer.play();
+
+                // Animação de entrada (Fade In) - essa pode ficar, é agradável
+                activeFadeInTimeline = new Timeline(
+                        new KeyFrame(Duration.seconds(0.5), new KeyValue(previewPlayer.volumeProperty(), 0.25))
+                );
+                activeFadeInTimeline.play();
+            });
+
+        } catch (Exception e) {
+            throw new SongNotFoundException("Erro preview: " + e.getMessage());
+        }
     }
 
-    private void stopPreview(Runnable after) {
-
+    private void stopPreview() {
+        // 1. Para a animação de entrada se estiver rodando
         if (activeFadeInTimeline != null) {
             activeFadeInTimeline.stop();
             activeFadeInTimeline = null;
         }
 
-        if (previewPlayer == null) {
-            after.run();
-            return;
+        // 2. Para o player IMEDIATAMENTE
+        if (previewPlayer != null) {
+            previewPlayer.stop();
+            previewPlayer.dispose(); // Libera o recurso do sistema operacional
+            previewPlayer = null;
         }
 
-        MediaPlayer old = previewPlayer;
-        previewPlayer = null;
-
-        // Animação de saída
-        Timeline fade = new Timeline(new KeyFrame(Duration.seconds(0.2), new KeyValue(old.volumeProperty(), 0)));
-        fade.setOnFinished(ev -> {
-            try {
-                old.stop();
-                old.dispose(); // O dispose acontece aqui
-            } catch (Exception ignore) {}
-
-            Platform.runLater(() -> {
+        // 3. Reseta o visual do fogo
+        Platform.runLater(() -> {
+            if(bgFire != null) {
                 bgFire.setScaleX(1);
                 bgFire.setScaleY(1);
                 bgFire.setOpacity(0.28);
-            });
-            after.run();
+            }
         });
-        fade.play();
     }
 
     public void setOnBack(Runnable r) {
-        this.onBack = () -> stopPreview(() -> {
+        this.onBack = () -> {
+            stopPreview(); // Garante silêncio antes de sair
             exitSceneCleanup();
             r.run();
-        });
+        };
     }
 
     public void setOnConfirm(Consumer<Integer> c) {
         this.onConfirm = idx -> {
             validarMusica(idx);
-            stopPreview(() -> {
-                exitSceneCleanup();
-                c.accept(idx);
-            });
+            stopPreview(); // Garante silêncio antes de começar o jogo
+            exitSceneCleanup();
+            c.accept(idx);
         };
     }
 

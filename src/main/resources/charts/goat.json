@@ -1,26 +1,6 @@
 {
   "notas": [
     {
-      "lane": 4,
-      "tempoMs": 29,
-      "tipo": "TAP"
-    },
-    {
-      "lane": 3,
-      "tempoMs": 589,
-      "tipo": "TAP"
-    },
-    {
-      "lane": 1,
-      "tempoMs": 1150,
-      "tipo": "TAP"
-    },
-    {
-      "lane": 3,
-      "tempoMs": 1430,
-      "tipo": "TAP"
-    },
-    {
       "lane": 2,
       "tempoMs": 1711,
       "tipo": "TAP"

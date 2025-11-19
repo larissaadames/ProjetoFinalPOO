@@ -31,10 +31,10 @@ public class JogoEstado {
     private void atualizarMultiplicador(int comboAtual) {
         int novoMult = 1;
 
-        if (comboAtual >= 350) novoMult = 5;
-        else if (comboAtual >= 200) novoMult = 4;
-        else if (comboAtual >= 100) novoMult = 3;
-        else if (comboAtual >= 50) novoMult = 2;
+        if (comboAtual >= 200) novoMult = 5;
+        else if (comboAtual >= 100) novoMult = 4;
+        else if (comboAtual >= 50) novoMult = 3;
+        else if (comboAtual >= 25) novoMult = 2;
 
         if (novoMult != multiplicador.get()) {
             multiplicador.set(novoMult);
