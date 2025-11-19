@@ -72,6 +72,16 @@ public class ControladorFluxo {
         }
     }
 
+    public static void irParaCreditos() {
+        try {
+            // Reutiliza o CSS do menu, pois o estilo visual é o mesmo
+            Scene cena = carregarComCSS("Creditos.fxml", "menu.css");
+            stageAtual.setScene(cena);
+        } catch (Exception e) {
+            throw new SceneLoadException("Erro ao carregar Creditos.fxml", e);
+        }
+    }
+
     public static void irParaSelecaoMusicas() {
         try {
             FXMLLoader loader = new FXMLLoader(

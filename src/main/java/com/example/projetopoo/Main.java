@@ -14,9 +14,6 @@ public class Main extends Application {
     public void start(Stage stage) {
         String NOME_FONTE_8BIT = GerenciadorFontes.carregar("/Fonts/Jersey10-Regular.ttf");
         ControladorFluxo.iniciar(stage);
-
-        // JogoEngine bmtl = new JogoEngine("bmtl", stage); <- SER CHAMADO QUANDO CLICAR NA MUSICA
-        // bmtl.iniciar(25);
     }
 
     public static void main(String[] args) {
