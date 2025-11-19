@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="root"
+            prefHeight="1080" prefWidth="1920"
+            xmlns="http://javafx.com/javafx/21"
+            xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="com.example.projetopoo.MenuController">
+
+    <!-- FUNDO -->
+    <AnchorPane style="-fx-background-color: #0d0020;">
+        <children>
+
+            <!-- RAIO -->
+            <Pane fx:id="lightningLayer"
+                  prefWidth="1920"
+                  prefHeight="1080"
+                  style="-fx-background-color: transparent;"
+            />
+
+            <!-- CONTAINER CENTRAL PARA TÍTULO + MENU -->
+            <VBox spacing="80"
+                  prefWidth="1920"
+                  layoutY="180"
+                  style="-fx-alignment: top-center;">
+
+                <!-- TÍTULO -->
+                <Label fx:id="title"
+                       text="POWERJORGE"
+                       style="-fx-text-fill: white;">
+                    <font>
+                        <Font size="110"/>
+                    </font>
+                </Label>
+
+                <!-- MENU -->
+                <VBox fx:id="menuBox"
+                      spacing="35"
+                      style="-fx-alignment: center;">
+                    <children>
+
+                        <Label text="JOGAR"
+                               style="-fx-text-fill: white; -fx-font-size: 54;" />
+                        <Label text="CRÉDITOS"
+                               style="-fx-text-fill: white; -fx-font-size: 54;" />
+                        <Label text="SAIR"
+                               style="-fx-text-fill: white; -fx-font-size: 54;" />
+
+                    </children>
+                </VBox>
+            </VBox>
+
+        </children>
+    </AnchorPane>
+
+</AnchorPane>
