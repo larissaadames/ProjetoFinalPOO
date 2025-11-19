@@ -67,7 +67,7 @@ public class SeletorMusicaController extends OrganizadorCenas {
         applyFireSoftening();
         playEntranceAnimation();
 
-        // UTILIZAÇÃO DO MÉTODO DA BASE: Garante o foco
+        // UTILIZAÇÃO DO MeTODO DA BASE: Garante o foco
         postLoadSetup(root);
 
         // Configuração de eventos e preview

@@ -1,5 +1,6 @@
 package com.example.projetopoo;
 
+import com.example.projetopoo.jogo.core.JogoEngine;
 import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
@@ -91,7 +92,7 @@ public class ControladorFluxo {
 
             controller.setOnBack(ControladorFluxo::irParaMenu);
 
-            // 🌟 MUDANÇA: Agora passa o songId (String) em vez do índice (int) para o jogo.
+            //  MUDANÇA: Agora passa o songId (String) em vez do índice (int) para o jogo.
             controller.setOnConfirm(i -> {
                 String songId = ALL_SONG_IDS[i];
                 irParaJogo(songId); // Chama a nova versão de irParaJogo
@@ -105,12 +106,12 @@ public class ControladorFluxo {
         }
     }
 
-    // 🌟 NOVO: Recebe o songId da música selecionada para iniciar a partida.
+    // NOVO: Recebe o songId da música selecionada para iniciar a partida.
     public static void irParaJogo(String songId) {
         try {
             // O controller da TelaJogo.fxml deve ser adaptado para receber este songId.
-            Scene cena = carregarComCSS("TelaJogo.fxml", "jogo.css");
-            stageAtual.setScene(cena);
+            JogoEngine bmtl = new JogoEngine("bmtl", getStageAtual());
+            bmtl.iniciar(25);
 
             // Ao final do jogo, o TelaJogoController chamará:
             // ControladorCenas.irParaTelaFinal(songId, scoreFinal);
@@ -120,7 +121,7 @@ public class ControladorFluxo {
         }
     }
 
-    // 🌟 NOVO: Recebe o songId e o score para a tela de finalização/salvamento.
+    // NOVO: Recebe o songId e o score para a tela de finalização/salvamento.
     public static void irParaTelaFinal(String songId, int score) {
         try {
             // O controller da TelaFinal.fxml será responsável por obter o nome do jogador
@@ -130,5 +131,9 @@ public class ControladorFluxo {
         } catch (Exception e) {
             throw new SceneLoadException("Erro ao carregar TelaFinal.fxml", e);
         }
+    }
+
+    public static Stage getStageAtual() {
+        return stageAtual;
     }
 }

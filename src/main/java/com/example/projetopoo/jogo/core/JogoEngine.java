@@ -1,6 +1,6 @@
 package com.example.projetopoo.jogo.core;
 
-import com.example.projetopoo.ControladorCenas;
+import com.example.projetopoo.ControladorFluxo;
 import com.example.projetopoo.jogo.chart.CarregaJogoChart;
 import com.example.projetopoo.jogo.chart.JogoChart;
 import com.example.projetopoo.jogo.logica.JogoLogica;
@@ -33,22 +33,22 @@ public class JogoEngine {
         this.logica = new JogoLogica(chart);
         this.estado = new JogoEstado();
         this.renderer = new JogoRenderer(this.estado);
-        this.musica.setAcaoFimMusica(this::finalizarJogo);
+       // this.musica.setAcaoFimMusica(this::finalizarJogo);
 
         renderer.iniciarCena(stage);
     }
 
-    public void finalizarJogo() {
-        if (gameLoop != null) gameLoop.stop();
-        musica.stop();
-
-        try {
-            ControladorCenas.irParaResultados(stage, this.estado);
-
-        } catch (IOException e) {
-            e.printStackTrace();
-        }
-    }
+//    public void finalizarJogo() {
+//        if (gameLoop != null) gameLoop.stop();
+//        musica.stop();
+//
+//        try {
+//            ControladorFluxo.irParaResultados(stage, this.estado);
+//
+//        } catch (IOException e) {
+//            e.printStackTrace();
+//        }
+//    }
 
 
     public void iniciar(double offsetSegundos) {

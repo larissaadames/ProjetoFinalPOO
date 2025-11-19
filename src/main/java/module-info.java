@@ -5,7 +5,6 @@ module com.example.projetopoo {
     requires javafx.media;
     requires com.fazecast.jSerialComm;
     requires javafx.graphics;
-    requires javafx.media;
     requires com.google.gson;
 
     exports com.example.projetopoo;
