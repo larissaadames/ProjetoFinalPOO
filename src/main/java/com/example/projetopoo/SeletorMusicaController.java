@@ -85,8 +85,8 @@ public class SeletorMusicaController extends OrganizadorCenas {
 
     private void handleKey(KeyEvent e) {
         switch (e.getCode()) {
-            case LEFT, A -> move(-1);
-            case RIGHT, D -> move(+1);
+            case UP, A -> move(-1);
+            case DOWN, D -> move(+1);
             case ENTER, SPACE -> {
                 validarMusica(index);
                 if (onConfirm != null) onConfirm.accept(index);
