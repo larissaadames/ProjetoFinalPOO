@@ -27,7 +27,6 @@ public class JogoEngine {
 
 
     public JogoEngine(String nomeMusica, Stage stage) throws IOException {
-        this.nomeMusica = nomeMusica;
         this.stage = stage;
 
         String caminhoMusica = "/musics/" + nomeMusica + ".mp3";
