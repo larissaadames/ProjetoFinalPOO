@@ -21,6 +21,8 @@ public class InputHandler {
     private final JogoEstado estado;
     private double offsetMs = 0;
 
+    private Scene sceneAtual;
+
     // Index 0 não usado, índices 1-5 representam as lanes.
     private final boolean[] teclasPressionadas = new boolean[6];
 
@@ -130,5 +132,19 @@ public class InputHandler {
             }
         }
 
+    }
+
+    public void desativar() {
+        if (sceneAtual != null) {
+            // Remove os "ouvintes" da cena para parar de detectar teclado
+            sceneAtual.setOnKeyPressed(null);
+            sceneAtual.setOnKeyReleased(null);
+            sceneAtual = null; // Limpa a referência
+        }
+
+        // Reseta o estado das teclas para evitar bugs se reentrar no jogo
+        for(int i=0; i < teclasPressionadas.length; i++) {
+            teclasPressionadas[i] = false;
+        }
     }
 }

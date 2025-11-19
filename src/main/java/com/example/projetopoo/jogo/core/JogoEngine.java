@@ -9,7 +9,9 @@ import com.example.projetopoo.jogo.logica.JogoLogica;
 import com.example.projetopoo.jogo.notas.Nota;
 import com.example.projetopoo.jogo.render.JogoRenderer;
 import javafx.animation.AnimationTimer;
+import javafx.animation.PauseTransition;
 import javafx.stage.Stage;
+import javafx.util.Duration;
 
 import java.io.IOException;
 
@@ -21,12 +23,16 @@ public class JogoEngine {
     private final JogoMusica musica;
     private final JogoEstado estado;
     private final String nomeMusica;
-    private final Stage stage; // <-- não entendo pq essa porra ta cinza
+    private final Stage stage; // <-- não entendo pq ta cinza
     private double globalOffsetMs = 100;
 
     private ArduinoConexao arduino;
 
+    private AnimationTimer gameLoop;
+    private InputHandler inputHandler;
+
     public JogoEngine(String nomeMusica, Stage stage) throws IOException {
+
         this.stage = stage;
         this.nomeMusica = nomeMusica;
 
@@ -43,7 +49,6 @@ public class JogoEngine {
         this.musica.setAcaoFimMusica(this::finalizarJogo);
 
         renderer.iniciarCena(stage);
-        //this.musica.setAcaoFimMusica(this::finalizarRun);
     }
 
     public void iniciar(double offsetSegundos) {
@@ -88,17 +93,34 @@ public class JogoEngine {
                 }
 
                 renderer.atualizar(logica, tempoJogo, deltaTime, timer.getFps());
+
+
             }
         };
         gameLoop.start();
     }
 
+    public void parar() {
+
+        if (gameLoop != null) {
+            gameLoop.stop();
+        }
+
+        if (musica != null) {
+            musica.stop(); // Certifique-se que criou esse método no JogoMusica conforme instrução anterior
+        }
+
+        // 3. Remove ouvintes de teclado para não bugar o menu
+        if (inputHandler != null) {
+            inputHandler.desativar();
+        }
+
+    }
+
     private void finalizarJogo() {
 
-//        gameLoop.stop();
+       parar();
 
-        musica.stop();
-
-            ControladorFluxo.irParaTelaFinal(this.nomeMusica, this.estado);
+        ControladorFluxo.irParaTelaFinal(this.nomeMusica, this.estado);
     }
 }

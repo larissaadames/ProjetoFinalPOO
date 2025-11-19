@@ -1,6 +1,6 @@
 package com.example.projetopoo;
 
-import com.example.projetopoo.exceptions.ChartLoadException;
+import com.example.projetopoo.exceptions.ErroLoadFonteException;
 import javafx.scene.text.Font;
 import java.io.InputStream;
 
@@ -11,13 +11,13 @@ public class GerenciadorFontes {
         try (InputStream is = GerenciadorFontes.class.getResourceAsStream(caminhoRelativo)) {
 
             if (is == null) {
-                throw new ChartLoadException.ErroLoadFonteException("Arquivo de fonte não encontrado. Caminho: " + caminhoRelativo);
+                throw new ErroLoadFonteException("Arquivo de fonte não encontrado. Caminho: " + caminhoRelativo);
             }
 
             Font fontCarregada = Font.loadFont(is, 10);
 
             if (fontCarregada == null) {
-                throw new ChartLoadException.ErroLoadFonteException("Falha ao carregar a fonte. O arquivo pode estar corrompido ou o formato não é suportado: " + caminhoRelativo);
+                throw new ErroLoadFonteException("Falha ao carregar a fonte. O arquivo pode estar corrompido ou o formato não é suportado: " + caminhoRelativo);
             }
 
             String nomeInterno = fontCarregada.getName();
@@ -25,10 +25,10 @@ public class GerenciadorFontes {
 
             return nomeInterno;
 
-        } catch (ChartLoadException.ErroLoadFonteException e) {
+        } catch (ErroLoadFonteException e) {
             throw e;
         } catch (Exception e) {
-            throw new ChartLoadException.ErroLoadFonteException("Erro inesperado ao carregar fonte.", e);
+            throw new ErroLoadFonteException("Erro inesperado ao carregar fonte.", e);
         }
     }
 }

@@ -91,7 +91,9 @@ public class SeletorMusicaController extends OrganizadorCenas {
             case DOWN, RIGHT, D -> move(+1);
             case ENTER, SPACE -> {
                 validarMusica(index);
-                if (onConfirm != null) onConfirm.accept(index);
+                if (onConfirm != null) {
+                    onConfirm.accept(index);
+                }
             }
             case ESCAPE -> {
                 if (onBack != null) onBack.run();
