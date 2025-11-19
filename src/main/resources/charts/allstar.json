@@ -1,0 +1,39 @@
+{
+  "notas": [
+    {
+      "lane": 1,
+      "tempoMs": 500,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 900,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 1200,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 2000,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 2600,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 3100,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 3400,
+      "tipo": "TAP"
+    }
+  ]
+}

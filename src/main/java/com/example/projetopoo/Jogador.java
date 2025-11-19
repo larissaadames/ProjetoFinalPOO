@@ -10,7 +10,6 @@ public class Jogador {
     private LocalDateTime criadoEm;
     private LocalDateTime ultimaPartida;
     private int totalPartidas;
-
     public Jogador(String nickName, float scoreMax, int ID, LocalDateTime criadoEm, LocalDateTime ultimaPartida, int totalPartidas) {
         this.nickName = nickName;
         this.scoreMax = scoreMax;
