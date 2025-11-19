@@ -20,7 +20,8 @@ public class JogoEngine {
     private final JogoRenderer renderer;
     private final JogoMusica musica;
     private final JogoEstado estado;
-    private final Stage stage;
+    private final Stage stage; // <-- não entendo pq essa porra ta cinza
+    private double globalOffsetMs = 100;
 
     private ArduinoConexao arduino;
 
@@ -42,7 +43,7 @@ public class JogoEngine {
         //this.musica.setAcaoFimMusica(this::finalizarRun);
     }
 
-//    public void finalizarRun() {
+//    public void finalizarRun() { // <--- TEM KI ARRUMAR LOGO
 //        if (gameLoop != null) gameLoop.stop();
 //        musica.stop();
 //
@@ -57,41 +58,49 @@ public class JogoEngine {
 
     public void iniciar(double offsetSegundos) {
 
-        double offsetMs = offsetSegundos * 1000;
+        double skipIntroMs = offsetSegundos * 1000;
 
-        logica.pularParaTempo(offsetMs);
+        // 1. Prepara a lógica
+        logica.pularParaTempo(skipIntroMs);
 
+        // 2. Configura Inputs e Latência
         InputHandler inputHandler = new InputHandler(logica, renderer, musica, estado);
+        inputHandler.setOffset(globalOffsetMs);
         inputHandler.ativar(renderer.getRoot().getScene());
 
-
-        this.arduino = new ArduinoConexao(inputHandler);
+        // 3. Inicia Arduino
+        this.arduino = new ArduinoConexao(inputHandler); // <-- NÃO MEXER NESSA BRINCADEIRINHA
         this.arduino.iniciar();
 
-
-        musica.iniciarComOffset(offsetMs);
+        // 4. Inicia Música
+        musica.iniciarComOffset(skipIntroMs);
         musica.play();
 
+        // 5. Loop do Jogo (Limpo)
         AnimationTimer gameLoop = new AnimationTimer() {
-
             @Override
             public void handle(long agora) {
+                // A. Calcula tempo e delta
                 timer.atualizar(agora);
                 double deltaTime = timer.getDeltatime();
+
+                // B. Calcula tempo corrigido (Latência)
+                double tempoJogo = musica.getTempoMusicaMs() - globalOffsetMs;
+
+                // C. Atualiza Inputs (Arduino/Teclado)
                 inputHandler.atualizarHolds();
-                logica.atualizar(deltaTime, musica.getTempoMusicaMs());
+
+                // D. Atualiza Lógica e Renderização (uma vez por frame, com tempo corrigido)
+                logica.atualizar(deltaTime, tempoJogo);
 
                 for (Nota nota : logica.getNotasFinalizadasNesteFrame()) {
                     estado.registrarHit(nota.getJulgamento());
-
                     renderer.mostrarFeedback(nota.getJulgamento());
                 }
 
-                renderer.atualizar(logica, musica.getTempoMusicaMs(), deltaTime, timer.getFps());
-//               System.out.println("Ativas: " + logica.getNotasAtivas().size());
+                renderer.atualizar(logica, tempoJogo, deltaTime, timer.getFps());
             }
         };
-
         gameLoop.start();
     }
 }
