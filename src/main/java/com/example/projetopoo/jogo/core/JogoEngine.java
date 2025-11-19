@@ -1,5 +1,7 @@
 package com.example.projetopoo.jogo.core;
 
+//imports fogos🔥🔥
+import com.example.projetopoo.ArduinoConexao;
 import com.example.projetopoo.ControladorFluxo;
 import com.example.projetopoo.jogo.chart.CarregaJogoChart;
 import com.example.projetopoo.jogo.chart.JogoChart;
@@ -18,8 +20,11 @@ public class JogoEngine {
     private final JogoRenderer renderer;
     private final JogoMusica musica;
     private final JogoEstado estado;
-    private final Stage stage;
-    private AnimationTimer gameLoop;
+    private final Stage stage; // <-- não entendo pq essa porra ta cinza
+    private double globalOffsetMs = 100;
+
+    private ArduinoConexao arduino;
+
 
     public JogoEngine(String nomeMusica, Stage stage) throws IOException {
         this.stage = stage;
@@ -33,12 +38,14 @@ public class JogoEngine {
         this.logica = new JogoLogica(chart);
         this.estado = new JogoEstado();
         this.renderer = new JogoRenderer(this.estado);
-       // this.musica.setAcaoFimMusica(this::finalizarJogo);
+
+        this.musica.setAcaoFimMusica(this::finalizarJogo);
 
         renderer.iniciarCena(stage);
+        //this.musica.setAcaoFimMusica(this::finalizarRun);
     }
 
-//    public void finalizarJogo() {
+//    public void finalizarRun() { // <--- TEM KI ARRUMAR LOGO
 //        if (gameLoop != null) gameLoop.stop();
 //        musica.stop();
 //
@@ -53,36 +60,58 @@ public class JogoEngine {
 
     public void iniciar(double offsetSegundos) {
 
-        double offsetMs = offsetSegundos * 1000;
+        double skipIntroMs = offsetSegundos * 1000;
 
-        logica.pularParaTempo(offsetMs);
+        // 1. Prepara a lógica
+        logica.pularParaTempo(skipIntroMs);
 
+        // 2. Configura Inputs e Latência
         InputHandler inputHandler = new InputHandler(logica, renderer, musica, estado);
+        inputHandler.setOffset(globalOffsetMs);
         inputHandler.ativar(renderer.getRoot().getScene());
 
-        musica.iniciarComOffset(offsetMs);
+        // 3. Inicia Arduino
+        this.arduino = new ArduinoConexao(inputHandler); // <-- NÃO MEXER NESSA BRINCADEIRINHA
+        this.arduino.iniciar();
+
+        // 4. Inicia Música
+        musica.iniciarComOffset(skipIntroMs);
         musica.play();
 
+        // 5. Loop do Jogo (Limpo)
         AnimationTimer gameLoop = new AnimationTimer() {
-
             @Override
             public void handle(long agora) {
+                // A. Calcula tempo e delta
                 timer.atualizar(agora);
                 double deltaTime = timer.getDeltatime();
+
+                // B. Calcula tempo corrigido (Latência)
+                double tempoJogo = musica.getTempoMusicaMs() - globalOffsetMs;
+
+                // C. Atualiza Inputs (Arduino/Teclado)
                 inputHandler.atualizarHolds();
-                logica.atualizar(deltaTime, musica.getTempoMusicaMs());
+
+                // D. Atualiza Lógica e Renderização (uma vez por frame, com tempo corrigido)
+                logica.atualizar(deltaTime, tempoJogo);
 
                 for (Nota nota : logica.getNotasFinalizadasNesteFrame()) {
                     estado.registrarHit(nota.getJulgamento());
-
                     renderer.mostrarFeedback(nota.getJulgamento());
                 }
 
-                renderer.atualizar(logica, musica.getTempoMusicaMs(), deltaTime, timer.getFps());
-//               System.out.println("Ativas: " + logica.getNotasAtivas().size());
+                renderer.atualizar(logica, tempoJogo, deltaTime, timer.getFps());
             }
         };
-
         gameLoop.start();
+    }
+
+    private void finalizarJogo() {
+
+//        gameLoop.stop();
+
+        musica.stop();
+
+            ControladorFluxo.irParaTelaFinal(this.nomeMusica, this.estado);
     }
 }

@@ -1,5 +1,7 @@
 package com.example.projetopoo.jogo.core;
 
+
+import com.example.projetopoo.ArduinoConexao;
 import com.example.projetopoo.jogo.logica.JogoLogica;
 import com.example.projetopoo.jogo.logica.Julgamento;
 import com.example.projetopoo.jogo.notas.Nota;
@@ -17,15 +19,37 @@ public class InputHandler {
     private final JogoRenderer renderer;
     private final JogoMusica musica;
     private final JogoEstado estado;
+    private double offsetMs = 0;
 
     // Index 0 não usado, índices 1-5 representam as lanes.
     private final boolean[] teclasPressionadas = new boolean[6];
 
-    public InputHandler(JogoLogica logica, JogoRenderer renderer, JogoMusica musica, JogoEstado estado) {
+    public InputHandler(JogoLogica logica, JogoRenderer renderer, JogoMusica musica, JogoEstado estado) {//construtor kabum
         this.logica = logica;
         this.renderer = renderer;
         this.musica = musica;
         this.estado = estado;
+    }
+
+
+    public void receberInputArduino(int lane, boolean pressionado) {
+        if (lane < 1 || lane > 5) return;
+
+        if (pressionado) {
+            // Lógica de APERTAR
+            // Só ativa se já não estiver pressionada (evita repetição)
+            if (!teclasPressionadas[lane]) {
+                teclasPressionadas[lane] = true;
+                checarHit(lane);
+            }
+        } else {
+            // Lógica de SOLTAR (Faltava isso!)
+            // Quando receber o sinal de soltar ('d', 'f', etc), desliga a tecla.
+            teclasPressionadas[lane] = false;
+        }
+    }
+    public void setOffset(double offsetMs){
+        this.offsetMs = offsetMs;
     }
 
     public void ativar(Scene scene) {
@@ -63,9 +87,12 @@ public class InputHandler {
     private void checarHit(int lane) {
         boolean acerto = false;
 
+        double tempoCorrigido = musica.getTempoMusicaMs() - offsetMs;
+
         for (Nota nota : logica.getNotasAtivas()) {
             if (nota.getLane() == lane && nota.isAtiva()) {
-                nota.tentaHit(musica.getTempoMusicaMs());
+
+                nota.tentaHit(tempoCorrigido);
 
                 if (nota.getJulgamento() != null && nota.getEstado() != NotaEstado.ERROU) {
                     Julgamento j = nota.getJulgamento();
@@ -91,7 +118,7 @@ public class InputHandler {
     }
 
     public void atualizarHolds() {
-        double tempoAtual = musica.getTempoMusicaMs();
+        double tempoAtual = musica.getTempoMusicaMs() - offsetMs;
 
         List<HitDot> dots = renderer.getHitDots();
         for (int i = 0; i < dots.size(); i++) {
