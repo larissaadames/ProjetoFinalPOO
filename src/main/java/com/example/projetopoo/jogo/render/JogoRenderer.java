@@ -65,7 +65,7 @@ public class JogoRenderer {
 
     private void configurarFPS() {
         // Tente usar a fonte carregada se existir, senão usa padrão
-        textFPS.setFont(Font.font("8BitPusab", FontWeight.BOLD, 20));
+        textFPS.setFont(Font.font("Jersey 10 Regular", FontWeight.BOLD, 20));
         textFPS.setFill(Color.LIME);
         textFPS.setX(10);
         textFPS.setY(30);
@@ -74,14 +74,14 @@ public class JogoRenderer {
 
     private void configurarInterface(JogoEstado estado) {
         // 1. Placar
-        textScore.setFont(Font.font("Consolas", FontWeight.BOLD, 40));
+        textScore.setFont(Font.font("Jersey 10 Regular", FontWeight.BOLD, 40));
         textScore.setFill(Color.WHITE);
         textScore.setX(1600);
         textScore.setY(100);
         textScore.textProperty().bind(estado.scoreProperty().asString("%06d"));
 
         // 2. Combo
-        textCombo.setFont(Font.font("Verdana", FontWeight.BOLD, 60));
+        textCombo.setFont(Font.font("Jersey 10 Regular", FontWeight.BOLD, 60));
         textCombo.setFill(Color.WHITE);
         textCombo.setX(200);
         textCombo.setY(500);
@@ -95,7 +95,7 @@ public class JogoRenderer {
         });
 
         // 3. Feedback
-        textFeedback.setFont(Font.font("Impact", 80));
+        textFeedback.setFont(Font.font("Jersey 10 Regular", 80));
         textFeedback.setStroke(Color.BLACK);
         textFeedback.setStrokeWidth(2);
         textFeedback.setX(Layout.INICIO_X + 200);
@@ -103,7 +103,7 @@ public class JogoRenderer {
         textFeedback.setOpacity(0);
 
         // 4. Multiplicador
-        textMultiplicador.setFont(Font.font("Impact", 50));
+        textMultiplicador.setFont(Font.font("Jersey 10 Regular", 50));
         textMultiplicador.setFill(Color.WHITE);
         textMultiplicador.setX(1600);
         textMultiplicador.setY(160);
@@ -211,7 +211,7 @@ public class JogoRenderer {
     private void configurarImageViewEfeito() {
         try {
             // Certifique-se que a imagem existe nesse caminho!
-            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/Images/polyphia.jpg")));
+            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/projetopoo/Images/balacobaco.jpg")));
             imageViewEfeito.setImage(image);
 
             imageViewEfeito.setFitWidth(300); // Aumentei um pouco para destacar

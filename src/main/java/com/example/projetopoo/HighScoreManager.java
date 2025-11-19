@@ -14,7 +14,7 @@ public class HighScoreManager {
 
     private static final HighScoreManager INSTANCE = new HighScoreManager();
 
-    // MUDANÇA 1: Definir apenas o nome do arquivo como String estática
+    // 1: Definir apenas o nome do arquivo como String estática
     private static final String SCORES_FILENAME = "highscores.csv";
 
     // chave = id da música ("allstar", "numb", "bmtl")
@@ -82,7 +82,7 @@ public class HighScoreManager {
 
     // Salva todos os scores no arquivo CSV.
     private synchronized void saveScores() {
-        // MUDANÇA 3: Recria o objeto Path
+
         Path scoresFile = Paths.get(SCORES_FILENAME);
         List<String> lines = new ArrayList<>();
 
@@ -142,7 +142,6 @@ public class HighScoreManager {
     // Metodo público para forçar o salvamento ao sair da aplicação.
     public synchronized void persistAll() {
         saveScores();
-        // Opcional: apenas para debug/confirmação
         System.out.println("Persistência final concluída.");
     }
 
