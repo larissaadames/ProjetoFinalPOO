@@ -113,7 +113,7 @@ public class ControladorFluxo {
         try {
             // O controller da TelaJogo.fxml deve ser adaptado para receber este songId.
             JogoEngine engine = new JogoEngine(songId, getStageAtual());
-            if (Objects.equals(songId, "bmtl")) engine.iniciar(200);
+            if (Objects.equals(songId, "bmtl")) engine.iniciar(220);
             else engine.iniciar(0);
 
             // ControladorCenas.irParaTelaFinal(songId, scoreFinal);
@@ -134,19 +134,18 @@ public class ControladorFluxo {
 
             Parent root = loader.load();
 
-            // Obtém o controlador e passa os dados
+            // Pega o controlador da tela que acabamos de carregar
             ResultadosController controller = loader.getController();
-            controller.setDadosFinais(estadoFinal);
 
-            // Opcional: Se você quiser salvar o nome da música no controller para usar no HighScore depois
-            // controller.setSongId(songId);
+            controller.setDadosFinais(songId, estadoFinal);
 
             Scene cena = new Scene(root, stageAtual.getWidth(), stageAtual.getHeight());
 
-            // cena.getStylesheets().add();
+            // Se tiver CSS de resultados, adicione aqui:
+            // cena.getStylesheets().add(ControladorFluxo.class.getResource("seletor.css").toExternalForm());
 
             stageAtual.setScene(cena);
-
+            Platform.runLater(root::requestFocus);
 
         } catch (IOException e) {
             throw new SceneLoadException("Erro ao carregar Resultados.fxml", e);

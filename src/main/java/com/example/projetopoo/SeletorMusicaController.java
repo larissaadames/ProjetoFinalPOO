@@ -25,6 +25,7 @@ import java.util.function.Consumer;
 public class SeletorMusicaController extends OrganizadorCenas {
 
     private MediaPlayer previewPlayer;
+    private Timeline activeFadeInTimeline;
 
     @FXML private AnchorPane root;
     @FXML private ImageView bgFire;
@@ -284,15 +285,28 @@ public class SeletorMusicaController extends OrganizadorCenas {
     }
 
     private void stopPreview(Runnable after) {
+
+        if (activeFadeInTimeline != null) {
+            activeFadeInTimeline.stop();
+            activeFadeInTimeline = null;
+        }
+
         if (previewPlayer == null) {
             after.run();
             return;
         }
+
         MediaPlayer old = previewPlayer;
         previewPlayer = null;
+
+        // Animação de saída
         Timeline fade = new Timeline(new KeyFrame(Duration.seconds(0.2), new KeyValue(old.volumeProperty(), 0)));
         fade.setOnFinished(ev -> {
-            try { old.stop(); old.dispose(); } catch (Exception ignore) {}
+            try {
+                old.stop();
+                old.dispose(); // O dispose acontece aqui
+            } catch (Exception ignore) {}
+
             Platform.runLater(() -> {
                 bgFire.setScaleX(1);
                 bgFire.setScaleY(1);
