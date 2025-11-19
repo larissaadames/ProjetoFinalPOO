@@ -95,12 +95,6 @@ public class InputHandler {
                 nota.tentaHit(tempoCorrigido);
 
                 if (nota.getJulgamento() != null && nota.getEstado() != NotaEstado.ERROU) {
-                    Julgamento j = nota.getJulgamento();
-
-                    estado.registrarHit(j);
-
-                    renderer.mostrarFeedback(j);
-
                     acerto = true;
                     break;
                 }

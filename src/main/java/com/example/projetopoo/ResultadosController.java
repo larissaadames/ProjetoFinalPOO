@@ -26,7 +26,7 @@ public class ResultadosController {
 
     @FXML
     public void initialize() {
-        // Configura o botão para chamar o método de salvar
+        // Configura o botão para chamar o metodo de salvar
         botaoMenu.setOnAction(actionEvent -> salvarEVoltar());
 
         // Limita o tamanho do texto

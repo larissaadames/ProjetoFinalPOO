@@ -26,7 +26,6 @@ public class JogoEngine {
 
     private ArduinoConexao arduino;
 
-
     public JogoEngine(String nomeMusica, Stage stage) throws IOException {
         this.stage = stage;
         this.nomeMusica = nomeMusica;
@@ -46,25 +45,6 @@ public class JogoEngine {
         renderer.iniciarCena(stage);
         //this.musica.setAcaoFimMusica(this::finalizarRun);
     }
-
-  //  public void finalizarRun() { // <--- TEM KI ARRUMAR LOGO
-//        if (gameLoop != null) gameLoop.stop();
-//        musica.stop();
-//
-//        try {
-//            ControladorFluxo.irParaResultados(stage, this.estado);
-//
-//        } catch (IOException e) {
-//            e.printStackTrace();
-//        }
-//        ArduinoConexao.getInstance().setInputHandler(null);
-//        try{
-//            ControladorFluxo.irParaResultados(stage, this.estado);
-//        } catch (Exception e){
-////            e.printStackTrace();
-//            }
-//    }
-
 
     public void iniciar(double offsetSegundos) {
 
