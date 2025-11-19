@@ -21,7 +21,7 @@ public class ResultadosController {
     private JogoEstado estadoFinal;
     private String songId;
 
-    private static final int MAX_LIMITE_CARACTERES = 12; // 15 pode quebrar o layout do CSV se for muito longo
+    private static final int MAX_LIMITE_CARACTERES = 12;
     private static final int MIN_LIMITE_CARACTERES = 3;
 
     @FXML
@@ -35,16 +35,19 @@ public class ResultadosController {
 
     // Chamado pelo ControladorFluxo ao abrir a tela
     public void setDadosFinais(String songId, JogoEstado estado) {
-        this.songId = this.songId;
+        // CORREÇÃO AQUI: Atribuir o parâmetro 'songId' ao atributo da classe 'this.songId'
+        this.songId = songId;
         this.estadoFinal = estado;
 
         // Atualiza a interface com os valores reais
-        textScore.setText("Pontuação: " + estado.scoreProperty().get());
-        textMaxCombo.setText("Maior Combo: " + estado.getMaxCombo());
-        textPerfeito.setText("PERFEITO: " + estado.getAcertosPerfeito());
-        textOtimo.setText("ÓTIMO: " + estado.getAcertosOtimo());
-        textRuim.setText("RUIM: " + estado.getAcertosRuim());
-        textErro.setText("ERROU: " + estado.getAcertosErro());
+        if (estado != null) {
+            textScore.setText("Pontuação: " + estado.scoreProperty().get());
+            textMaxCombo.setText("Maior Combo: " + estado.getMaxCombo());
+            textPerfeito.setText("PERFEITO: " + estado.getAcertosPerfeito());
+            textOtimo.setText("ÓTIMO: " + estado.getAcertosOtimo());
+            textRuim.setText("RUIM: " + estado.getAcertosRuim());
+            textErro.setText("ERROU: " + estado.getAcertosErro());
+        }
     }
 
     private void salvarEVoltar() {
@@ -57,14 +60,18 @@ public class ResultadosController {
             return;
         }
 
-        // 2. Salvar no HighScoreManager
+        // 2. Salvar no HighScoreManager (CSV)
         if (estadoFinal != null && songId != null) {
             // Pega a pontuação final do estado
             int scoreFinal = estadoFinal.scoreProperty().get();
 
-            // Chama o Singleton para salvar no CSV/Memória
+            // Chama o Singleton para salvar no arquivo highscores.csv
+            // O HighScoreManager já tem a lógica de leitura/escrita pronta.
             HighScoreManager.getInstance().addScore(songId, nome, scoreFinal);
-            System.out.println("Score salvo: " + nome + " - " + scoreFinal + "pts em " + songId);
+
+            System.out.println("Score salvo com sucesso: " + nome + " | " + scoreFinal + " | Música: " + songId);
+        } else {
+            System.err.println("Erro ao salvar: songId ou estadoFinal nulos.");
         }
 
         // 3. Voltar para o Menu
