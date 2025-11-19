@@ -127,7 +127,7 @@ public class ControladorFluxo {
         try {
             // O controller da TelaJogo.fxml deve ser adaptado para receber este songId.
             JogoEngine engine = new JogoEngine(songId, getStageAtual());
-            if (Objects.equals(songId, "bmtl")) engine.iniciar(1000);
+            if (Objects.equals(songId, "bmtl")) engine.iniciar(25);
             else engine.iniciar(0);
 
             // Ao final do jogo, o TelaJogoController chamará:
