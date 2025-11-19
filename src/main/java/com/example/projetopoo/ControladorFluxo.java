@@ -34,6 +34,8 @@ public class ControladorFluxo {
             HighScoreManager.getInstance().persistAll();
         });
 
+        ArduinoConexao.getInstance().iniciar();
+
         irParaMenu();
         stageAtual.show();
     }
