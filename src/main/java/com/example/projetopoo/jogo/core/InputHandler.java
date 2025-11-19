@@ -1,5 +1,7 @@
 package com.example.projetopoo.jogo.core;
 
+
+import com.example.projetopoo.ArduinoConexao;
 import com.example.projetopoo.jogo.logica.JogoLogica;
 import com.example.projetopoo.jogo.logica.Julgamento;
 import com.example.projetopoo.jogo.notas.Nota;
@@ -26,6 +28,20 @@ public class InputHandler {
         this.renderer = renderer;
         this.musica = musica;
         this.estado = estado;
+    }
+
+    public void receberInputArduino(int lane, boolean pressionado){
+        if (lane < 1 || lane > 5) return;
+
+        if (pressionado){
+            if (!teclasPressionadas[lane]){
+                teclasPressionadas[lane] = true;
+                checarHit(lane);
+            }
+            else {
+                teclasPressionadas[lane] = false;
+            }
+        }
     }
 
     public void ativar(Scene scene) {
