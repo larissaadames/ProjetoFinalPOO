@@ -25,11 +25,21 @@
 }
 
 /* SELECIONADO (setas + cor dourada forte) */
+.menu-base {
+    -fx-font-family: "Consolas"; /* Fonte monoespaçada combina com o tema */
+    -fx-font-size: 54px;         /* Tamanho fixo e grande */
+    -fx-text-fill: white;
+    -fx-alignment: center;
+    -fx-padding: 10 30;
+    -fx-border-color: transparent; /* Borda invisível por padrão */
+    -fx-border-width: 4;
+}
+
+/* ESTADO SELECIONADO */
+/* O Java vai adicionar o estilo de borda elétrica em cima disso, sem quebrar o tamanho */
 .menu-selected {
-    -fx-text-fill: #fff5d0;
-    -fx-opacity: 1.0;
-    -fx-effect: dropshadow(gaussian, rgba(255,230,100,0.9), 16, 0.8, 0, 0);
-    -fx-border-color: #ffd86b;
+    -fx-text-fill: #FFD54A;      /* Cor dourada */
+    -fx-effect: dropshadow(gaussian, rgba(255,213,74,0.75), 30, 0.5, 0, 0);
 }
 
 /* Animação elétrica aplicada por Java */

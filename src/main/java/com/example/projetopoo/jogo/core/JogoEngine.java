@@ -1,8 +1,8 @@
 package com.example.projetopoo.jogo.core;
 
-
-//imports fodas🔥🔥
+//imports fogos🔥🔥
 import com.example.projetopoo.ArduinoConexao;
+import com.example.projetopoo.ControladorFluxo;
 import com.example.projetopoo.jogo.chart.CarregaJogoChart;
 import com.example.projetopoo.jogo.chart.JogoChart;
 import com.example.projetopoo.jogo.logica.JogoLogica;
@@ -25,7 +25,9 @@ public class JogoEngine {
 
     private ArduinoConexao arduino;
 
+
     public JogoEngine(String nomeMusica, Stage stage) throws IOException {
+        this.nomeMusica = nomeMusica;
         this.stage = stage;
 
         String caminhoMusica = "/musics/" + nomeMusica + ".mp3";
@@ -38,6 +40,7 @@ public class JogoEngine {
         this.estado = new JogoEstado();
         this.renderer = new JogoRenderer(this.estado);
 
+        this.musica.setAcaoFimMusica(this::finalizarJogo);
 
         renderer.iniciarCena(stage);
         //this.musica.setAcaoFimMusica(this::finalizarRun);
@@ -102,5 +105,14 @@ public class JogoEngine {
             }
         };
         gameLoop.start();
+    }
+
+    private void finalizarJogo() {
+
+//        gameLoop.stop();
+
+        musica.stop();
+
+            ControladorFluxo.irParaTelaFinal(this.nomeMusica, this.estado);
     }
 }
