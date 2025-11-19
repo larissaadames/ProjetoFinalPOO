@@ -18,7 +18,7 @@ public class ControladorFluxo {
     private static Stage stageAtual;
 
     // Lista de IDs de música (baseado no SeletorMusicaController: allstar, numb, bmtl)
-    private static final String[] ALL_SONG_IDS = { "allstar", "numb", "bmtl" };
+    private static final String[] ALL_SONG_IDS = { "goat", "brightside", "bmtl" };
 
     public static void iniciar(Stage stage) {
         stageAtual = stage;
@@ -116,6 +116,7 @@ public class ControladorFluxo {
             if (Objects.equals(songId, "bmtl")) engine.iniciar(220);
             else engine.iniciar(0);
 
+            // Ao final do jogo, o TelaJogoController chamará:
             // ControladorCenas.irParaTelaFinal(songId, scoreFinal);
 
         } catch (Exception e) {

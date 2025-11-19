@@ -42,7 +42,7 @@
                 <!-- CAPA COM fx:id -->
                 <ImageView fx:id="cover1" fitHeight="610.0" fitWidth="388.0">
                     <image>
-                        <Image url="@Images/shrekalbum.jpg"/>
+                        <Image url="@Images/goat.jpg"/>
                     </image>
                 </ImageView>
 
@@ -79,7 +79,7 @@
                     </points>
                 </Polygon>
                 <!-- TÍTULO DA MÚSICA -->
-                <Label text="All Star"
+                <Label text="Goat"
                        styleClass="song-title"
                        StackPane.alignment="BOTTOM_CENTER"
                        translateY="-40"/>
@@ -115,7 +115,7 @@
                 <!-- CAPA COM fx:id -->
                 <ImageView fx:id="cover2" fitHeight="610.0" fitWidth="388.0">
                     <image>
-                        <Image url="@Images/numb.jpg"/>
+                        <Image url="@Images/brightside.jpg"/>
                     </image>
                 </ImageView>
 
@@ -152,7 +152,7 @@
                     </points>
                 </Polygon>
                 <!-- TÍTULO DA MÚSICA -->
-                <Label text="Numb"
+                <Label text="Mr Brightside"
                        styleClass="song-title"
                        StackPane.alignment="BOTTOM_CENTER"
                        translateY="-40"/>
