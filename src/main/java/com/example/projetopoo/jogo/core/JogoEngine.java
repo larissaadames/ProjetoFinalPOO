@@ -20,6 +20,7 @@ public class JogoEngine {
     private final JogoRenderer renderer;
     private final JogoMusica musica;
     private final JogoEstado estado;
+    private final String nomeMusica;
     private final Stage stage; // <-- não entendo pq essa porra ta cinza
     private double globalOffsetMs = 100;
 
@@ -28,6 +29,7 @@ public class JogoEngine {
 
     public JogoEngine(String nomeMusica, Stage stage) throws IOException {
         this.stage = stage;
+        this.nomeMusica = nomeMusica;
 
         String caminhoMusica = "/musics/" + nomeMusica + ".mp3";
         this.musica = new JogoMusica(caminhoMusica);
