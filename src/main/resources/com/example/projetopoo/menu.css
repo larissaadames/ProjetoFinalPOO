@@ -5,7 +5,7 @@
 
 /* TÍTULO */
 #title {
-    -fx-font-size: 85px;
+    -fx-font-size: 200px;
     -fx-font-family: "Jersey 10 Regular";
     -fx-text-fill: #ffdf8a;
     -fx-effect: dropshadow(gaussian, rgba(255,199,90,0.7), 40, 0.5, 0, 0);
