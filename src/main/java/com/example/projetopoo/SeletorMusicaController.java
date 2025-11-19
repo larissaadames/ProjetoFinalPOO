@@ -85,8 +85,8 @@ public class SeletorMusicaController extends OrganizadorCenas {
 
     private void handleKey(KeyEvent e) {
         switch (e.getCode()) {
-            case UP, A -> move(-1);
-            case DOWN, D -> move(+1);
+            case UP, LEFT, A -> move(-1);
+            case DOWN, RIGHT, D -> move(+1);
             case ENTER, SPACE -> {
                 validarMusica(index);
                 if (onConfirm != null) onConfirm.accept(index);
@@ -260,6 +260,8 @@ public class SeletorMusicaController extends OrganizadorCenas {
                 previewPlayer.setCycleCount(MediaPlayer.INDEFINITE);
 
                 previewPlayer.setOnReady(() -> {
+                    if (previewPlayer == null) return;
+
                     previewPlayer.setVolume(0.0);
                     previewPlayer.setAudioSpectrumNumBands(32);
                     previewPlayer.setAudioSpectrumInterval(0.03);
@@ -275,8 +277,11 @@ public class SeletorMusicaController extends OrganizadorCenas {
                             bgFire.setOpacity(opacity);
                         });
                     });
-                    previewPlayer.play();
-                    new Timeline(new KeyFrame(Duration.seconds(1), new KeyValue(previewPlayer.volumeProperty(), 0.25))).play();
+
+                    previewPlayer.play();activeFadeInTimeline = new Timeline(
+                            new KeyFrame(Duration.seconds(1), new KeyValue(previewPlayer.volumeProperty(), 0.25))
+                    );
+                    activeFadeInTimeline.play();
                 });
             } catch (Exception e) {
                 throw new SongNotFoundException("Erro preview: " + e.getMessage());
