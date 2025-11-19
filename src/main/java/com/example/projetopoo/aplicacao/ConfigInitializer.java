@@ -1,4 +1,7 @@
-package com.example.projetopoo;
+package com.example.projetopoo.aplicacao;
+
+import com.example.projetopoo.GerenciadorFontes;
+import com.example.projetopoo.exceptions.ChartLoadException;
 
 public class ConfigInitializer {
 
@@ -9,7 +12,7 @@ public class ConfigInitializer {
     static {
         try {
             NOME_FONTE_8BIT = GerenciadorFontes.carregar("/Fonts/8-bit-pusab.ttf");
-        } catch (ErroLoadFonteException e) {
+        } catch (ChartLoadException.ErroLoadFonteException e) {
             e.printStackTrace();
             throw e;
         }

@@ -1,4 +1,4 @@
-package com.example.projetopoo;
+package com.example.projetopoo.dados;
 
 public class ScoreEntry implements Comparable<ScoreEntry> {
 

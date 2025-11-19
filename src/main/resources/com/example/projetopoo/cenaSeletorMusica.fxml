@@ -15,7 +15,7 @@
             prefHeight="1080.0" prefWidth="1920.0"
             xmlns="http://javafx.com/javafx/21"
             xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.projetopoo.SeletorMusicaController">
+            fx:controller="com.example.projetopoo.controllers.SeletorMusicaController">
 
     <ImageView fx:id="bgFire"
                fitWidth="1920"

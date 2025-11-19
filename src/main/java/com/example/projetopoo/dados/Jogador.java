@@ -1,7 +1,6 @@
-package com.example.projetopoo;
+package com.example.projetopoo.dados;
 
 import java.time.LocalDateTime;
-import java.util.ArrayList;
 
 public class Jogador {
     private String nickName;

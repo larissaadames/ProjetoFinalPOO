@@ -1,7 +1,7 @@
-package com.example.projetopoo;
+package com.example.projetopoo.controllers;
 
+import com.example.projetopoo.ControladorFluxo;
 import javafx.animation.*;
-import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.scene.control.Label;
 import javafx.scene.layout.AnchorPane;

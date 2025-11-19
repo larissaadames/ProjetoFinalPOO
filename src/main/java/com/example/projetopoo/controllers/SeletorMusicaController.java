@@ -1,5 +1,7 @@
-package com.example.projetopoo;
+package com.example.projetopoo.controllers;
 
+import com.example.projetopoo.HighScoreManager;
+import com.example.projetopoo.dados.ScoreEntry;
 import com.example.projetopoo.exceptions.SongNotFoundException;
 import javafx.animation.*;
 import javafx.application.Platform;

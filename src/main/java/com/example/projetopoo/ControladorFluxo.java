@@ -1,5 +1,7 @@
 package com.example.projetopoo;
 
+import com.example.projetopoo.controllers.ResultadosController;
+import com.example.projetopoo.controllers.SeletorMusicaController;
 import com.example.projetopoo.jogo.core.JogoEngine;
 import com.example.projetopoo.jogo.core.JogoEstado;
 import javafx.application.Platform;

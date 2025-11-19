@@ -1,4 +1,4 @@
-package com.example.projetopoo;
+package com.example.projetopoo.aplicacao;
 
 import javafx.application.Application;
 

@@ -1,4 +1,4 @@
-package com.example.projetopoo;
+package com.example.projetopoo.controllers;
 
 import javafx.application.Platform;
 import javafx.scene.Node;

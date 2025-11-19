@@ -1,4 +1,4 @@
-package com.example.projetopoo;
+package com.example.projetopoo.exceptions;
 
 import javafx.scene.text.Font;
 

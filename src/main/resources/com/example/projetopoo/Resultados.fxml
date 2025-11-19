@@ -7,7 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #111;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetopoo.ResultadosController">
+<AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #111;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetopoo.controllers.ResultadosController">
     <children>
         <Text fill="WHITE" layoutX="600.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADOS" textAlignment="CENTER" wrappingWidth="724.0">
             <font><Font name="Jersey 10 Regular" size="96.0" /></font>

@@ -1,5 +1,7 @@
-package com.example.projetopoo;
+package com.example.projetopoo.controllers;
 
+import com.example.projetopoo.ControladorFluxo;
+import com.example.projetopoo.HighScoreManager;
 import com.example.projetopoo.jogo.core.JogoEstado;
 import javafx.fxml.FXML;
 import javafx.scene.control.Button;

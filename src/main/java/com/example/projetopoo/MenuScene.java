@@ -1,5 +1,7 @@
 package com.example.projetopoo;
 
+import com.example.projetopoo.aplicacao.Main;
+import com.example.projetopoo.controllers.SeletorMusicaController;
 import javafx.geometry.Pos;
 import javafx.scene.Parent;
 import javafx.scene.Scene;

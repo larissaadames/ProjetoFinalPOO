@@ -29,5 +29,11 @@ module com.example.projetopoo {
     // Renderer
     exports com.example.projetopoo.jogo.render;
     opens com.example.projetopoo.jogo.render to com.google.gson, javafx.fxml;
+    exports com.example.projetopoo.aplicacao;
+    opens com.example.projetopoo.aplicacao to com.google.gson, javafx.fxml;
+    exports com.example.projetopoo.controllers;
+    opens com.example.projetopoo.controllers to com.google.gson, javafx.fxml;
+    exports com.example.projetopoo.dados;
+    opens com.example.projetopoo.dados to com.google.gson, javafx.fxml;
 }
 

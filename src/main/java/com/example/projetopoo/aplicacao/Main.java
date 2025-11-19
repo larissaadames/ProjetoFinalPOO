@@ -1,12 +1,9 @@
-package com.example.projetopoo;
+package com.example.projetopoo.aplicacao;
 
-import com.example.projetopoo.jogo.core.JogoEngine;
+import com.example.projetopoo.ControladorFluxo;
+import com.example.projetopoo.GerenciadorFontes;
 import javafx.application.Application;
-import javafx.scene.text.Font;
 import javafx.stage.Stage;
-
-import java.io.IOException;
-import java.io.InputStream;
 
 public class Main extends Application {
 

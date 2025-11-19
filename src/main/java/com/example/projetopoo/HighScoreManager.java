@@ -1,5 +1,6 @@
 package com.example.projetopoo;
 
+import com.example.projetopoo.dados.ScoreEntry;
 import com.example.projetopoo.exceptions.SongNotFoundException;
 import java.io.BufferedReader;
 import java.io.BufferedWriter;

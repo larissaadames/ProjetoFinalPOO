@@ -1,5 +1,6 @@
-package com.example.projetopoo;
+package com.example.projetopoo.controllers;
 
+import com.example.projetopoo.ControladorFluxo;
 import javafx.fxml.FXML;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.AnchorPane;
