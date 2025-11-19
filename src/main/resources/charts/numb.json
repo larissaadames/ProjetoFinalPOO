@@ -1,0 +1,939 @@
+{
+  "notas": [
+    {
+      "lane": 3,
+      "tempoMs": 10498,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 12679,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 13497,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 14315,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 15406,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 15678,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 16224,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 16496,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 17041,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 17859,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 18677,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 19222,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 19495,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 21949,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 22494,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 23312,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 23584,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 24402,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 25220,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 25765,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 27128,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 27401,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 27946,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 29309,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 29582,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 30127,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 31218,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 32308,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 33126,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 33399,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 34489,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 35580,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 36670,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 37216,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 37488,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 38851,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 38988,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 42668,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 42941,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 43213,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 44031,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 44849,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 45122,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 45939,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 46212,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 47575,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 47712,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 50847,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 51392,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 51937,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 52755,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 53028,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 54118,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 54936,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 55209,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 56844,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 57390,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 58207,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 58480,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 59571,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 60661,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 61206,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 61752,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 62569,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 62842,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 63660,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 63933,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 64478,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 65023,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 66114,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 66659,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 67749,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 68022,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 68295,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 68840,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 78109,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 79199,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 79745,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 80290,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 81380,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 81926,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 82471,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 83561,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 84379,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 85197,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 85470,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 86288,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 86560,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 86969,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 90650,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 91195,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 92285,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 93376,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 94466,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 95012,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 95693,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 99101,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 99374,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 99919,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 101009,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 102100,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 102918,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 103736,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 104281,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 105099,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 105371,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 106462,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 107280,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 107552,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 109188,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 109733,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 111369,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 112187,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 112460,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 113550,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 114095,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 115731,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 116004,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 116276,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 117367,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 118185,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 118457,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 120093,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 120366,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 120638,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 122274,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 123092,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 123364,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 123637,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 124455,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 124728,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 125273,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 126091,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 127181,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 128272,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 129362,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 130453,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 130998,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 131543,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 132088,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 132361,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 132634,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 133451,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 134269,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 134815,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 135632,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 136450,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 136996,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 137813,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 138631,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 139313,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 142175,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 142448,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 143539,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 144356,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 144629,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 146265,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 146810,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 148446,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 148991,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 150627,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 151172,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 152262,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 153080,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 153353,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 154989,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 155534,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 157170,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 157715,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 158805,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 159896,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 160986,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 163713,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 165076,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 165894,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 166712,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 166984,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 167257,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 167529,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 1,
+      "tempoMs": 168620,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 169710,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 172437,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 4,
+      "tempoMs": 173800,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 5,
+      "tempoMs": 174618,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 3,
+      "tempoMs": 175435,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 175708,
+      "tipo": "TAP"
+    },
+    {
+      "lane": 2,
+      "tempoMs": 175981,
+      "tipo": "TAP"
+    }
+  ]
+}

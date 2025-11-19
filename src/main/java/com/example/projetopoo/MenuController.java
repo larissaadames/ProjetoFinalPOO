@@ -35,7 +35,7 @@ public class MenuController extends OrganizadorCenas {
         playGuitarSFX();
         iniciarRaios();
 
-        // UTILIZAÇÃO DO MÉTODO DA BASE: Garante o foco na raiz
+        // UTILIZAÇÃO DO METODO DA BASE: Garante o foco na raiz
         postLoadSetup(root);
 
         root.setOnKeyPressed(e -> {
@@ -62,8 +62,6 @@ public class MenuController extends OrganizadorCenas {
     public void exitSceneCleanup() {
         // Sem recursos para limpar aqui
     }
-
-    // ... (demais métodos: playEntranceAnim, playGuitarSFX, highlightItem, animateElectricBorder, activate, iniciarRaios, gerarRaio permanecem iguais)
 
     private void playEntranceAnim() {
         title.setOpacity(0);
@@ -114,6 +112,7 @@ public class MenuController extends OrganizadorCenas {
     private void activate(int option) {
         switch (option) {
             case 0 -> ControladorFluxo.irParaSelecaoMusicas();
+            case 1 -> ControladorFluxo.irParaCreditos();
             case 2 -> System.exit(0);
         }
     }
