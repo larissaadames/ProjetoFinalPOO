@@ -43,6 +43,9 @@ public class JogoRenderer {
 
     private final ImageView imageViewEfeito = new ImageView();
 
+    private final List<Image> imagensMascote = new ArrayList<>();
+    private final Random rng = new Random();
+
     public JogoRenderer(JogoEstado estado) {
         root.resize(1920, 1080);
 
@@ -130,35 +133,46 @@ public class JogoRenderer {
         root.getChildren().addAll(textScore, textCombo, textFeedback, textMultiplicador);
     }
 
-    // Animação estilo Osu! (Pop-in -> Espera -> Fade-out)
     private void animarMascote(ImageView imageView) {
-        // Reseta para garantir que a animação comece limpa
-        imageView.setOpacity(0.0);
-        imageView.setScaleX(0.8);
-        imageView.setScaleY(0.8);
+        // 1. Sorteia uma imagem nova da lista
+        if (!imagensMascote.isEmpty()) {
+            Image imagemSorteada = imagensMascote.get(rng.nextInt(imagensMascote.size()));
+            imageView.setImage(imagemSorteada);
+        }
 
-        // Entrada
-        FadeTransition fadeIn = new FadeTransition(Duration.millis(200), imageView);
+        // 2. Sorteia o Lado (Esquerda ou Direita)
+        boolean ladoEsquerdo = rng.nextBoolean();
+
+        // Coordenadas X calculadas para não sobrepor a pista de jogo (que vai de 660 a 1260)
+        // Esquerda: ~280
+        // Direita: ~1350 (logo após a pista)
+        double posX = ladoEsquerdo ? 280 : 1350;
+
+        imageView.setLayoutX(posX);
+        imageView.setLayoutY(365); // Mantém a altura centralizada
+
+        // 3. Configuração Inicial (Reseta escala e opacidade)
+        imageView.setOpacity(0.0);
+        imageView.setScaleX(1.0); // Garante tamanho normal (sem zoom)
+        imageView.setScaleY(1.0);
+
+        // 4. Animação Suave (Fade In -> Espera -> Fade Out)
+
+        // Entrada Suave
+        FadeTransition fadeIn = new FadeTransition(Duration.millis(500), imageView);
         fadeIn.setFromValue(0.0);
         fadeIn.setToValue(1.0);
 
-        ScaleTransition scaleUp = new ScaleTransition(Duration.millis(200), imageView);
-        scaleUp.setFromX(0.8);
-        scaleUp.setFromY(0.8);
-        scaleUp.setToX(1.0);
-        scaleUp.setToY(1.0);
-
-        ParallelTransition entrada = new ParallelTransition(fadeIn, scaleUp);
-
-        // Fica na tela
+        // Tempo de permanência
         PauseTransition ficarNaTela = new PauseTransition(Duration.seconds(2.0));
 
-        // Saída
+        // Saída Suave
         FadeTransition fadeOut = new FadeTransition(Duration.millis(500), imageView);
         fadeOut.setFromValue(1.0);
         fadeOut.setToValue(0.0);
 
-        SequentialTransition sequencia = new SequentialTransition(entrada, ficarNaTela, fadeOut);
+        // Executa a sequência
+        SequentialTransition sequencia = new SequentialTransition(fadeIn, ficarNaTela, fadeOut);
         sequencia.play();
     }
 
@@ -209,24 +223,41 @@ public class JogoRenderer {
     }
 
     private void configurarImageViewEfeito() {
-        try {
-            // Certifique-se que a imagem existe nesse caminho!
-            Image image = new Image(Objects.requireNonNull(getClass().getResourceAsStream("/com/example/projetopoo/Images/balacobaco.jpg")));
-            imageViewEfeito.setImage(image);
+        String[] caminhos = {
+                "/com/example/projetopoo/Images/caveiras/abencoe-rock.jpg",
+                "/com/example/projetopoo/Images/caveiras/balacobaco.jpg",
+                "/com/example/projetopoo/Images/caveiras/essa-vai-pros-do-rock.jpg",
+                "/com/example/projetopoo/Images/caveiras/rock-crime.png",
+                "/com/example/projetopoo/Images/caveiras/ta-preparado-rock.jpg",
 
-            imageViewEfeito.setFitWidth(300); // Aumentei um pouco para destacar
-            imageViewEfeito.setFitHeight(300);
-            imageViewEfeito.setPreserveRatio(true);
+        };
 
-            imageViewEfeito.setLayoutX(50);
-            imageViewEfeito.setLayoutY(400);
+        for (String path : caminhos) {
+            try {
+                var stream = getClass().getResourceAsStream(path);
+                if (stream != null) {
+                    imagensMascote.add(new Image(stream));
+                } else {
+                    System.out.println("Imagem não encontrada: " + path);
+                }
+            } catch (Exception e) {
+                System.err.println("Erro ao carregar imagem: " + path);
+            }
+        }
 
-            // IMPORTANTE: Começa invisível
-            imageViewEfeito.setOpacity(0.0);
+        // Configurações iniciais do ImageView
+        imageViewEfeito.setFitWidth(350); // Um pouco maior
+        imageViewEfeito.setPreserveRatio(true);
 
+        // NOVA POSIÇÃO: Mais perto do "meio" (perto da trilha, que começa em X=660)
+        imageViewEfeito.setLayoutX(280);
+        imageViewEfeito.setLayoutY(365); // Centralizado verticalmente (considerando altura da imagem)
+
+        imageViewEfeito.setOpacity(0.0); // Começa invisível
+
+        // Adiciona ao root se ainda não estiver lá
+        if (!root.getChildren().contains(imageViewEfeito)) {
             root.getChildren().add(imageViewEfeito);
-        } catch (Exception e) {
-            System.err.println("Erro ao carregar a imagem de efeito.");
         }
     }
 
