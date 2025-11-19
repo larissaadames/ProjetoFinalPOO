@@ -15,6 +15,7 @@ public abstract class Nota {
 
     public static final double SPAWN_OFFSET_MS = 2000;
     public static final double SCROLL_SPEED = 1.5;
+
     protected final double momentoHit;
     protected final int lane;
 
@@ -67,7 +68,6 @@ public abstract class Nota {
 
     public abstract void segurar(double tempoMusicaMs);
 
-
     public boolean deveDespawnar(double tempoMusicaMs) {
 
         if (estado == NotaEstado.ACERTO) {
@@ -92,9 +92,6 @@ public abstract class Nota {
 
         return false;
     }
-
-
-
 
     public NotaEstado getEstado() { return estado; }
 

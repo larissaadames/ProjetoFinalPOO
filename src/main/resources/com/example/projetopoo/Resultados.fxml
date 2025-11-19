@@ -10,15 +10,15 @@
 <AnchorPane prefHeight="1080.0" prefWidth="1920.0" style="-fx-background-color: #111;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.projetopoo.ResultadosController">
     <children>
         <Text fill="WHITE" layoutX="600.0" layoutY="150.0" strokeType="OUTSIDE" strokeWidth="0.0" text="RESULTADOS" textAlignment="CENTER" wrappingWidth="724.0">
-            <font><Font name="Impact" size="96.0" /></font>
+            <font><Font name="Jersey 10 Regular" size="96.0" /></font>
         </Text>
 
         <VBox alignment="CENTER" layoutX="710.0" layoutY="200.0" spacing="10.0">
             <Text fx:id="textScore" fill="YELLOW" text="Pontuação: 0">
-                <font><Font name="Consolas Bold" size="48.0" /></font>
+                <font><Font name="Jersey 10 Regular" size="48.0" /></font>
             </Text>
             <Text fx:id="textMaxCombo" fill="CYAN" text="Maior Combo: 0">
-                <font><Font name="Consolas" size="36.0" /></font>
+                <font><Font name="Jersey 10 Regular" size="36.0" /></font>
             </Text>
         </VBox>
 
@@ -30,7 +30,7 @@
         </VBox>
 
         <VBox alignment="CENTER" layoutX="760.0" layoutY="600.0" spacing="20.0">
-            <Text fill="WHITE" text="Digite seu nome:">
+            <Text fill="WHITE" text="Adicione seu nome ao placar:">
                 <font><Font size="20.0" /></font>
             </Text>
             <TextField fx:id="inputNome" alignment="CENTER" prefHeight="50.0" prefWidth="400.0" promptText="Seu Nickname">
