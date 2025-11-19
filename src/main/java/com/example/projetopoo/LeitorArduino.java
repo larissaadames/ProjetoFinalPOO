@@ -1,3 +1,7 @@
+// Classe insana pra testar o arduino
+
+
+
 package com.example.projetopoo;
 
 import com.fazecast.jSerialComm.SerialPort;
@@ -5,10 +9,6 @@ import com.fazecast.jSerialComm.SerialPortMessageListener;
 import com.fazecast.jSerialComm.SerialPortEvent;
 import java.nio.charset.StandardCharsets;
 
-/**
- * Classe essencial para ler dados de uma porta serial e imprimir no terminal.
- * Não contém JavaFX.
- */
 public class LeitorArduino {
 
     // A porta serial precisa ser 'static' para ser acessível pelo 'main'

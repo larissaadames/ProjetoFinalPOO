@@ -3,6 +3,7 @@ package com.example.projetopoo.jogo.core;
 
 //imports fodas🔥🔥
 import com.example.projetopoo.ArduinoConexao;
+import com.example.projetopoo.ControladorFluxo;
 import com.example.projetopoo.jogo.chart.CarregaJogoChart;
 import com.example.projetopoo.jogo.chart.JogoChart;
 import com.example.projetopoo.jogo.logica.JogoLogica;
@@ -43,7 +44,7 @@ public class JogoEngine {
         //this.musica.setAcaoFimMusica(this::finalizarRun);
     }
 
-//    public void finalizarRun() { // <--- TEM KI ARRUMAR LOGO
+  //  public void finalizarRun() { // <--- TEM KI ARRUMAR LOGO
 //        if (gameLoop != null) gameLoop.stop();
 //        musica.stop();
 //
@@ -53,6 +54,12 @@ public class JogoEngine {
 //        } catch (IOException e) {
 //            e.printStackTrace();
 //        }
+//        ArduinoConexao.getInstance().setInputHandler(null);
+//        try{
+//            ControladorFluxo.irParaResultados(stage, this.estado);
+//        } catch (Exception e){
+////            e.printStackTrace();
+//            }
 //    }
 
 
@@ -69,8 +76,7 @@ public class JogoEngine {
         inputHandler.ativar(renderer.getRoot().getScene());
 
         // 3. Inicia Arduino
-        this.arduino = new ArduinoConexao(inputHandler); // <-- NÃO MEXER NESSA BRINCADEIRINHA
-        this.arduino.iniciar();
+        ArduinoConexao.getInstance().setInputHandler(inputHandler);
 
         // 4. Inicia Música
         musica.iniciarComOffset(skipIntroMs);
