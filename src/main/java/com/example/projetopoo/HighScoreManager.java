@@ -13,7 +13,7 @@ public class HighScoreManager {
 
     private static final HighScoreManager INSTANCE = new HighScoreManager();
 
-    // ⚠️ MUDANÇA 1: Definir apenas o nome do arquivo como String estática
+    // MUDANÇA 1: Definir apenas o nome do arquivo como String estática
     private static final String SCORES_FILENAME = "highscores.csv";
 
     // chave = id da música ("allstar", "numb", "bmtl")
@@ -25,10 +25,11 @@ public class HighScoreManager {
 
     public static HighScoreManager getInstance() {
         return INSTANCE;
+
     }
 
     // ==========================
-    // 💾 MÉTODOS DE PERSISTÊNCIA
+    // MÉTODOS DE PERSISTÊNCIA
     // ==========================
 
     /**
@@ -36,7 +37,7 @@ public class HighScoreManager {
      * Trata exceções internamente para não quebrar a inicialização do JavaFX.
      */
     private void loadScores() {
-        // ⚠️ MUDANÇA 2: Criar o objeto Path DENTRO do metodo (inicialização segura)
+        // MUDANÇA 2: Criar o objeto Path DENTRO do metodo (inicialização segura)
         Path scoresFile = Paths.get(SCORES_FILENAME);
 
         // Se a lista de scores já não estiver vazia, não carrega novamente
@@ -80,7 +81,7 @@ public class HighScoreManager {
 
     // Salva todos os scores no arquivo CSV.
     private synchronized void saveScores() {
-        // ⚠️ MUDANÇA 3: Recria o objeto Path
+        // MUDANÇA 3: Recria o objeto Path
         Path scoresFile = Paths.get(SCORES_FILENAME);
         List<String> lines = new ArrayList<>();
 

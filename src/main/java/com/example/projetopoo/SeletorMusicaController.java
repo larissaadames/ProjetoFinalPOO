@@ -23,7 +23,7 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.function.Consumer;
 
-public class SeletorMusicaController {
+public class SeletorMusicaController extends OrganizadorCenas {
 
     private MediaPlayer previewPlayer;
 
@@ -100,6 +100,11 @@ public class SeletorMusicaController {
         });
     }
 
+    // Implementa o contrato da classe base para limpeza de mídia
+    @Override
+    public void exitSceneCleanup() {
+        stopPreview(() -> {});
+    }
 
     private void handleKey(KeyEvent e) {
         switch (e.getCode()) {
@@ -139,9 +144,7 @@ public class SeletorMusicaController {
 
 
     private void applyHighlight() {
-
         for (int i = 0; i < cards.size(); i++) {
-
             StackPane card = cards.get(i);
             boolean selected = (i == index);
 
@@ -162,7 +165,6 @@ public class SeletorMusicaController {
 
 
     private void updateScoreboard() {
-
         validarMusica(index);
 
         VBox box = scoreBoxes.get(index);
@@ -280,7 +282,6 @@ public class SeletorMusicaController {
 
 
     private void startTrianglePulse() {
-
         for (Polygon[] pair : arrows) {
             Polygon top = pair[0];
             Polygon bottom = pair[1];
@@ -327,11 +328,9 @@ public class SeletorMusicaController {
 
 
     private void playPreview(int index) {
-
         validarMusica(index);
 
         stopPreview(() -> {
-
             try {
                 String path = previewPaths[index];
 
@@ -420,15 +419,22 @@ public class SeletorMusicaController {
         fade.play();
     }
 
-
+    // Chama o cleanup da base e executa o callback.
     public void setOnBack(Runnable r) {
-        this.onBack = () -> stopPreview(r);
+        this.onBack = () -> stopPreview(() -> {
+            exitSceneCleanup();
+            r.run();
+        });
     }
 
+    // Chama o cleanup da base e executa o callback.
     public void setOnConfirm(Consumer<Integer> c) {
         this.onConfirm = idx -> {
             validarMusica(idx);
-            stopPreview(() -> c.accept(idx));
+            stopPreview(() -> {
+                exitSceneCleanup();
+                c.accept(idx);
+            });
         };
     }
 
@@ -438,8 +444,6 @@ public class SeletorMusicaController {
         updateScoreboard();
     }
 
-
-    // 🔥 NOVA FUNÇÃO — valida antes de tocar/selecionar música
     private void validarMusica(int idx) {
         if (idx < 0 || idx >= songIds.length)
             throw new SongNotFoundException("Índice inválido de música: " + idx);

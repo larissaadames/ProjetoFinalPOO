@@ -13,7 +13,7 @@ import javafx.scene.shape.Polyline;
 import javafx.util.Duration;
 import java.util.Random;
 
-public class MenuController {
+public class MenuController extends OrganizadorCenas {
 
     @FXML private AnchorPane root;
     @FXML private Label title;
@@ -28,53 +28,49 @@ public class MenuController {
     @FXML
     private void initialize() {
 
-        // pega as labels do menu
         items = menuBox.getChildren().stream()
                 .map(n -> (Label) n)
                 .toArray(Label[]::new);
 
         highlightItem();
-
         playEntranceAnim();
         playGuitarSFX();
 
         Platform.runLater(() -> root.requestFocus());
-
-        // raios automáticos
         iniciarRaios();
 
         root.setOnKeyPressed(e -> {
             switch (e.getCode()) {
-
                 case DOWN:
                 case S:
                     index = (index + 1) % items.length;
                     highlightItem();
                     break;
-
                 case UP:
                 case W:
                     index = (index - 1 + items.length) % items.length;
                     highlightItem();
                     break;
-
                 case ENTER:
                 case SPACE:
                     activate(index);
                     break;
-
                 case ESCAPE:
-                    ControladorCenas.irParaMenu();
+                    // 🌟 CORRIGIDO: Deve chamar a classe de fluxo para retornar ao menu principal
+                    ControladorFluxo.irParaMenu();
                     break;
-
                 default:
                     break;
             }
         });
-
     }
 
-    /** animação de entrada */
+    // Implementa o contrato da classe base, mas não limpa nada neste controller.
+    @Override
+    public void exitSceneCleanup() {
+        // Não há recursos para limpar (ex: MediaPlayer ou Timers) neste controller.
+    }
+
     private void playEntranceAnim() {
         title.setOpacity(0);
         menuBox.setOpacity(0);
@@ -90,7 +86,6 @@ public class MenuController {
         tl.play();
     }
 
-    /** som inicial */
     private void playGuitarSFX() {
         try {
             Media m = new Media(getClass().getResource("/sfx/guitar_hit.mp3").toExternalForm());
@@ -102,9 +97,7 @@ public class MenuController {
         }
     }
 
-    /** seta + borda elétrica dourada */
     private void highlightItem() {
-
         for (int i = 0; i < items.length; i++) {
             Label lbl = items[i];
 
@@ -120,9 +113,7 @@ public class MenuController {
         }
     }
 
-    /** borda elétrica dourada */
     private void animateElectricBorder(Label lbl) {
-
         Timeline t = new Timeline(
                 new KeyFrame(Duration.ZERO, new KeyValue(lbl.styleProperty(),
                         "-fx-border-color: #ffd86b; -fx-border-width: 4")),
@@ -138,18 +129,14 @@ public class MenuController {
         lbl.setUserData(t);
     }
 
-    /** abrir jogo / cenas */
     private void activate(int option) {
         switch (option) {
-            case 0 -> ControladorCenas.irParaSelecaoMusicas();
-            case 1 -> {}
-            case 2 -> System.exit(0);
+            // 🌟 CORRIGIDO: Chama a classe de fluxo renomeada
+            case 0 -> ControladorFluxo.irParaSelecaoMusicas();
+            case 1 -> {} // Créditos
+            case 2 -> System.exit(0); // Sair
         }
     }
-
-    // ==========================
-    // 🔥 EFEITO DE RAIOS NO FUNDO
-    // ==========================
 
     private void iniciarRaios() {
         Timeline loop = new Timeline(

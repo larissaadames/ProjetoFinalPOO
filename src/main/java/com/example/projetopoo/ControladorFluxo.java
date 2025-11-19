@@ -6,13 +6,11 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
-import java.util.Objects;
 
 // Apenas adicionamos as EXCEPTIONS aqui.
 import com.example.projetopoo.exceptions.SceneLoadException;
-import com.example.projetopoo.exceptions.SongNotFoundException;
 
-public class ControladorCenas {
+public class ControladorFluxo {
 
     private static Stage stageAtual;
 
@@ -38,7 +36,7 @@ public class ControladorCenas {
     }
 
     private static Scene carregarComCSS(String fxml, String cssName) throws IOException {
-        FXMLLoader loader = new FXMLLoader(ControladorCenas.class.getResource(fxml));
+        FXMLLoader loader = new FXMLLoader(ControladorFluxo.class.getResource(fxml));
 
         if (loader.getLocation() == null)
             throw new SceneLoadException("FXML não encontrado: " + fxml);
@@ -48,7 +46,7 @@ public class ControladorCenas {
         Scene cena = new Scene(root, stageAtual.getWidth(), stageAtual.getHeight());
 
         if (cssName != null) {
-            var urlCSS = ControladorCenas.class.getResource(cssName);
+            var urlCSS = ControladorFluxo.class.getResource(cssName);
 
             if (urlCSS == null)
                 throw new SceneLoadException("CSS não encontrado: " + cssName);
@@ -74,7 +72,7 @@ public class ControladorCenas {
     public static void irParaSelecaoMusicas() {
         try {
             FXMLLoader loader = new FXMLLoader(
-                    ControladorCenas.class.getResource("cenaSeletorMusica.fxml")
+                    ControladorFluxo.class.getResource("cenaSeletorMusica.fxml")
             );
 
             if (loader.getLocation() == null)
@@ -83,7 +81,7 @@ public class ControladorCenas {
             Parent root = loader.load();
             Scene cena = new Scene(root, 1920, 1080);
 
-            var css = ControladorCenas.class.getResource("seletor.css");
+            var css = ControladorFluxo.class.getResource("seletor.css");
             if (css == null)
                 throw new SceneLoadException("seletor.css não encontrado.");
 
@@ -91,7 +89,7 @@ public class ControladorCenas {
 
             SeletorMusicaController controller = loader.getController();
 
-            controller.setOnBack(ControladorCenas::irParaMenu);
+            controller.setOnBack(ControladorFluxo::irParaMenu);
 
             // 🌟 MUDANÇA: Agora passa o songId (String) em vez do índice (int) para o jogo.
             controller.setOnConfirm(i -> {
