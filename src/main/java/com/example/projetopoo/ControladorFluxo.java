@@ -7,6 +7,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.stage.Stage;
 import java.io.IOException;
+import java.util.Objects;
 
 // Apenas adicionamos as EXCEPTIONS aqui.
 import com.example.projetopoo.exceptions.SceneLoadException;
@@ -16,7 +17,7 @@ public class ControladorFluxo {
     private static Stage stageAtual;
 
     // Lista de IDs de música (baseado no SeletorMusicaController: allstar, numb, bmtl)
-    private static final String[] ALL_SONG_IDS = { "allstar", "numb", "bmtl" };
+    private static final String[] ALL_SONG_IDS = { "goat", "brightside", "bmtl" };
 
     public static void iniciar(Stage stage) {
         stageAtual = stage;
@@ -110,8 +111,12 @@ public class ControladorFluxo {
     public static void irParaJogo(String songId) {
         try {
             // O controller da TelaJogo.fxml deve ser adaptado para receber este songId.
-            JogoEngine bmtl = new JogoEngine("bmtl", getStageAtual());
-            bmtl.iniciar(25);
+            JogoEngine engine = new JogoEngine(songId, getStageAtual());
+            engine.iniciar(0);
+
+            if(Objects.equals(songId, "bmtl")){
+                engine.iniciar(25);
+            }
 
             // Ao final do jogo, o TelaJogoController chamará:
             // ControladorCenas.irParaTelaFinal(songId, scoreFinal);

@@ -38,8 +38,8 @@ public class SeletorMusicaController extends OrganizadorCenas {
     private List<VBox> scoreBoxes;
     private List<Polygon[]> arrows;
 
-    private final String[] songIds = { "allstar", "numb", "bmtl" };
-    private final String[] previewPaths = { "/musics/allstar.mp3", "/musics/numb.mp3", "/musics/bmtl.mp3" };
+    private final String[] songIds = { "goat", "brightside", "bmtl" };
+    private final String[] previewPaths = { "/musics/goat.mp3", "/musics/brightside.mp3", "/musics/bmtl.mp3" };
 
     private int index = 0;
     private Runnable onBack;
