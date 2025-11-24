@@ -23,7 +23,7 @@ public class ResultadosController {
     private JogoEstado estadoFinal;
     private String songId;
 
-    private static final int MAX_LIMITE_CARACTERES = 12;
+    private static final int MAX_LIMITE_CARACTERES = 20;
     private static final int MIN_LIMITE_CARACTERES = 3;
 
     @FXML

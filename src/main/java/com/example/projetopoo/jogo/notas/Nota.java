@@ -14,7 +14,7 @@ public abstract class Nota {
     public abstract INotaSprite obterSprite(JogoRenderer renderer);
 
     public static final double SPAWN_OFFSET_MS = 2000;
-    public static final double SCROLL_SPEED = 1.5;
+    public static final double SCROLL_SPEED = 1.0;
 
     protected final double momentoHit;
     protected final int lane;
@@ -22,9 +22,9 @@ public abstract class Nota {
     protected NotaEstado estado = NotaEstado.PENDENTE;
     protected Julgamento julgamento;
 
-    protected double windowHitPerfeito = 30;
-    protected double windowHitOtimo = 60;
-    protected double windowHitRuim = 90;
+    protected double windowHitPerfeito = 40;
+    protected double windowHitOtimo = 80;
+    protected double windowHitRuim = 120;
 
     public Nota(int lane, double momentoHit){
         this.momentoHit = momentoHit;

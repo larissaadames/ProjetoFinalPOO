@@ -107,7 +107,7 @@ public class JogoEngine {
         }
 
         if (musica != null) {
-            musica.stop(); // Certifique-se que criou esse método no JogoMusica conforme instrução anterior
+            musica.stop(); // Certifique-se que criou esse metodo no JogoMusica conforme instrução anterior
         }
 
         // 3. Remove ouvintes de teclado para não bugar o menu
