@@ -59,16 +59,24 @@ public class JogoEngine {
         logica.pularParaTempo(skipIntroMs);
 
         // 2. Configura Inputs e Latência
-        InputHandler inputHandler = new InputHandler(logica, renderer, musica, estado);
-        inputHandler.setOffset(globalOffsetMs);
-        inputHandler.ativar(renderer.getRoot().getScene());
+        this.inputHandler = new InputHandler(logica, renderer, musica, estado);
+
+        this.inputHandler.setAcaoSair(() -> {
+            System.out.println("Jogo abortado pelo usuário via ESC.");
+            parar();
+            ControladorFluxo.irParaMenu();
+        });
+
+        this.inputHandler.setOffset(globalOffsetMs);
+        this.inputHandler.ativar(renderer.getRoot().getScene());
 
         // 3. Inicia Arduino
-        ArduinoConexao.getInstance().setInputHandler(inputHandler);
+        ArduinoConexao.getInstance().setInputHandler(this.inputHandler);
 
         // 4. Inicia Música
         musica.iniciarComOffset(skipIntroMs);
         musica.play();
+
 
         // 5. Loop do Jogo (Limpo)
         AnimationTimer gameLoop = new AnimationTimer() {
@@ -107,7 +115,7 @@ public class JogoEngine {
         }
 
         if (musica != null) {
-            musica.stop(); // Certifique-se que criou esse método no JogoMusica conforme instrução anterior
+            musica.stop();
         }
 
         // 3. Remove ouvintes de teclado para não bugar o menu
@@ -116,6 +124,7 @@ public class JogoEngine {
         }
 
     }
+
 
     private void finalizarJogo() {
 

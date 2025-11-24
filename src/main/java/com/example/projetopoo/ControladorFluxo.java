@@ -8,166 +8,136 @@ import javafx.application.Platform;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Parent;
 import javafx.scene.Scene;
+import javafx.scene.input.KeyCombination;
 import javafx.stage.Stage;
+import com.example.projetopoo.exceptions.SceneLoadException;
+
 import java.io.IOException;
 import java.util.Objects;
-
-// Apenas adicionamos as EXCEPTIONS aqui.
-import com.example.projetopoo.exceptions.SceneLoadException;
 
 public class ControladorFluxo {
 
     private static Stage stageAtual;
+    private static Scene scenePrincipal; // Mantemos uma referência única à cena
 
-    // Lista de IDs de música (baseado no SeletorMusicaController: allstar, numb, bmtl)
-    private static final String[] ALL_SONG_IDS = { "goat", "brightside", "bmtl" };
+    private static final String[] ALL_SONG_IDS = { "goat", "brightside", "bmtl", "numb" };
 
     public static void iniciar(Stage stage) {
         stageAtual = stage;
 
         stageAtual.setTitle("PowerJorge - Arcade Rock");
-        stageAtual.setWidth(1920);
-        stageAtual.setHeight(1080);
-        stageAtual.setResizable(false);
-        stageAtual.centerOnScreen();
 
-        // Adiciona o Gancho de Desligamento (Shutdown Hook) para a persistência.
+        // Configura FullScreen e impede sair com ESC
+        stageAtual.setFullScreenExitHint("");
+        stageAtual.setFullScreenExitKeyCombination(KeyCombination.NO_MATCH);
+
+        // Cria a cena inicial vazia (será preenchida pelo irParaMenu)
+        // Usamos um Group ou Pane vazio apenas para inicializar
+        scenePrincipal = new Scene(new javafx.scene.layout.Pane(), 1920, 1080);
+        stageAtual.setScene(scenePrincipal);
+
         stageAtual.setOnCloseRequest(event -> {
             HighScoreManager.getInstance().persistAll();
         });
 
         ArduinoConexao.getInstance().iniciar();
 
-        irParaMenu();
+        irParaMenu(); // Isso vai preencher o conteúdo da scenePrincipal
+
+        // Ativa o fullscreen e mostra
+        stageAtual.setFullScreen(true);
         stageAtual.show();
     }
 
-    private static Scene carregarComCSS(String fxml, String cssName) throws IOException {
-        FXMLLoader loader = new FXMLLoader(ControladorFluxo.class.getResource(fxml));
+    // Método Mágico: Troca o conteúdo sem trocar a janela
+    private static void mudarConteudo(String fxml, String cssName) {
+        try {
+            FXMLLoader loader = new FXMLLoader(ControladorFluxo.class.getResource(fxml));
+            if (loader.getLocation() == null) throw new SceneLoadException("FXML não encontrado: " + fxml);
 
-        if (loader.getLocation() == null)
-            throw new SceneLoadException("FXML não encontrado: " + fxml);
+            Parent novoRoot = loader.load();
 
-        Parent root = loader.load();
+            // Troca o nó raiz da cena existente
+            scenePrincipal.setRoot(novoRoot);
 
-        Scene cena = new Scene(root, stageAtual.getWidth(), stageAtual.getHeight());
+            // Atualiza o CSS
+            scenePrincipal.getStylesheets().clear();
+            if (cssName != null) {
+                var urlCSS = ControladorFluxo.class.getResource(cssName);
+                if (urlCSS != null) {
+                    scenePrincipal.getStylesheets().add(urlCSS.toExternalForm());
+                }
+            }
 
-        if (cssName != null) {
-            var urlCSS = ControladorFluxo.class.getResource(cssName);
+            // Garante o foco para inputs
+            Platform.runLater(novoRoot::requestFocus);
 
-            if (urlCSS == null)
-                throw new SceneLoadException("CSS não encontrado: " + cssName);
-
-            cena.getStylesheets().add(urlCSS.toExternalForm());
+        } catch (IOException e) {
+            throw new SceneLoadException("Erro ao carregar tela: " + fxml, e);
         }
-
-        return cena;
     }
 
     public static void irParaMenu() {
-        try {
-            Scene cena = carregarComCSS("Menu.fxml", "menu.css");
-            stageAtual.setScene(cena);
-
-            Platform.runLater(() -> cena.getRoot().requestFocus());
-
-        } catch (Exception e) {
-            throw new SceneLoadException("Erro ao carregar Menu.fxml", e);
-        }
+        mudarConteudo("Menu.fxml", "menu.css");
     }
 
     public static void irParaCreditos() {
-        try {
-            // Reutiliza o CSS do menu, pois o estilo visual é o mesmo
-            Scene cena = carregarComCSS("Creditos.fxml", "menu.css");
-            stageAtual.setScene(cena);
-        } catch (Exception e) {
-            throw new SceneLoadException("Erro ao carregar Creditos.fxml", e);
-        }
+        mudarConteudo("Creditos.fxml", "menu.css");
     }
 
     public static void irParaSelecaoMusicas() {
         try {
-            FXMLLoader loader = new FXMLLoader(
-                    ControladorFluxo.class.getResource("cenaSeletorMusica.fxml")
-            );
-
-            if (loader.getLocation() == null)
-                throw new SceneLoadException("cenaSeletorMusica.fxml não encontrado.");
-
+            FXMLLoader loader = new FXMLLoader(ControladorFluxo.class.getResource("cenaSeletorMusica.fxml"));
             Parent root = loader.load();
-            Scene cena = new Scene(root, 1920, 1080);
-
-            var css = ControladorFluxo.class.getResource("seletor.css");
-            if (css == null)
-                throw new SceneLoadException("seletor.css não encontrado.");
-
-            cena.getStylesheets().add(css.toExternalForm());
 
             SeletorMusicaController controller = loader.getController();
-
             controller.setOnBack(ControladorFluxo::irParaMenu);
+            controller.setOnConfirm(i -> irParaJogo(ALL_SONG_IDS[i]));
 
-            //  MUDANÇA: Agora passa o songId (String) em vez do índice (int) para o jogo.
-            controller.setOnConfirm(i -> {
-                String songId = ALL_SONG_IDS[i];
-                irParaJogo(songId); // Chama a nova versão de irParaJogo
-            });
+            // Troca o conteúdo manualmente pois este método tem lógica extra
+            scenePrincipal.setRoot(root);
 
-            stageAtual.setScene(cena);
-            Platform.runLater(() -> root.requestFocus());
+            scenePrincipal.getStylesheets().clear();
+            var css = ControladorFluxo.class.getResource("seletor.css");
+            if (css != null) scenePrincipal.getStylesheets().add(css.toExternalForm());
 
-        } catch (IOException e) {
-            throw new SceneLoadException("Erro ao carregar cenaSeletorMusica.fxml", e);
-        }
-    }
-
-    // NOVO: Recebe o songId da música selecionada para iniciar a partida.
-    public static void irParaJogo(String songId) {
-        try {
-            // O controller da TelaJogo.fxml deve ser adaptado para receber este songId.
-            JogoEngine engine = new JogoEngine(songId, getStageAtual());
-            if (Objects.equals(songId, "bmtl")) engine.iniciar(25);
-            else engine.iniciar(0);
-
-            // Ao final do jogo, o TelaJogoController chamará:
-            // ControladorCenas.irParaTelaFinal(songId, scoreFinal);
-
-        } catch (Exception e) {
-            throw new SceneLoadException("Erro ao carregar TelaJogo.fxml", e);
-        }
-    }
-
-    // NOVO: Recebe o songId e o score para a tela de finalização/salvamento.
-    public static void irParaTelaFinal(String songId, JogoEstado estadoFinal) {
-        try {
-            FXMLLoader loader = new FXMLLoader(ControladorFluxo.class.getResource("Resultados.fxml"));
-
-            if (loader.getLocation() == null) {
-                throw new SceneLoadException("FXML de Resultados não encontrado.");
-            }
-
-            Parent root = loader.load();
-
-            // Pega o controlador da tela que acabamos de carregar
-            ResultadosController controller = loader.getController();
-
-            controller.setDadosFinais(songId, estadoFinal);
-
-            Scene cena = new Scene(root, stageAtual.getWidth(), stageAtual.getHeight());
-
-            // Se tiver CSS de resultados, adicione aqui:
-            // cena.getStylesheets().add(ControladorFluxo.class.getResource("seletor.css").toExternalForm());
-
-            stageAtual.setScene(cena);
             Platform.runLater(root::requestFocus);
 
         } catch (IOException e) {
-            throw new SceneLoadException("Erro ao carregar Resultados.fxml", e);
+            throw new SceneLoadException("Erro no Seletor", e);
         }
     }
 
-    public static Stage getStageAtual() {
-        return stageAtual;
+    public static void irParaJogo(String songId) {
+        try {
+            JogoEngine engine = new JogoEngine(songId, stageAtual);
+            if (Objects.equals(songId, "bmtl")) engine.iniciar(25);
+            else engine.iniciar(0);
+        } catch (Exception e) {
+            throw new SceneLoadException("Erro ao carregar Jogo", e);
+        }
     }
+
+    public static void irParaTelaFinal(String songId, JogoEstado estadoFinal) {
+        try {
+            FXMLLoader loader = new FXMLLoader(ControladorFluxo.class.getResource("Resultados.fxml"));
+            Parent root = loader.load();
+
+            ResultadosController controller = loader.getController();
+            controller.setDadosFinais(songId, estadoFinal);
+
+            scenePrincipal.setRoot(root);
+            // scenePrincipal.getStylesheets().clear(); // Se tiver CSS específico, adicione aqui
+
+            Platform.runLater(root::requestFocus);
+
+        } catch (IOException e) {
+            throw new SceneLoadException("Erro na tela final", e);
+        }
+    }
+
+    public static Stage getStageAtual() { return stageAtual; }
+
+    // Método útil se o JogoEngine precisar acessar a cena
+    public static Scene getScenePrincipal() { return scenePrincipal; }
 }

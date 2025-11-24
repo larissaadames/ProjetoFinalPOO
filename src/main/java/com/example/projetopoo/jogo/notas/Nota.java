@@ -14,7 +14,7 @@ public abstract class Nota {
     public abstract INotaSprite obterSprite(JogoRenderer renderer);
 
     public static final double SPAWN_OFFSET_MS = 2000;
-    public static final double SCROLL_SPEED = 1.5;
+    public static final double SCROLL_SPEED = 1.0;
 
     protected final double momentoHit;
     protected final int lane;

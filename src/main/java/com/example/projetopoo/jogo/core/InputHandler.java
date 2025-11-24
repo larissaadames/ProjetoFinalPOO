@@ -20,6 +20,7 @@ public class InputHandler {
     private final JogoMusica musica;
     private final JogoEstado estado;
     private double offsetMs = 0;
+    private Runnable acaoSair;
 
     private Scene sceneAtual;
 
@@ -31,6 +32,10 @@ public class InputHandler {
         this.renderer = renderer;
         this.musica = musica;
         this.estado = estado;
+    }
+
+    public void setAcaoSair(Runnable acao) {
+        this.acaoSair = acao;
     }
 
 
@@ -56,6 +61,13 @@ public class InputHandler {
 
     public void ativar(Scene scene) {
         scene.setOnKeyPressed(event -> {
+
+            if (event.getCode() == KeyCode.ESCAPE) {
+                if (acaoSair != null) {
+                    acaoSair.run();
+                }
+                return;
+            }
 
             int lane = teclaParaLane(event.getCode());
             if (lane == -1) return;

@@ -6,52 +6,13 @@
       "tipo": "TAP"
     },
     {
-      "lane": 2,
-      "tempoMs": 2200,
-      "tipo": "TAP"
-    },
-    {
       "lane": 3,
       "tempoMs": 2400,
       "tipo": "TAP"
     },
     {
-      "lane": 3,
-      "tempoMs": 2450,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 3,
-      "tempoMs": 2460,
-      "tipo": "HOLD",
-      "duracaoMs": 1000
-    },
-    {
-      "lane": 4,
-      "tempoMs": 2460,
-      "tipo": "HOLD",
-      "duracaoMs": 1000
-    },
-    {
-      "lane": 4,
-      "tempoMs": 2500,
-      "tipo": "TAP"
-    },
-    {
-      "lane": 5,
-      "tempoMs": 2600,
-      "tipo": "TAP"
-    },
-    {
       "lane": 5,
       "tempoMs": 30839,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 30997,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -62,20 +23,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 31471,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
       "tempoMs": 31787,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 31945,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -86,19 +35,7 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 32418,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
-      "tempoMs": 32734,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
       "tempoMs": 32734,
       "tipo": "TAP",
       "duracaoMs": 0
@@ -111,33 +48,9 @@
     },
     {
       "lane": 4,
-      "tempoMs": 33050,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 33208,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
       "tempoMs": 33366,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 33366,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 33524,
-      "tipo": "HOLD",
-      "duracaoMs": 78
     },
     {
       "lane": 1,
@@ -152,31 +65,13 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 34155,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
       "tempoMs": 34471,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
     {
-      "lane": 2,
-      "tempoMs": 34629,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
-      "tempoMs": 34945,
-      "tipo": "HOLD",
-      "duracaoMs": 236
-    },
-    {
-      "lane": 4,
       "tempoMs": 34945,
       "tipo": "HOLD",
       "duracaoMs": 236
@@ -188,19 +83,7 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 35418,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
-      "tempoMs": 35576,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 5,
       "tempoMs": 35576,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -212,32 +95,14 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 36050,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
       "tempoMs": 36366,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 36524,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
       "lane": 2,
       "tempoMs": 36839,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 36997,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -249,18 +114,6 @@
     },
     {
       "lane": 5,
-      "tempoMs": 37471,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 37787,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 37787,
       "tipo": "TAP",
       "duracaoMs": 0
@@ -268,18 +121,6 @@
     {
       "lane": 1,
       "tempoMs": 38102,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 38102,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 38260,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -288,18 +129,6 @@
       "tempoMs": 38418,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 38418,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 38576,
-      "tipo": "HOLD",
-      "duracaoMs": 79
     },
     {
       "lane": 1,
@@ -314,31 +143,13 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 39208,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
       "tempoMs": 39524,
       "tipo": "HOLD",
       "duracaoMs": 78
     },
     {
-      "lane": 5,
-      "tempoMs": 39681,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
-      "tempoMs": 39997,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 1,
       "tempoMs": 39997,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -350,19 +161,7 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 40471,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
-      "tempoMs": 40629,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 2,
       "tempoMs": 40629,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -374,20 +173,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 41102,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
       "tempoMs": 41418,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 41576,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -398,31 +185,13 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 42050,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
       "tempoMs": 42366,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 42524,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
       "lane": 2,
-      "tempoMs": 42839,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
       "tempoMs": 42839,
       "tipo": "TAP",
       "duracaoMs": 0
@@ -430,18 +199,6 @@
     {
       "lane": 2,
       "tempoMs": 43155,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 43155,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 43313,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -450,18 +207,6 @@
       "tempoMs": 43471,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 43471,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 43629,
-      "tipo": "HOLD",
-      "duracaoMs": 79
     },
     {
       "lane": 4,
@@ -476,31 +221,13 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 44260,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 1,
       "tempoMs": 44576,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 44734,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
-      "tempoMs": 45050,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 4,
       "tempoMs": 45050,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -512,19 +239,7 @@
       "duracaoMs": 79
     },
     {
-      "lane": 2,
-      "tempoMs": 45524,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
       "lane": 1,
-      "tempoMs": 45681,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 5,
       "tempoMs": 45681,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -536,20 +251,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 46155,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
       "tempoMs": 46471,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 46629,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -560,31 +263,13 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 47102,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
       "tempoMs": 47418,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
     {
-      "lane": 2,
-      "tempoMs": 47576,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
-      "tempoMs": 47892,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 47892,
       "tipo": "TAP",
       "duracaoMs": 0
@@ -596,34 +281,10 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 48208,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 48366,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 48524,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 48524,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 48681,
-      "tipo": "HOLD",
-      "duracaoMs": 79
     },
     {
       "lane": 5,
@@ -638,31 +299,13 @@
       "duracaoMs": 79
     },
     {
-      "lane": 2,
-      "tempoMs": 49313,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
       "tempoMs": 49629,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 49787,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
-      "tempoMs": 50102,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 1,
       "tempoMs": 50102,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -674,12 +317,6 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 50576,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
       "tempoMs": 50734,
       "tipo": "HOLD",
@@ -687,31 +324,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 50734,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 2,
       "tempoMs": 52338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 52338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 52338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 52495,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -723,37 +336,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 52811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 52811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
       "tempoMs": 52969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 52969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 52969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 53127,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -764,68 +347,20 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 53443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 53443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 53601,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 53759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 53916,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 53916,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 54074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 54232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 54232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 54232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 54390,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -836,26 +371,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 54706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 54864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 54864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 55022,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -867,37 +384,7 @@
     },
     {
       "lane": 4,
-      "tempoMs": 55338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 55338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
       "tempoMs": 55495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 55495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 55495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 55653,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -908,30 +395,12 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 55969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 55969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 56127,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 56285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 56443,
       "tipo": "TAP",
@@ -939,37 +408,7 @@
     },
     {
       "lane": 1,
-      "tempoMs": 56443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 56601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 56759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 56759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 56759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 56916,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -980,32 +419,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 57232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 57232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 57390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 57390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 57548,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1016,38 +431,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 57864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 57864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 58022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 58022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 58022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 58180,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1058,30 +443,12 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 58495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 58495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 58653,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 58811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 58969,
       "tipo": "TAP",
@@ -1089,37 +456,7 @@
     },
     {
       "lane": 1,
-      "tempoMs": 58969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 59127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 59285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 59285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 59285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 59443,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1130,32 +467,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 59759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 59916,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 59916,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 59916,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 60074,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1167,37 +480,7 @@
     },
     {
       "lane": 1,
-      "tempoMs": 60390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 60390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 60548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 60548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 60548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 60706,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1208,68 +491,20 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 61022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 61022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 61180,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 61338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 61495,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 61495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 61653,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 61811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 61811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 61811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 61969,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1280,56 +515,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 62127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 62127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 62285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 62285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 62285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 62443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 62443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 62443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 62601,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1341,37 +528,7 @@
     },
     {
       "lane": 4,
-      "tempoMs": 62916,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 62916,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
       "tempoMs": 63074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 63074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 63074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 63232,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1382,68 +539,20 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 63548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 63548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 63706,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 63864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 64022,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 64022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 64180,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 64338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 64338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 64338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 64495,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1454,26 +563,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 64811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 64969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 64969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 65127,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1485,37 +576,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 65443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 65443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
       "tempoMs": 65601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 65601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 65601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 65759,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1526,30 +587,12 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 66074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 66074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 66232,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 66390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 66548,
       "tipo": "TAP",
@@ -1557,37 +600,7 @@
     },
     {
       "lane": 5,
-      "tempoMs": 66548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 66706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
       "tempoMs": 66864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 66864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 66864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 67022,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1598,32 +611,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 67338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 67338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 67495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 67495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 67653,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1634,38 +623,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 67969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 67969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 68127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 68127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 68127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 68285,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1676,30 +635,12 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 68601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 68601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 68759,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 68916,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 69074,
       "tipo": "TAP",
@@ -1707,37 +648,7 @@
     },
     {
       "lane": 5,
-      "tempoMs": 69074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 69232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
       "tempoMs": 69390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 69390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 69390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 69548,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1748,32 +659,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 69864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 70022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 70022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 70022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 70180,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1785,37 +672,7 @@
     },
     {
       "lane": 5,
-      "tempoMs": 70495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 70495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
       "tempoMs": 70653,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 70653,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 70653,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 70811,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1826,38 +683,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 71127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 71127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 71285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 71443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 71443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 71443,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -1868,25 +695,7 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 71759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
-      "tempoMs": 71916,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 71916,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
       "tempoMs": 71916,
       "tipo": "TAP",
       "duracaoMs": 0
@@ -1894,48 +703,12 @@
     {
       "lane": 5,
       "tempoMs": 72232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 72232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 72232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 72390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 72390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 72390,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
       "lane": 4,
       "tempoMs": 74443,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 74601,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -1952,44 +725,8 @@
       "duracaoMs": 78
     },
     {
-      "lane": 2,
-      "tempoMs": 75100,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
-      "lane": 1,
-      "tempoMs": 75257,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 75257,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
       "tempoMs": 75573,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 75573,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 75731,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 75731,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2000,44 +737,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 76047,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 76205,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 76205,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 1,
       "tempoMs": 76521,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 76521,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 76678,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 76678,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2049,43 +750,7 @@
     },
     {
       "lane": 5,
-      "tempoMs": 76994,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 77152,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 77152,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
       "tempoMs": 77310,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 77310,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 77468,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 77468,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2096,44 +761,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 77784,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 77942,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 77942,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 1,
       "tempoMs": 78257,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 78257,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 78415,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 78415,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2144,31 +773,7 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 78731,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
-      "tempoMs": 78889,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 78889,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 79205,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 1,
       "tempoMs": 79205,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -2176,24 +781,6 @@
     {
       "lane": 4,
       "tempoMs": 79521,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 79521,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 79678,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 79678,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2210,44 +797,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 80152,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 80310,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 80310,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
       "tempoMs": 80626,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 80626,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 80784,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 80784,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2259,43 +810,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 81100,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
-      "lane": 5,
-      "tempoMs": 81257,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 81257,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
       "tempoMs": 81573,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 81573,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 81731,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 81731,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2306,44 +821,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 82047,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 82205,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 82205,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
       "tempoMs": 82363,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 82363,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 82521,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 82521,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2354,44 +833,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 82836,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 82994,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 82994,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 1,
       "tempoMs": 83310,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 83310,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 83468,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 83468,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2402,31 +845,7 @@
       "duracaoMs": 79
     },
     {
-      "lane": 2,
-      "tempoMs": 83784,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 83942,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 83942,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
-      "tempoMs": 84257,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 4,
       "tempoMs": 84257,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -2439,30 +858,6 @@
     },
     {
       "lane": 1,
-      "tempoMs": 84573,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 84731,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 84731,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 84889,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 5,
       "tempoMs": 84889,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -2474,44 +869,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 85205,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 85363,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 85363,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
       "tempoMs": 85678,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 85678,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 85836,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 85836,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2522,44 +881,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 86152,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 86310,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 86310,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 1,
       "tempoMs": 86626,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 86626,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 86784,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 86784,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2570,44 +893,8 @@
       "duracaoMs": 78
     },
     {
-      "lane": 5,
-      "tempoMs": 87100,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
-      "lane": 2,
-      "tempoMs": 87257,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 87257,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
       "tempoMs": 87415,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 87415,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 87573,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 87573,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2618,44 +905,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 87889,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 88047,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 88047,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
       "tempoMs": 88363,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 88363,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 88521,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 88521,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2666,31 +917,7 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 88836,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 88994,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 88994,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 1,
-      "tempoMs": 89310,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 2,
       "tempoMs": 89310,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -2698,24 +925,6 @@
     {
       "lane": 4,
       "tempoMs": 89626,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 89626,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 89784,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 89784,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2732,44 +941,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 90257,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 90415,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 90415,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
       "tempoMs": 90731,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 90731,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 90889,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 90889,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2780,44 +953,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 2,
-      "tempoMs": 91205,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 91363,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 91363,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
       "tempoMs": 91678,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 91678,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 91836,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 91836,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2829,43 +966,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 92152,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 92310,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 92310,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
       "tempoMs": 92468,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 92468,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 92626,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 92626,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2876,44 +977,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 92942,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 93100,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
-      "lane": 2,
-      "tempoMs": 93100,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
       "lane": 4,
       "tempoMs": 93415,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 93415,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 93573,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 93573,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -2925,30 +990,6 @@
     },
     {
       "lane": 2,
-      "tempoMs": 93889,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 94047,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 94047,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 94363,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 1,
       "tempoMs": 94363,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -2960,31 +1001,7 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 94678,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 94836,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 1,
-      "tempoMs": 94836,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 94994,
-      "tipo": "HOLD",
-      "duracaoMs": 237
-    },
-    {
-      "lane": 5,
       "tempoMs": 94994,
       "tipo": "HOLD",
       "duracaoMs": 237
@@ -2996,20 +1013,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 95468,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 95784,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 95942,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3020,20 +1025,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 96415,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 96731,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 96889,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3050,24 +1043,6 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 97877,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 97877,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 98034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 98192,
       "tipo": "TAP",
@@ -3075,37 +1050,7 @@
     },
     {
       "lane": 4,
-      "tempoMs": 98350,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 98350,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
       "tempoMs": 98508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 98508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 98508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 98666,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3116,68 +1061,20 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 98982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 98982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 99140,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 99298,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 99455,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 99455,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 99613,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 99771,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 99771,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 99771,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 99929,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3188,26 +1085,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 100245,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 100403,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 100403,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 100561,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3219,37 +1098,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 100877,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 100877,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
       "tempoMs": 101034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 101034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 101034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 101192,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3260,30 +1109,12 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 101508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 101508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 101666,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 101824,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 101982,
       "tipo": "TAP",
@@ -3291,37 +1122,7 @@
     },
     {
       "lane": 5,
-      "tempoMs": 101982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 102140,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
       "tempoMs": 102298,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 102298,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 102298,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 102455,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3332,32 +1133,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 102771,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 102771,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 102929,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 102929,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 103087,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3368,38 +1145,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 103403,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 103403,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 103561,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 103561,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 103561,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 103719,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3410,30 +1157,12 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 104034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 104034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 104192,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 104350,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 104508,
       "tipo": "TAP",
@@ -3441,37 +1170,7 @@
     },
     {
       "lane": 5,
-      "tempoMs": 104508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 104666,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
       "tempoMs": 104824,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 104824,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 104824,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 104982,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3482,32 +1181,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 105298,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 105455,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 105455,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 105455,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 105613,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3519,37 +1194,7 @@
     },
     {
       "lane": 5,
-      "tempoMs": 105929,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 105929,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
       "tempoMs": 106087,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 106087,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 106087,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 106245,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3560,68 +1205,20 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 106561,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 106561,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 106719,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 106877,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 107034,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 107034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 107192,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 107350,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 107350,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 107350,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 107508,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3632,56 +1229,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 107666,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 107666,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 107824,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 107824,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 107824,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 107982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 107982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 107982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 108140,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3693,37 +1242,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 108455,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 108455,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
       "tempoMs": 108613,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 108613,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 108613,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 108771,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3734,68 +1253,20 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 109087,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 109087,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 109245,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 109403,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 109561,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 109561,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 109719,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 109877,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 109877,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 109877,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 110034,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3806,26 +1277,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 110350,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 110508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 110508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 110666,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3837,37 +1290,7 @@
     },
     {
       "lane": 4,
-      "tempoMs": 110982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 110982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
       "tempoMs": 111140,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 111140,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 111140,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 111298,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3878,30 +1301,12 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 111613,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 111613,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 111771,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 111929,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 112087,
       "tipo": "TAP",
@@ -3909,37 +1314,7 @@
     },
     {
       "lane": 1,
-      "tempoMs": 112087,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 112245,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 112403,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 112403,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 112403,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 112561,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3950,32 +1325,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 112877,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 112877,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 113034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 113034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 113192,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -3986,38 +1337,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 113508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 113508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 113666,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 113666,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 113666,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 113824,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -4028,30 +1349,12 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 114140,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 114140,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 114298,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 114455,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 114613,
       "tipo": "TAP",
@@ -4059,37 +1362,7 @@
     },
     {
       "lane": 1,
-      "tempoMs": 114613,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 114771,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 114929,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 114929,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 114929,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 115087,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -4100,32 +1373,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 115403,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 115561,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 115561,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 115561,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 115719,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -4137,55 +1386,13 @@
     },
     {
       "lane": 1,
-      "tempoMs": 116034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 116034,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 116192,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 116192,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 116192,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 116350,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
       "lane": 4,
       "tempoMs": 116508,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 116666,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 116666,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -4197,43 +1404,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 116982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 116982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 116982,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
       "tempoMs": 117140,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 117140,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 117298,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 117298,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -4245,67 +1416,13 @@
     },
     {
       "lane": 1,
-      "tempoMs": 117455,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 117613,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 117613,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 117771,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 117771,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 117929,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 117929,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
       "lane": 1,
       "tempoMs": 118103,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 118103,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 118103,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 118260,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -4316,50 +1433,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 118576,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 118734,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 118734,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 118734,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 118892,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 119050,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 119208,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 119208,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -4376,32 +1457,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 119839,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 119997,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 119997,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 120155,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 120155,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -4412,22 +1469,10 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 120471,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 120629,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 120629,
-      "tipo": "HOLD",
-      "duracaoMs": 474
     },
     {
       "lane": 4,
@@ -4436,34 +1481,16 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 121103,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 121260,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 121260,
-      "tipo": "HOLD",
-      "duracaoMs": 316
     },
     {
       "lane": 5,
       "tempoMs": 121576,
       "tipo": "HOLD",
       "duracaoMs": 316
-    },
-    {
-      "lane": 2,
-      "tempoMs": 121734,
-      "tipo": "TAP",
-      "duracaoMs": 0
     },
     {
       "lane": 4,
@@ -4478,26 +1505,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 122366,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 122524,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 122524,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 122681,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -4508,44 +1517,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 122839,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 122997,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 122997,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
       "tempoMs": 123155,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 123155,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 123313,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 123313,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -4556,46 +1529,10 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 123629,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 123787,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 123787,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 1,
       "tempoMs": 124103,
       "tipo": "HOLD",
       "duracaoMs": 78
-    },
-    {
-      "lane": 4,
-      "tempoMs": 124103,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
-      "lane": 1,
-      "tempoMs": 124260,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 124260,
-      "tipo": "HOLD",
-      "duracaoMs": 79
     },
     {
       "lane": 1,
@@ -4604,44 +1541,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 2,
-      "tempoMs": 124576,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 124734,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 124734,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 1,
       "tempoMs": 125050,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 125050,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 125208,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 125208,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -4653,43 +1554,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 125366,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 125524,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 125524,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
       "tempoMs": 125839,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 125839,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 125997,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 125997,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -4700,44 +1565,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 2,
-      "tempoMs": 126313,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 126471,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 126471,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
       "tempoMs": 126787,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 126787,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 126945,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 126945,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -4748,44 +1577,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 127260,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 127418,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 127418,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 4,
       "tempoMs": 127576,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 127576,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 127734,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 127734,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -4796,44 +1589,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 2,
-      "tempoMs": 127892,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 128050,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 128050,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 1,
       "tempoMs": 128208,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 128208,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 128208,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 128366,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -4844,50 +1601,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 128681,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 128839,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 128839,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 128839,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 128997,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
       "lane": 5,
       "tempoMs": 129155,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 129313,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 129313,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -4904,34 +1625,10 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 129945,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 130103,
       "tipo": "HOLD",
       "duracaoMs": 78
-    },
-    {
-      "lane": 4,
-      "tempoMs": 130103,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
-      "lane": 4,
-      "tempoMs": 130260,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 130260,
-      "tipo": "HOLD",
-      "duracaoMs": 79
     },
     {
       "lane": 2,
@@ -4940,22 +1637,10 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 130576,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 130734,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 130734,
-      "tipo": "HOLD",
-      "duracaoMs": 474
     },
     {
       "lane": 2,
@@ -4964,44 +1649,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 131366,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 131366,
-      "tipo": "HOLD",
-      "duracaoMs": 315
-    },
-    {
       "lane": 1,
       "tempoMs": 131681,
       "tipo": "HOLD",
       "duracaoMs": 316
     },
     {
-      "lane": 4,
-      "tempoMs": 131839,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 131997,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 132155,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 132155,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5012,32 +1667,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 132471,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 132629,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 132629,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 132787,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 132787,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -5049,24 +1680,6 @@
     },
     {
       "lane": 4,
-      "tempoMs": 133260,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 133260,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 133418,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
       "tempoMs": 133418,
       "tipo": "HOLD",
       "duracaoMs": 79
@@ -5078,44 +1691,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 133734,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 133892,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 133892,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
       "tempoMs": 134208,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 134208,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 134366,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 134366,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -5126,44 +1703,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 134681,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 134839,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 134839,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
       "tempoMs": 135155,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 135155,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 135313,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 135313,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -5174,82 +1715,22 @@
       "duracaoMs": 79
     },
     {
-      "lane": 4,
-      "tempoMs": 135471,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 135629,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 135629,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
       "tempoMs": 135787,
       "tipo": "HOLD",
       "duracaoMs": 631
     },
     {
-      "lane": 1,
-      "tempoMs": 135787,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 135787,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 136418,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 136418,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 136418,
-      "tipo": "HOLD",
-      "duracaoMs": 316
     },
     {
       "lane": 1,
       "tempoMs": 136892,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 136892,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 137050,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 137050,
-      "tipo": "HOLD",
-      "duracaoMs": 631
     },
     {
       "lane": 1,
@@ -5258,38 +1739,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 137366,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 137366,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 137681,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 137681,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 137839,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 137839,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5300,44 +1751,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 137997,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 138155,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 138155,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 138338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 138338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 138443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 138548,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5348,32 +1763,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 138759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 138864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 138969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 139074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 139180,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5384,32 +1775,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 139443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 139601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 139601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 139706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 139811,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5420,26 +1787,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 140074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 140232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 140338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 140443,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5450,26 +1799,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 140653,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 140759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 140864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 141022,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5480,32 +1811,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 141285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 141390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 141495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 141601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 141706,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5516,26 +1823,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 141969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 142127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 142127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 142285,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5546,26 +1835,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 142548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 142653,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 142759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 142916,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5576,38 +1847,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 143180,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 143285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 143390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 143390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 143495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 143601,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5618,26 +1859,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 143864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 144022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 144127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 144232,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5648,26 +1871,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 144495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 144653,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 144653,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 144811,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5678,32 +1883,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 145074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 145180,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 145285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 145390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 145495,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5714,28 +1895,10 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 145706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 145811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 145916,
       "tipo": "HOLD",
       "duracaoMs": 632
-    },
-    {
-      "lane": 5,
-      "tempoMs": 145916,
-      "tipo": "TAP",
-      "duracaoMs": 0
     },
     {
       "lane": 5,
@@ -5748,12 +1911,6 @@
       "tempoMs": 146548,
       "tipo": "HOLD",
       "duracaoMs": 632
-    },
-    {
-      "lane": 2,
-      "tempoMs": 146548,
-      "tipo": "TAP",
-      "duracaoMs": 0
     },
     {
       "lane": 2,
@@ -5774,26 +1931,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 147495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 147811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 147811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 147969,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5804,38 +1943,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 148127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 148285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 148443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 148443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 148548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 148653,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5846,32 +1955,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 148864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 148969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 149074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 149180,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 149285,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5882,32 +1967,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 149548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 149706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 149706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 149811,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 149916,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5918,26 +1979,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 150127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 150232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 150338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 150495,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5948,32 +1991,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 150759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 150864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 150969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 151074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 151180,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -5984,32 +2003,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 151390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 151495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 151601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 151706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 151811,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6020,26 +2015,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 152074,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 152232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 152232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 152390,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6050,26 +2027,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 152653,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 152759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 152864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 153022,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6080,38 +2039,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 153285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 153390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 153495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 153495,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 153601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 153706,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6122,20 +2051,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 153916,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 154127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 154285,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6146,32 +2063,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 154601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 154759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 154759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 154864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 154969,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6182,32 +2075,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 155232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 155232,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 155390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 155390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 155548,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6219,30 +2088,6 @@
     },
     {
       "lane": 4,
-      "tempoMs": 155706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 155864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 156022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 156022,
-      "tipo": "HOLD",
-      "duracaoMs": 2447
-    },
-    {
-      "lane": 1,
       "tempoMs": 156022,
       "tipo": "TAP",
       "duracaoMs": 0
@@ -6272,24 +2117,6 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 158565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 158722,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 158722,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 159038,
       "tipo": "TAP",
@@ -6297,43 +2124,7 @@
     },
     {
       "lane": 1,
-      "tempoMs": 159196,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 159196,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 159196,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 159512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 159512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 159670,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 159670,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6344,68 +2135,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 159986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 160143,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 160143,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 160459,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 160459,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 160459,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 160617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 160775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 160775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 160933,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 160933,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6417,67 +2154,13 @@
     },
     {
       "lane": 1,
-      "tempoMs": 161249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 161407,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 161407,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 161722,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 161722,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 161722,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 161880,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
       "lane": 1,
       "tempoMs": 162196,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 162196,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 162354,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 162354,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6489,31 +2172,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 162670,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
       "tempoMs": 162986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 162986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 162986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 163143,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6524,44 +2183,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 163301,
-      "tipo": "HOLD",
-      "duracaoMs": 316
-    },
-    {
-      "lane": 2,
-      "tempoMs": 163459,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 163459,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 163617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 163617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 163775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 163775,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6572,44 +2195,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 164249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 164249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 164249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 164565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 164565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 164722,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 164722,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6621,43 +2208,7 @@
     },
     {
       "lane": 1,
-      "tempoMs": 165038,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 165196,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 165196,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 165512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 165512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 165512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 165670,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6668,68 +2219,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 165828,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 165986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 165986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 166301,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 166301,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 166459,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 166459,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 166775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 166775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 166775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 166933,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6740,56 +2237,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 167249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 167407,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 167407,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 167722,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 167722,
-      "tipo": "HOLD",
-      "duracaoMs": 316
-    },
-    {
       "lane": 1,
       "tempoMs": 168038,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 168038,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 168038,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 168196,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6800,44 +2255,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 168354,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 168512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 168512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 168670,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 168670,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 168828,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 168828,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6849,43 +2268,7 @@
     },
     {
       "lane": 5,
-      "tempoMs": 169301,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 169301,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 169301,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
       "tempoMs": 169617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 169617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 169775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 169775,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6896,44 +2279,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 170091,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 170249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 170249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 170565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 170565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 170565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 170722,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -6944,68 +2291,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 170880,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 171038,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 171038,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 171354,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 171354,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 171512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 171512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 171828,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 171828,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 171828,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 171986,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7016,68 +2309,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 172301,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 172459,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 172459,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 172775,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 172775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 172933,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 172933,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 173091,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 173091,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 173091,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 173249,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7088,44 +2327,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 173407,
-      "tipo": "HOLD",
-      "duracaoMs": 315
-    },
-    {
-      "lane": 2,
-      "tempoMs": 173565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 173565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 173722,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 173722,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 173880,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 173880,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7137,43 +2340,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 174354,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 174354,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 174354,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
       "tempoMs": 174670,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 174670,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 174828,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 174828,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7184,44 +2351,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 175143,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 175301,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 175301,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 175617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 175617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 175617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 175775,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7232,56 +2363,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 175933,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 176091,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 176091,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 176407,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 176407,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 176407,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 176565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 176565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 176565,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7292,68 +2375,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 176880,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 176880,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 177038,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 177038,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 177038,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 177354,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 177354,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 177354,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 177512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 177512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 177512,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7364,38 +2387,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 177828,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 177828,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 177986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 177986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 178143,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 178143,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7407,49 +2400,7 @@
     },
     {
       "lane": 4,
-      "tempoMs": 178301,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 178459,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 178459,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
       "tempoMs": 178617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 178617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 178812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 178812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 178812,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7460,38 +2411,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 179127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 179285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 179285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 179443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 179443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 179443,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7502,26 +2423,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 179759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 179917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 179917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 180075,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7532,38 +2435,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 180390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 180390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 180548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 180706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 180706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 180706,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7574,26 +2447,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 181022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 181180,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 181338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 181338,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7604,38 +2459,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 181654,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 181812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 181812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 181969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 181969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 181969,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7646,26 +2471,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 182285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 182443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 182443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 182601,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7676,38 +2483,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 182917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 182917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 183075,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 183233,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 183233,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 183233,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7718,32 +2495,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 183548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 183706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 183706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 183864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 183864,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7754,38 +2507,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 184180,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 184338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 184338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 184496,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 184496,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 184496,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7796,26 +2519,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 184812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 184969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 184969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 185127,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7826,38 +2531,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 185443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 185443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 185601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 185759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 185759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 185759,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7868,50 +2543,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 186075,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 186075,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 186075,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 186233,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 186233,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 186233,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 186390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 186390,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -7922,86 +2555,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 186864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 187022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 187022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 187022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 187338,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 187338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 187338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 187496,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 187496,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 187812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 187812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 187812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 187969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 187969,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8012,18 +2573,6 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 188285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 188285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 188443,
       "tipo": "TAP",
@@ -8031,49 +2580,7 @@
     },
     {
       "lane": 1,
-      "tempoMs": 188443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 188601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 188601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 188759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 188759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 188917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 188917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 188917,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8084,38 +2591,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 189233,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 189390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 189390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 189548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 189548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 189548,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8126,26 +2603,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 189864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 190022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 190022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 190180,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8156,38 +2615,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 190496,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 190496,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 190654,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 190812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 190812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 190812,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8198,26 +2627,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 191127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 191285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 191443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 191443,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8228,38 +2639,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 191759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 191917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 191917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 192075,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 192075,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 192075,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8270,26 +2651,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 192390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 192548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 192548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 192706,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8300,38 +2663,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 193022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 193022,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 193180,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 193338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 193338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 193338,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8342,32 +2675,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 193654,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 193812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 193812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 193969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 193969,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8378,38 +2687,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 194285,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 194443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 194443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 194601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 194601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 194601,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8420,26 +2699,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 194917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 195075,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 195075,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 195233,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8450,38 +2711,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 195548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 195548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 195706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 195864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 195864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 195864,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8492,32 +2723,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 1,
-      "tempoMs": 196180,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 196338,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 196496,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 196496,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 196496,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8528,38 +2735,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 196812,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 196969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 196969,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 197127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 197127,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 197127,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8570,56 +2747,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 197443,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 197601,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 197601,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 197759,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 4,
       "tempoMs": 197917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 197917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 197917,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 198075,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 198075,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8631,73 +2766,13 @@
     },
     {
       "lane": 2,
-      "tempoMs": 198233,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 198390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 198390,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
       "tempoMs": 198548,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
       "lane": 4,
-      "tempoMs": 198548,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 198706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 198706,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
       "tempoMs": 198864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 198864,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 199039,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 199039,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 199039,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8708,32 +2783,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 199354,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 199512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 199670,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 199670,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 199670,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8744,32 +2795,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 199986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 200144,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 200144,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 200302,
-      "tipo": "HOLD",
-      "duracaoMs": 473
-    },
-    {
-      "lane": 4,
-      "tempoMs": 200302,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8781,31 +2808,7 @@
     },
     {
       "lane": 5,
-      "tempoMs": 200617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 200775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
       "tempoMs": 200933,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 200933,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 201091,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -8816,50 +2819,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 201249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 201407,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 201407,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 201565,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 201565,
-      "tipo": "HOLD",
-      "duracaoMs": 474
-    },
-    {
       "lane": 2,
       "tempoMs": 201881,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 201881,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 202039,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8870,28 +2837,10 @@
       "duracaoMs": 0
     },
     {
-      "lane": 5,
-      "tempoMs": 202196,
-      "tipo": "HOLD",
-      "duracaoMs": 316
-    },
-    {
       "lane": 1,
       "tempoMs": 202512,
       "tipo": "HOLD",
       "duracaoMs": 316
-    },
-    {
-      "lane": 2,
-      "tempoMs": 202512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 202670,
-      "tipo": "TAP",
-      "duracaoMs": 0
     },
     {
       "lane": 5,
@@ -8900,32 +2849,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 202986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 202986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 203144,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 203144,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 203302,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -8937,37 +2862,7 @@
     },
     {
       "lane": 1,
-      "tempoMs": 203460,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 203617,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
       "tempoMs": 203775,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 203775,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 203933,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 203933,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -8978,44 +2873,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 5,
-      "tempoMs": 204091,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 204249,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 204249,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
       "tempoMs": 204565,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 204565,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 204723,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 204723,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -9026,44 +2885,8 @@
       "duracaoMs": 78
     },
     {
-      "lane": 2,
-      "tempoMs": 205039,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
-      "lane": 5,
-      "tempoMs": 205196,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 205196,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 5,
       "tempoMs": 205512,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 205512,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 205670,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 205670,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -9074,44 +2897,8 @@
       "duracaoMs": 79
     },
     {
-      "lane": 1,
-      "tempoMs": 205986,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 5,
-      "tempoMs": 206144,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 1,
-      "tempoMs": 206144,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
       "lane": 2,
       "tempoMs": 206302,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 206302,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 4,
-      "tempoMs": 206460,
-      "tipo": "HOLD",
-      "duracaoMs": 79
-    },
-    {
-      "lane": 2,
-      "tempoMs": 206460,
       "tipo": "HOLD",
       "duracaoMs": 79
     },
@@ -9120,18 +2907,6 @@
       "tempoMs": 206617,
       "tipo": "HOLD",
       "duracaoMs": 632
-    },
-    {
-      "lane": 1,
-      "tempoMs": 206617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 206617,
-      "tipo": "TAP",
-      "duracaoMs": 0
     },
     {
       "lane": 2,
@@ -9146,32 +2921,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 207249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 207249,
-      "tipo": "HOLD",
-      "duracaoMs": 316
-    },
-    {
       "lane": 2,
       "tempoMs": 207565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 207565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 207723,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -9183,31 +2934,7 @@
     },
     {
       "lane": 4,
-      "tempoMs": 207881,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 208039,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
       "tempoMs": 208196,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 208196,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 208354,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -9219,67 +2946,13 @@
     },
     {
       "lane": 4,
-      "tempoMs": 208512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 208670,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 208670,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
       "tempoMs": 208828,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
       "lane": 1,
-      "tempoMs": 208828,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 208986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 208986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
       "tempoMs": 209144,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 209144,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 209144,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 209302,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -9290,32 +2963,8 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 209617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 209775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 209775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 209775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 209933,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -9326,38 +2975,14 @@
       "duracaoMs": 0
     },
     {
-      "lane": 2,
-      "tempoMs": 210249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 5,
       "tempoMs": 210407,
       "tipo": "HOLD",
       "duracaoMs": 474
     },
     {
-      "lane": 4,
-      "tempoMs": 210407,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 210723,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 210723,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 210881,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -9366,18 +2991,6 @@
       "tempoMs": 211039,
       "tipo": "HOLD",
       "duracaoMs": 78
-    },
-    {
-      "lane": 2,
-      "tempoMs": 211039,
-      "tipo": "HOLD",
-      "duracaoMs": 78
-    },
-    {
-      "lane": 1,
-      "tempoMs": 211196,
-      "tipo": "HOLD",
-      "duracaoMs": 79
     },
     {
       "lane": 5,
@@ -9386,22 +2999,10 @@
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 211512,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 2,
       "tempoMs": 211670,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 211670,
-      "tipo": "HOLD",
-      "duracaoMs": 474
     },
     {
       "lane": 4,
@@ -9411,27 +3012,9 @@
     },
     {
       "lane": 5,
-      "tempoMs": 211986,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 212144,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
       "tempoMs": 212302,
       "tipo": "TAP",
       "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 212302,
-      "tipo": "HOLD",
-      "duracaoMs": 315
     },
     {
       "lane": 5,
@@ -9440,50 +3023,14 @@
       "duracaoMs": 316
     },
     {
-      "lane": 4,
-      "tempoMs": 212617,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 212775,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 212933,
       "tipo": "TAP",
       "duracaoMs": 0
     },
     {
-      "lane": 4,
-      "tempoMs": 213091,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
-      "tempoMs": 213091,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
       "lane": 1,
       "tempoMs": 213249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 213249,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 213407,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -9495,43 +3042,7 @@
     },
     {
       "lane": 2,
-      "tempoMs": 213565,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 213723,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 213723,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 2,
       "tempoMs": 213881,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 1,
-      "tempoMs": 213881,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 4,
-      "tempoMs": 214039,
-      "tipo": "TAP",
-      "duracaoMs": 0
-    },
-    {
-      "lane": 5,
-      "tempoMs": 214039,
       "tipo": "TAP",
       "duracaoMs": 0
     },
@@ -9540,18 +3051,6 @@
       "tempoMs": 214196,
       "tipo": "HOLD",
       "duracaoMs": 7579
-    },
-    {
-      "lane": 2,
-      "tempoMs": 214196,
-      "tipo": "HOLD",
-      "duracaoMs": 5053
-    },
-    {
-      "lane": 4,
-      "tempoMs": 214196,
-      "tipo": "HOLD",
-      "duracaoMs": 2527
     }
   ]
 }

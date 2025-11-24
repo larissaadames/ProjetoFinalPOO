@@ -262,10 +262,24 @@ public class JogoRenderer {
     }
 
     public void iniciarCena(Stage stage) {
-        Scene cena = new Scene(root, 1920, 1080);
-        cena.setFill(Color.web("010101"));
-        stage.setScene(cena);
-        stage.show();
+        // Em vez de criar uma nova Scene, pegamos a atual e trocamos o conteúdo
+        Scene cenaAtual = stage.getScene();
+
+        if (cenaAtual != null) {
+            // Limpa CSS antigos do menu
+            cenaAtual.getStylesheets().clear();
+
+            // Define o grupo do jogo como raiz
+            cenaAtual.setRoot(root);
+
+            // Garante o fundo preto (já que o CSS foi removido)
+            cenaAtual.setFill(Color.web("010101"));
+        } else {
+            // Fallback caso algo dê errado e não tenha cena (improvável com o novo Controlador)
+            Scene novaCena = new Scene(root, 1920, 1080);
+            novaCena.setFill(Color.web("010101"));
+            stage.setScene(novaCena);
+        }
     }
 
     public Group getRoot() { return root; }
